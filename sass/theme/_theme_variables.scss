@@ -1,0 +1,48 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+@import url("https://use.typekit.net/tgs4lol.css?v=6");
+
+$theme-colors: (
+
+  "primary": #e74026,
+  "secondary": #1f3231,
+  "tertiary": #f6a40b,
+  "background": #e9d5bc,
+
+  "danger" : #e74026,
+  "info" : #1f3231,
+  "warning" : #f6a40b,
+
+   "black": #000000,
+   "dark": #333333,
+   "dk-grey": #707070,
+   "md-grey": #d0d0d0,
+   "lt-grey": #f7f7f7,
+   "white": #ffffff,
+);
+
+$easing :                     cubic-bezier(0.87, 0, 0.13, 1);
+$transition-base:             all 1s $easing !default;
+$transition-fade:             opacity .3s ease-in-out  !default;
+$transition-collapse:         height .35s $easing !default;
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+$border-width:                1px !default;
+$border-color:                #000000 !default;
+$border-radius:								0;
+$border-radius-lg:						0;
+
+$font-family-adelle:          'adelle', serif !default;
+$font-family-modesto:         'modesto-condensed', serif !default;
+$font-family-sharp:           'sharp25', sans-serif !default;
+$font-family-caaires:         'caaires', sans-serif !default;
+
+$font-family-sans-serif:      $font-family-sharp;
+$font-family-serif:           $font-family-adelle;
+$font-family-titles:      		$font-family-modesto;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;

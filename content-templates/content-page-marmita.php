@@ -1,0 +1,175 @@
+<section>
+
+  <div class="container">
+
+    <div class="row">
+        <div class="col-lg-6 col-md-8 col-10 mx-auto">
+
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 512 237" xml:space="preserve" class="typeonapath">
+            <text text-anchor="middle">
+              <textPath startOffset="50%" class="svgtext fill-secondary" xlink:href="#typepath"><?php the_title() ?></textPath>
+            </text>
+          </svg>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 marmitas--explicacao order-1">
+        <h2 class="wavy-text">me explica!</h2>
+        <div class="px-5">
+          <p><strong>NÃO É DELIVERY EM TEMPO REAL</strong>! São entregas agendadas de <strong>MARMITAS CONGELADAS</strong>, pra você ter sempre à mão quando bater a fome.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 marmitas--explicacao order-2">
+        <h2 class="wavy-text d-none d-md-block">e o menu?</h2>
+        <div class="px-3">
+          <p class="d-none d-md-block mb-0"><strong>TODA SEMANA UM CARDÁPIO NOVO!</strong><br/>Sempre temos opções vegetarianas e veganas. </p>
+          <p><strong>É ALMOÇO. É JANTAR. É PUDIM.</strong></p>
+        </div>
+      </div>
+
+      <div class="col-12  order-lg-4 order-3">
+        <div class="marmitas--box">
+        <h2 class="wavy-text d-md-none">A entrega</h2>
+        <div class="px-5 marmitas--explicacao">
+          <p class="d-none d-md-block pb-4 pt-3">A entrega é feita duas vezes por semana,<br/> em horário comercial.</p>
+          <p class="d-block d-md-none">Peça quantas marmitas quiser a qualquer hora. <strong>A ENTREGA É FEITA DUAS VEZES POR SEMANA, EM HORÁRIO COMERCIAL.</strong></p>
+        </div>
+
+
+          <div class="row">
+            <div class="col-md-3 py-3 col-6 ">
+              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
+              <use xlink:href="#ico-calendario"/>
+              </svg>
+              <p>faça o pedido até</p>
+              <h5>Segunda</h5>
+              <p>meio-dia</p>
+
+              <svg class="manicula ctl-ico ctl-ico--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2 18.8" style="enable-background:new 0 0 32.2 18.8;" xml:space="preserve">
+                <use xlink:href="#ico-manicula" class="fill-primary"/>
+              </svg>
+
+            </div>
+
+            <div class="col-md-3 py-3 col-6    separador-right">
+              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
+                <use xlink:href="#ico-marmita"/>
+              </svg>
+              <p>receba na</p>
+              <h5>Terça</h5>
+              <p>em horário comercial</p>
+            </div>
+
+            <div class="col-md-3 py-3 col-6  ">
+              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
+              <use xlink:href="#ico-calendario"/>
+              </svg>
+              <p>faça o pedido até</p>
+              <h5>Quinta</h5>
+              <p>meio-dia</p>
+
+              <svg class="manicula ctl-ico ctl-ico--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2 18.8" style="enable-background:new 0 0 32.2 18.8;" xml:space="preserve">
+                <use xlink:href="#ico-manicula" class="fill-primary"/>
+              </svg>
+            </div>
+
+            <div class="col-md-3 py-3 col-6  ">
+              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
+                <use xlink:href="#ico-marmita"/>
+              </svg>
+              <p>receba na</p>
+              <h5>Sexta</h5>
+              <p>em horário comercial</p>
+            </div>
+
+          </div>
+
+       </div>
+
+      </div>
+
+      <div class="col-lg-4 marmitas--explicacao order-lg-3 order-4">
+        <h2 class="wavy-text d-md-none d-lg-block">promoções!</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-6 col-md-4 col-lg-6 promo mb-5 mt-3 mb-lg-0 mt-md-0">
+            <strong class="text-primary">na compra de 7+ marmitas</strong>
+
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 512 181" style="enable-background:new 0 0 512 181;" xml:space="preserve">               <defs>
+                 <path id="pathpromo" d="M21.5,58.5C82.3,129.4,165,173,256,173s173.7-43.6,234.5-114.5"/>
+               </defs>
+               <polygon class="fill-primary" points="255.9,66.9 238.5,79.6 245.2,59.1 227.8,46.4 249.3,46.5 256,26.1 262.6,46.5 284.2,46.6 266.7,59.2
+               	273.4,79.6 "/>
+
+            <text text-anchor="middle">
+              <textPath startOffset="50%" class="fill-secondary svgtext--lg" xlink:href="#pathpromo">entrega grátis!</textPath>
+            </text>
+
+            </svg>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-6 promo mb-5 mt-3 mb-lg-0 mt-md-0">
+
+
+            <strong class="text-primary">na compra de 14 marmitas</strong>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 512 181" style="enable-background:new 0 0 512 181;" xml:space="preserve">               <defs>
+                 <path id="pathpromo" d="M21.5,58.5C82.3,129.4,165,173,256,173s173.7-43.6,234.5-114.5"/>
+               </defs>
+               <polygon class="fill-primary" points="255.9,66.9 238.5,79.6 245.2,59.1 227.8,46.4 249.3,46.5 256,26.1 262.6,46.5 284.2,46.6 266.7,59.2
+               	273.4,79.6 "/>
+
+            <text text-anchor="middle">
+              <textPath startOffset="50%" class="fill-secondary svgtext--lg" xlink:href="#pathpromo">a 15ª é de brinde!</textPath>
+            </text>
+
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- //row -->
+    </div>
+
+    <!-- //container -->
+  </div>
+
+</section>
+
+    <?php
+
+    $posts = get_field('produtos');
+    if( $posts ): ?>
+  <section id="marmitas" class="pb-5 archive-marmita">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-4 mx-auto mb-4">
+          <h2 class="wavy-text">Cardápio da semana</h2>
+          <p class="marmitas--explicacao d-lg-none"><strong>TODA SEMANA UM CARDÁPIO NOVO!</strong><br/>Sempre temos opções vegetarianas e veganas.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+          <div class="col-lg-4 col-md-6 col-12 mb-30px">
+            <?php setup_postdata($post);
+            get_template_part( 'loop-templates/content-marmita', get_post_field( 'post_name', get_post() )); ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php endif; ?>
+
+
+  <a class="ctl-cart <?php $cc =(int)WC()->cart->get_cart_contents_count(); echo ($cc > 0 ? 'readypop' : 'scrollpop') ?> slide-up poponce" href="<?php echo wc_get_cart_url(); ?>">
+    <div class="ctl-cart__count"><span class="no"><?php echo WC()->cart->get_cart_contents_count() ?></span> <span class="woocommerce-Price-currencySymbol">itens</span></div>
+    <div class="ctl-cart__goto">ver carrinho</div>
+    <div class="ctl-cart__total"><span class="woocommerce-Price-currencySymbol">R$</span><span class="no"><?php echo WC()->cart->get_cart_contents_total() ?></span></div>
+  </a>

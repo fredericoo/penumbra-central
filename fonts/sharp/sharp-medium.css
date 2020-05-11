@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'sharp05';
+    src: url('sharpgrotesk-medium05-webfont.eot');
+    src: url('sharpgrotesk-medium05-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sharpgrotesk-medium05-webfont.woff2') format('woff2'),
+         url('sharpgrotesk-medium05-webfont.woff') format('woff'),
+         url('sharpgrotesk-medium05-webfont.ttf') format('truetype'),
+         url('sharpgrotesk-medium05-webfont.svg#sharp_groteskmedium_05') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sharp10';
+    src: url('sharpgrotesk-medium10-webfont.eot');
+    src: url('sharpgrotesk-medium10-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sharpgrotesk-medium10-webfont.woff2') format('woff2'),
+         url('sharpgrotesk-medium10-webfont.woff') format('woff'),
+         url('sharpgrotesk-medium10-webfont.ttf') format('truetype'),
+         url('sharpgrotesk-medium10-webfont.svg#sharp_groteskmedium_10') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sharp15';
+    src: url('sharpgrotesk-medium15-webfont.eot');
+    src: url('sharpgrotesk-medium15-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sharpgrotesk-medium15-webfont.woff2') format('woff2'),
+         url('sharpgrotesk-medium15-webfont.woff') format('woff'),
+         url('sharpgrotesk-medium15-webfont.ttf') format('truetype'),
+         url('sharpgrotesk-medium15-webfont.svg#sharp_groteskmedium_15') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sharp20';
+    src: url('sharpgrotesk-medium20-webfont.eot');
+    src: url('sharpgrotesk-medium20-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sharpgrotesk-medium20-webfont.woff2') format('woff2'),
+         url('sharpgrotesk-medium20-webfont.woff') format('woff'),
+         url('sharpgrotesk-medium20-webfont.ttf') format('truetype'),
+         url('sharpgrotesk-medium20-webfont.svg#sharp_groteskmedium_20') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sharp25';
+    src: url('sharpgrotesk-medium25-webfont.eot');
+    src: url('sharpgrotesk-medium25-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sharpgrotesk-medium25-webfont.woff2') format('woff2'),
+         url('sharpgrotesk-medium25-webfont.woff') format('woff'),
+         url('sharpgrotesk-medium25-webfont.ttf') format('truetype'),
+         url('sharpgrotesk-medium25-webfont.svg#sharp_groteskmedium_25') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
