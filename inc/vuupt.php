@@ -42,7 +42,7 @@ function pnmbr_add_to_vuupt( $order_id ){
 	       	$name		= $order->billing_first_name;
         	$surname	= $order->billing_last_name;
         	$email		= $order->billing_email;
-          $phone = $order->billing_phone;
+          $phone = '55'.$order->billing_phone;
           $notes = $order->get_customer_note();
           $address = formatted_shipping_address($order);
         	$apikey 	= "8sGsj2Cu1UQmUVTX";
