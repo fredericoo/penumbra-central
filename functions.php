@@ -28,7 +28,7 @@ $understrap_includes = array(
 	'/smart-image.php',                      // Load deprecated functions.
 	'/penumbra.php',                      // Load deprecated functions.
 	'/ajax-loading.php',                      // Load deprecated functions.
-	'/vuupt.php',                      // Load deprecated functions.
+	// '/vuupt.php',                      // Load deprecated functions.
 );
 
 foreach ( $understrap_includes as $file ) {
