@@ -32,19 +32,23 @@ function setupContent() {
 
   lazyLoadInstance.update();
 
-  var nodeList = document.querySelectorAll('.carousel');
-  for (var i = 0, t = nodeList.length; i < t; i++) {
-    var flkty = Flickity.data(nodeList[i]);
+  // initialise flickity
+  var flktyCarousels = document.querySelectorAll('.carousel');
+  [].map.call(flktyCarousels, carousel => {
+    let flkty = Flickity.data(carousel);
     if (!flkty) {
-      var flktyData = nodeList[i].getAttribute('data-flickity');
+      const flktyData = carousel.getAttribute('data-flickity');
       if (flktyData) {
-        var flktyOptions = JSON.parse(flktyData);
-        new Flickity(nodeList[i], flktyOptions);
+        const flktyOptions = JSON.parse(flktyData);
+        flkty = new Flickity(carousel, flktyOptions);
       } else {
-        new Flickity(nodeList[i]);
+        flkty = new Flickity(carousel);
       }
+      // do not activate anything whilst the user is dragging
+      flkty.on('dragStart', () => flkty.slider.childNodes.forEach(slide => slide.style.pointerEvents = "none") );
+      flkty.on('dragEnd', () => flkty.slider.childNodes.forEach(slide => slide.style.pointerEvents = "all") );
     }
-  }
+  });
 
   isotope = jQuery('.grid--packery').isotope({
     itemSelector: '.grid__item',
