@@ -1406,3 +1406,9 @@ display: none !important;
 		display: none;
 	}
 }
+
+.payment_box.payment_method_stripe {
+	label {
+		display: none;
+	}
+}
