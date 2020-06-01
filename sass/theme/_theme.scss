@@ -63,7 +63,6 @@ html, body {
 
 	.ctl-prompter {
 		align-self: stretch;
-		width: 100%;
 		padding-top: 4px;
 		padding-bottom: 4px;
 
@@ -83,7 +82,7 @@ html, body {
 				flex-grow: 1;
 				display: inline-block;
 				padding-right: 10px;
-				animation: marquee 5s linear infinite;
+				animation: marquee 10s linear infinite;
 			}
 		}
 
