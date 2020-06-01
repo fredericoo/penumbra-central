@@ -214,10 +214,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 						<div class="ctl-prompter">
-							<span>
-								Extra Extra! Nossa Senhora da Marmita inaugura serviço de entregas.
-								<?php //echo get_theme_mod( 'penumbra_prompter' ); ?>
-							</span>
+							<div class="marquee">
+								<?php $marquee = get_theme_mod( 'penumbra_prompter' ); ?>
+								<span>
+										<?php echo $marquee ?>
+								</span>
+								<span aria-hidden="true">
+										<?php echo $marquee; ?>
+								</span>
+								<span aria-hidden="true">
+										<?php echo $marquee; ?>
+								</span>
+								<span aria-hidden="true">
+										<?php echo $marquee; ?>
+								</span>
+
+							</div>
+
 						</div>
 
 						<?php wp_nav_menu(

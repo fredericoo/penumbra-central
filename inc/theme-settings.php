@@ -19,9 +19,9 @@ if ( ! function_exists( 'understrap_setup_theme_default_settings' ) ) {
 			set_theme_mod( 'understrap_posts_index_style', 'default' );
 		}
 
-		// Sidebar position.
+		// Prompter text.
 		$penumbra_prompter = get_theme_mod( 'penumbra_prompter' );
-		if ( '' == $understrap_sidebar_position ) {
+		if ( '' == $penumbra_prompter ) {
 			set_theme_mod( 'penumbra_prompter', 'você está n’A Central' );
 		}
 
