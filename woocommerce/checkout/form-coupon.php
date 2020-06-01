@@ -22,6 +22,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 }
 
 ?>
+
 <div class="woocommerce-form-coupon-toggle">
 <?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Tem um cupom promocional?', 'understrap' ) . ' <a href="#" class="showcoupon">' . __( 'Clique aqui p’ra ser feliz', 'understrap' ) . '</a>' ), 'notice' ); ?></div>
 

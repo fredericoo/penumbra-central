@@ -21,7 +21,13 @@ if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
+
 <div id="payment" class="woocommerce-checkout-payment">
+
+	<div class="marmitas--box container">
+			<?php get_template_part( 'components/entrega-row'); ?>
+	</div>
+	
 	<h3 id="order_review_heading" class="mt-5 mb-0"><?php esc_html_e( 'Forma de pagamento', 'understrap' ); ?></h3>
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">

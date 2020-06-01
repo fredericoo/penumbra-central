@@ -173,6 +173,14 @@
 		"oAP": "/comments.php",
 		"oF": 0
 		},
+	"/components/entrega-row.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/entrega-row.php",
+		"oF": 0
+		},
 	"/composer.json": {
 		"ft": 524288,
 		"oA": 1,

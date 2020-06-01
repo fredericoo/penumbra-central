@@ -40,54 +40,7 @@
           <p class="d-block d-md-none">Peça quantas marmitas quiser a qualquer hora. <strong>A ENTREGA É FEITA DUAS VEZES POR SEMANA, EM HORÁRIO COMERCIAL.</strong></p>
         </div>
 
-
-          <div class="row">
-            <div class="col-md-3 py-3 col-6 ">
-              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
-              <use xlink:href="#ico-calendario"/>
-              </svg>
-              <p>faça o pedido até</p>
-              <h5>Segunda</h5>
-              <p>meio-dia</p>
-
-              <svg class="manicula ctl-ico ctl-ico--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2 18.8" style="enable-background:new 0 0 32.2 18.8;" xml:space="preserve">
-                <use xlink:href="#ico-manicula" class="fill-primary"/>
-              </svg>
-
-            </div>
-
-            <div class="col-md-3 py-3 col-6    separador-right">
-              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
-                <use xlink:href="#ico-marmita"/>
-              </svg>
-              <p>receba na</p>
-              <h5>Terça</h5>
-              <p>em horário comercial</p>
-            </div>
-
-            <div class="col-md-3 py-3 col-6  ">
-              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
-              <use xlink:href="#ico-calendario"/>
-              </svg>
-              <p>faça o pedido até</p>
-              <h5>Quinta</h5>
-              <p>meio-dia</p>
-
-              <svg class="manicula ctl-ico ctl-ico--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.2 18.8" style="enable-background:new 0 0 32.2 18.8;" xml:space="preserve">
-                <use xlink:href="#ico-manicula" class="fill-primary"/>
-              </svg>
-            </div>
-
-            <div class="col-md-3 py-3 col-6  ">
-              <svg class="ctl-ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.7 224.6" style="enable-background:new 0 0 223.7 224.6;" xml:space="preserve">
-                <use xlink:href="#ico-marmita"/>
-              </svg>
-              <p>receba na</p>
-              <h5>Sexta</h5>
-              <p>em horário comercial</p>
-            </div>
-
-          </div>
+        <?php get_template_part( 'components/entrega-row'); ?>
 
        </div>
 
@@ -167,6 +120,43 @@
   <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
 
+
+<?php
+// check if the repeater field has rows of data
+if( have_rows('secoes') ):
+
+// loop through the rows of data
+while ( have_rows('secoes') ) : the_row(); ?>
+
+  <section class="secao">
+    <div class="container">
+      <div class="secao__info">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 512 167" style="width: 100%" xml:space="preserve" class="typeonapath">
+
+          <text text-anchor="middle">
+            <textPath startOffset="50%" class="secao__info__titulo svgtext" xlink:href="#typepath"><?php the_sub_field('titulo') ?></textPath>
+          </text>
+        </svg>
+        <p class="secao__info__texto"><?php the_sub_field('texto') ?></p>
+      </div>
+
+      <div class="row justify-content-center">
+        <?php $posts = get_sub_field('produtos'); foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+          <div class="col-lg-4 col-md-6 col-12 mb-30px">
+            <?php setup_postdata($post);
+            get_template_part( 'loop-templates/content-marmita', get_post_field( 'post_name', get_post() )); ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+<?php endwhile;
+wp_reset_postdata();
+endif;
+
+?>
 
   <a class="ctl-cart <?php $cc =(int)WC()->cart->get_cart_contents_count(); echo ($cc > 0 ? 'readypop' : 'scrollpop') ?> slide-up poponce" href="<?php echo wc_get_cart_url(); ?>">
     <div class="ctl-cart__count"><span class="no"><?php echo WC()->cart->get_cart_contents_count() ?></span> <span class="woocommerce-Price-currencySymbol">itens</span></div>
