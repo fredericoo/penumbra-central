@@ -16,7 +16,7 @@ endif;
 		smart_image($thumbnail_id,'large','nobg cat-icon z-up','fade poponce');
 	} ?>
 	<div class="row">
-		<div class="col-8 col-md-7 col-lg-6 px-0">
+		<div class="<?php echo (get_post_thumbnail_id() ? 'col-8 col-md-7 col-lg-6' : 'col-12') ?> px-0">
 			<div class="p-3">
 				<a data-toggle="modal" data-target="#modal" data-modal-id="<?php echo get_the_ID(); ?>" href="<?php the_permalink() ?>"><h3 class="produto__titulo"><?php the_title() ?></h3></a>
 				<?php $price = get_post_meta( get_the_ID(), '_price', true ); ?>
