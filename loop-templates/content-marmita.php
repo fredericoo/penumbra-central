@@ -1,4 +1,4 @@
-<div class="produto produto--marmita scrollpop fade poponce p-relative
+<div data-toggle="modal" data-target="#modal" data-modal-id="<?php echo get_the_ID(); ?>" class="grid-item produto produto--marmita scrollpop fade poponce p-relative
 <?php $terms = get_the_terms( get_the_ID(), 'product_cat' );
 
 if ( $terms && ! is_wp_error( $terms ) ) :
@@ -13,7 +13,7 @@ endif;
 	">
 	<?php foreach ($terms as $cat) {
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
-		smart_image($thumbnail_id,'large','nobg cat-icon z-up','fade poponce');
+		smart_image($thumbnail_id,'large','nobg cat-icon','fade poponce');
 	} ?>
 	<div class="row">
 		<div class="<?php echo (get_post_thumbnail_id() ? 'col-8 col-md-7 col-lg-6' : 'col-12') ?> px-0">

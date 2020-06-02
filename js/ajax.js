@@ -115,8 +115,7 @@ jQuery('#modal').on('show.bs.modal', function (event) {
         }
     }});
   } else {
-    modal.querySelector('.modal-title').innerHTML = 'Erro'
-    modal.querySelector('.modal-body').innerHTML = 'Falha ao carregar post. Entre em contato com o suporte.'
+    modal.querySelector('.modal-body').innerHTML = 'Falha ao carregar post #'+postId+'. Entre em contato com o suporte.'
   }
 
 })

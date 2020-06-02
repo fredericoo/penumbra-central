@@ -17,24 +17,31 @@
 
     <div class="row">
 
+      <?php
+      $secao1 = get_field('secao_1');
+      if( $secao1 ): ?>
       <div class="col-lg-4 col-md-6 marmitas--explicacao order-1">
-        <h2 class="wavy-text">me explica!</h2>
+        <h2 class="wavy-text display-4"><?php echo $secao1['titulo']; ?></h2>
         <div class="px-5">
-          <p><strong>NÃO É DELIVERY EM TEMPO REAL</strong>! São entregas agendadas de <strong>MARMITAS CONGELADAS</strong>, pra você ter sempre à mão quando bater a fome.</p>
+          <?php echo $secao1['texto']; ?>
         </div>
       </div>
+      <?php endif; ?>
 
+      <?php
+      $secao2 = get_field('secao_2');
+      if( $secao2 ): ?>
       <div class="col-lg-4 col-md-6 marmitas--explicacao order-2">
-        <h2 class="wavy-text d-none d-md-block">e o menu?</h2>
+        <h2 class="wavy-text d-none d-md-block display-4"><?php echo $secao2['titulo']; ?></h2>
         <div class="px-3">
-          <p class="d-none d-md-block mb-0"><strong>TODA SEMANA UM CARDÁPIO NOVO!</strong><br/>Sempre temos opções vegetarianas e veganas. </p>
-          <p><strong>É ALMOÇO. É JANTAR. É PUDIM.</strong></p>
+          <?php echo $secao2['texto']; ?>
         </div>
       </div>
+      <?php endif; ?>
 
       <div class="col-12  order-lg-4 order-3">
         <div class="marmitas--box">
-        <h2 class="wavy-text d-md-none">A entrega</h2>
+        <h2 class="wavy-text d-md-none display-4">A entrega</h2>
         <div class="px-5 marmitas--explicacao">
           <p class="d-none d-md-block pb-4 pt-3">A entrega é feita duas vezes por semana,<br/> em horário comercial.</p>
           <p class="d-block d-md-none">Peça quantas marmitas quiser a qualquer hora. <strong>A ENTREGA É FEITA DUAS VEZES POR SEMANA, EM HORÁRIO COMERCIAL.</strong></p>
@@ -47,7 +54,7 @@
       </div>
 
       <div class="col-lg-4 marmitas--explicacao order-lg-3 order-4">
-        <h2 class="wavy-text d-md-none d-lg-block">promoções!</h2>
+        <h2 class="wavy-text d-md-none d-lg-block display-4">promoções!</h2>
 
         <div class="row justify-content-center">
           <div class="col-6 col-md-4 col-lg-6 promo mb-5 mt-3 mb-lg-0 mt-md-0">
@@ -95,16 +102,26 @@
 
 </section>
 
+<nav class="scrollmenu sticky-top" style="top: 60px;">
+    <div class="container">
+      <a href="#marmitas" class="scroll">Cardápio da semana</a>
+      <?php $ss == 0; while ( have_rows('secoes') ) : the_row(); $ss++; ?>
+        <a href="#sec-<?php echo $ss; ?>" class="scroll"><?php the_sub_field('titulo') ?></a>
+      <?php endwhile;
+      wp_reset_postdata(); ?>
+    </div>
+</nav>
+
     <?php
 
     $posts = get_field('produtos');
     if( $posts ): ?>
-  <section id="marmitas" class="pb-5 archive-marmita">
+  <section id="marmitas" class="pb-5 archive-marmita secao">
     <div class="container">
+      <h2 class="display-4">Cardápio da semana</h2>
+      <p class="marmitas--explicacao d-lg-none"><strong>TODA SEMANA UM CARDÁPIO NOVO!</strong><br/>Sempre temos opções vegetarianas e veganas.</p>
       <div class="row">
         <div class="col-md-12 col-lg-4 mx-auto mb-4">
-          <h2 class="wavy-text">Cardápio da semana</h2>
-          <p class="marmitas--explicacao d-lg-none"><strong>TODA SEMANA UM CARDÁPIO NOVO!</strong><br/>Sempre temos opções vegetarianas e veganas.</p>
         </div>
       </div>
       <div class="row justify-content-center">
@@ -124,21 +141,17 @@
 <?php
 // check if the repeater field has rows of data
 if( have_rows('secoes') ):
-
+$ss = 0;
 // loop through the rows of data
-while ( have_rows('secoes') ) : the_row(); ?>
+while ( have_rows('secoes') ) : the_row(); $ss++; ?>
 
-  <section class="secao">
+  <section id="sec-<?php echo $ss; ?>" class="secao">
     <div class="container">
-      <div class="secao__info">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 512 167" style="width: 100%" xml:space="preserve" class="typeonapath">
+      <div class="secao__info mb-2">
 
-          <text text-anchor="middle">
-            <textPath startOffset="50%" class="secao__info__titulo svgtext" xlink:href="#typepath"><?php the_sub_field('titulo') ?></textPath>
-          </text>
-        </svg>
-        <p class="secao__info__texto"><?php the_sub_field('texto') ?></p>
+        <h2 class="display-4 mb-0"><?php the_sub_field('titulo') ?></h2>
+
+        <div class="marmitas--explicacao"><?php the_sub_field('texto') ?></div>
       </div>
 
       <div class="row justify-content-center">
@@ -147,7 +160,7 @@ while ( have_rows('secoes') ) : the_row(); ?>
             <?php setup_postdata($post);
             get_template_part( 'loop-templates/content-marmita', get_post_field( 'post_name', get_post() )); ?>
           </div>
-        <?php endforeach; ?>
+        <?php endforeach; wp_reset_postdata(); ?>
       </div>
     </div>
   </section>

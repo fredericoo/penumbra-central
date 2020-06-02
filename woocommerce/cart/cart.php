@@ -173,4 +173,26 @@ do_action( 'woocommerce_before_cart' ); ?>
 	?>
 </div>
 
+<div class="modal fade modal--produto" id="precart" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <button type="button" class="fechar" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body p-0">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php do_action( 'woocommerce_after_cart' );
+
+wp_enqueue_script( 'hijacker', get_template_directory_uri() . '/js/checkout-hijacker-min.js', array(), '1', true );
+
+if ( $post = get_page_by_path( 'upsell', OBJECT, 'page' ) )
+    $upsell = $post->ID;
+else
+    $upsell = 0;
+
+wp_localize_script( 'hijacker', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'upsell' => $upsell ));

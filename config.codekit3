@@ -301,6 +301,14 @@
 		"oAP": "/content-templates/content-page-quem-somos.php",
 		"oF": 0
 		},
+	"/content-templates/content-page-upsell.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/content-templates/content-page-upsell.php",
+		"oF": 0
+		},
 	"/content-templates/content-page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1216,6 +1224,28 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/charming-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/checkout-hijacker-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/checkout-hijacker-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/checkout-hijacker.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/checkout-hijacker-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

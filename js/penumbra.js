@@ -132,3 +132,42 @@ jQuery(document).ready(function($){
 var pushdata = [];
 var inTransition = false;
 const docMain = document.querySelector('main');
+
+(function() {
+  'use strict';
+
+  let section = document.querySelectorAll(".secao");
+  let sections = {};
+  let i = 0;
+  let isAnimating = false;
+
+  [].forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+  window.onscroll = () => {
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    let selectedPos = '';
+
+    for (i in sections) {
+      if (sections[i] <= (scrollPosition+120) ) {
+        selectedPos = i;
+      }
+    }
+
+    if (selectedPos != '') {
+      const scrollSelected = document.querySelector('a[href*=' + selectedPos + ']');
+      if (!scrollSelected.classList.contains('current')) {
+        document.querySelectorAll('.current').forEach(current => current.classList.remove('current') );
+        scrollSelected.classList.add('current');
+        if (!isAnimating) {
+          isAnimating = true;
+          jQuery('.scrollmenu .container').animate(
+          {  scrollLeft: scrollSelected.offsetLeft },
+          500,
+          () => isAnimating = false);
+        }
+      }
+    }
+  };
+})();

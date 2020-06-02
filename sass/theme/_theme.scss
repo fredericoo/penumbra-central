@@ -407,6 +407,19 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 	line-height: 1;
 }
 
+.display-4 {
+	font-family: $font-family-adelle;
+	font-size: .9rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .3em;
+	margin-bottom: 1.8rem;
+	color: theme-color(primary);
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
 .section {
 	&--intro {
 		.quick-links {
@@ -469,6 +482,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 }
 
 .produto {
+
 	a {
 		&:hover {
 			text-decoration: none;
@@ -561,7 +575,6 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 					}
 				}
 			}
-
 		}
 	}
 }
@@ -600,6 +613,9 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 				-webkit-line-clamp: initial !important;
 				-webkit-box-orient: vertical;
 				height: auto;
+				@include media-breakpoint-down(sm) {
+					padding-right: 48px;
+				}
 			}
 			&__desc {
 				flex-grow: 1;
@@ -756,15 +772,31 @@ a:hover {
 	border-top-right-radius: 8px;
 	left: var(--remainder);
 	width: calc(100vw - (var(--remainder)*2) );
-	background: theme-color(primary);
+
+	//background: theme-color(primary);
+
+	background-image: -ms-radial-gradient(50% -8px, circle closest-corner, transparentize(theme-color(primary),1) 0, transparentize(theme-color(primary),1) 23px, theme-color(primary) 24px);
+	background-image: -moz-radial-gradient(50% -8px, circle closest-corner, transparentize(theme-color(primary),1) 0, transparentize(theme-color(primary),1) 23px, theme-color(primary) 24px);
+	background-image: -o-radial-gradient(50% -8px, circle closest-corner, transparentize(theme-color(primary),1) 0, transparentize(theme-color(primary),1) 23px, theme-color(primary) 24px);
+	background-image: -webkit-radial-gradient(50% -8px, circle closest-corner, transparentize(theme-color(primary),1) 0, transparentize(theme-color(primary),1) 23px, theme-color(primary) 24px);
+
+
 	color: theme-color(background);
 
 	&.animate {
 		color: theme-color(primary);
+		padding-bottom: 32px;
+		@include media-breakpoint-down(sm) {
+			padding-bottom: 48px;
+		}
 	}
 
-	&:hover {
-		color: theme-color(background);
+	@include mouse {
+		&:hover {
+			color: theme-color(background);
+			padding-bottom: 24px;
+			transition-duration: .3s;
+		}
 	}
 
 	&__count {
@@ -776,6 +808,9 @@ a:hover {
 		font-size: 60%;
 		letter-spacing: .2em;
 		align-self: center;
+		@include media-breakpoint-down(sm) {
+			padding-top: 8px;
+		}
 	}
 	&__total {
 		align-self: center;
@@ -1102,6 +1137,7 @@ a:hover {
 	right: -12px;
 	top: -12px;
 	padding-bottom: 0px;
+	z-index: 101;
 	img {
 		object-fit: contain !important;
 		object-position: right !important;
@@ -1189,8 +1225,8 @@ a:hover {
 }
 
 @keyframes slide {
-    from { background-position: 0; }
-    to { background-position: -100%; }
+    from { background-position: 0px; }
+    to { background-position: -16px; }
 }
 
 .product-subtotal {
@@ -1274,16 +1310,6 @@ a:hover {
 }
 
 .wavy-text {
-	font-family: $font-family-adelle;
-	font-size: .9rem;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: .3em;
-	margin-bottom: 1.8rem;
-	color: theme-color(primary);
-	text-align: center;
-	padding-top: 4px;
-	padding-bottom: 4px;
 
 	position: relative;
 	&:before {
@@ -1294,7 +1320,7 @@ a:hover {
 		@extend .wave--top;
 		top: -8px;
 		left: 0;
-		animation: slide 5s linear infinite;
+		animation: slide 1s linear infinite;
 	}
 	&:after {
 		content: '';
@@ -1304,7 +1330,50 @@ a:hover {
 		@extend .wave--bottom;
 		bottom: -8px;
 		left: 0;
-		animation: slide 5s linear infinite;
+		animation: slide 1s linear infinite;
+	}
+}
+
+.scrollmenu {
+  background-color: theme-color('background');
+	z-index: 500;
+	overflow: hidden;
+	margin-bottom: 2rem;
+	border-top: 1px solid theme-color('primary');
+	border-bottom: 1px solid theme-color('primary');
+
+
+	.container {
+		overflow: auto;
+	  white-space: nowrap;
+		overflow: -moz-scrollbars-none;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	a {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 60%;
+		letter-spacing: .2em;
+
+		display: inline-block;
+	  padding: 14px;
+	  text-decoration: none;
+
+
+			&:hover {
+				@include touch {
+					color: inherit;
+				}
+			}
+
+		&.current {
+			background: theme-color('primary');
+			color: theme-color('background');
+		}
 	}
 }
 
@@ -1418,4 +1487,19 @@ display: none !important;
 	label {
 		display: none;
 	}
+}
+
+.grid-item {
+	cursor: hand !important;
+	cursor: pointer !important;
+	user-select: none;
+
+	&:hover {
+		.produto__link {
+			@include mouse {
+					transform: rotate(2deg);
+			}
+		}
+	}
+
 }

@@ -1,4 +1,4 @@
-<div class="produto produto--marmita scrollpop fade poponce p-relative
+<div data-toggle="modal" data-target="#modal" data-modal-id="<?php echo get_the_ID(); ?>" class="grid-item produto produto--marmita scrollpop fade poponce p-relative
 <?php $terms = get_the_terms( get_the_ID(), 'product_cat' );
 
 if ( $terms && ! is_wp_error( $terms ) ) :
