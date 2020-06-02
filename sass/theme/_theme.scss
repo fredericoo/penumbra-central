@@ -553,6 +553,7 @@ h1, h2, h3, h4, h5, h6 {
 
 		.produto {
 			&__titulo {
+				text-transform: none;
 				font-family: $font-family-adelle;
 				font-weight: 700;
 				color: theme-color(secondary);
@@ -721,6 +722,49 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
+.shipping-calculator-button {
+	border: 1px solid;
+	padding: .618em 1.618em;
+	margin-bottom: .5rem;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	color: theme-color('secondary');
+	@include mouse {
+		&:hover {
+			background: theme-color('secondary');
+			border-color: theme-color('secondary');
+			color: theme-color('background')
+		}
+	}
+}
+
+.shipping-calculator-form {
+	#calc_shipping_state_field {
+		span {
+			width: 100%;
+		}
+	}
+	.input-text, .select2 {
+		@extend .form-control;
+		margin-bottom: 0 !important;
+	}
+	.select2 {
+		border-bottom: none !important;
+		padding-left: 0 !important
+	}
+	button {
+		@extend .btn;
+		@extend .btn-lg;
+		@extend .btn-secondary;
+		@extend .btn-block;
+	}
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	right: 8px !important;
+	border-color: transparent transparent theme-color('secondary') transparent !important;
+}
 .btn-rounded {
 	border-radius: 8px;
 }
@@ -1581,4 +1625,8 @@ display: none !important;
 		}
 	}
 
+}
+
+.delivery-when {
+	background: theme-color('tertiary');
 }

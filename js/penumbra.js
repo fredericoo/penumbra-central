@@ -50,23 +50,6 @@ function setupContent() {
     }
   });
 
-  isotope = jQuery('.grid--packery').isotope({
-    itemSelector: '.grid__item',
-    percentPosition: true,
-    layoutMode: 'packery',
-    packery: {
-      columnWidth: '.grid-sizer'
-    }
-  });
-  isotope = jQuery('.grid--fitRows').isotope({
-    itemSelector: '.grid__item',
-    percentPosition: true,
-    layoutMode: 'fitRows',
-    fitRows: {
-      columnWidth: '.grid-sizer'
-    }
-  });
-
   setTimeout(function() {
     scrollPop.doPop();
   }, 200);

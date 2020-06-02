@@ -14,8 +14,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	 */
 	function understrap_scripts() {
 
-		$penumbra_options = ['flickity'	=> true,
-												 'isotope'	=> true,
+		$penumbra_options = ['flickity'	=> false,
+												 'isotope'	=> false,
 												 'ajax'			=> true,
 											 	];
 
@@ -38,10 +38,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
 		wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), $js_version, true );
 		wp_enqueue_script( 'scrollpop', get_template_directory_uri() . '/js/scrollpop-min.js', array(), $js_version, true );
-		wp_enqueue_script( 'nearby', get_template_directory_uri() . '/js/nearby-min.js', array(), $js_version, true );
 		// wp_enqueue_script( 'charming', get_template_directory_uri() . '/js/charming-min.js', array(), $js_version, true );
-		wp_enqueue_script( 'tweenmax', get_template_directory_uri() . '/js/TweenMax-min.js', array(), $js_version, true );
-		wp_enqueue_script( 'particles', get_template_directory_uri() . '/js/particles.js', array(), $js_version, true );
 
 		if ($penumbra_options['flickity']) wp_enqueue_script( 'flickity', get_template_directory_uri() . '/js/flickity-min.js', array(), $js_version, true );
 		if ($penumbra_options['isotope']) wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope-min.js', array(), $js_version, true );
@@ -51,10 +48,10 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 			wp_localize_script( 'ajax', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'homeid' => get_option('page_on_front') ));
 		}
 		wp_enqueue_script( 'lazy', get_template_directory_uri() . '/js/lazy.js', array(), $js_version, true );
-		wp_enqueue_script( 'mtm', get_template_directory_uri() . '/js/penumbra.js', array(), $js_version, true );
+		wp_enqueue_script( 'pnmbr', get_template_directory_uri() . '/js/penumbra.js', array(), $js_version, true );
 
-		wp_enqueue_style( 'share-buttons', get_template_directory_uri() . '/css/share-buttons.css', array(), $css_version );
-		wp_enqueue_script( 'share-buttons', get_template_directory_uri() . '/js/share-buttons.js', array(), $js_version, true );
+		// wp_enqueue_style( 'share-buttons', get_template_directory_uri() . '/css/share-buttons.css', array(), $css_version );
+		// wp_enqueue_script( 'share-buttons', get_template_directory_uri() . '/js/share-buttons.js', array(), $js_version, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );

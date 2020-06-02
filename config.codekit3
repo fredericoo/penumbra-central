@@ -197,78 +197,6 @@
 		"oAP": "/composer.lock",
 		"oF": 0
 		},
-	"/content-templates/content-ebook.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-ebook.php",
-		"oF": 0
-		},
-	"/content-templates/content-equipe.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-equipe.php",
-		"oF": 0
-		},
-	"/content-templates/content-eventos.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-eventos.php",
-		"oF": 0
-		},
-	"/content-templates/content-page-alcool.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-page-alcool.php",
-		"oF": 0
-		},
-	"/content-templates/content-page-compliance.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-page-compliance.php",
-		"oF": 0
-		},
-	"/content-templates/content-page-contato.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-page-contato.php",
-		"oF": 0
-		},
-	"/content-templates/content-page-conteudo.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-page-conteudo.php",
-		"oF": 0
-		},
-	"/content-templates/content-page-equipe.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-page-equipe.php",
-		"oF": 0
-		},
-	"/content-templates/content-page-geolocation-test.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-page-geolocation-test.php",
-		"oF": 0
-		},
 	"/content-templates/content-page-home.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -285,20 +213,12 @@
 		"oAP": "/content-templates/content-page-marmita.php",
 		"oF": 0
 		},
-	"/content-templates/content-page-portfolio.php": {
+	"/content-templates/content-page-queimao.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/content-templates/content-page-portfolio.php",
-		"oF": 0
-		},
-	"/content-templates/content-page-quem-somos.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-page-quem-somos.php",
+		"oAP": "/content-templates/content-page-queimao.php",
 		"oF": 0
 		},
 	"/content-templates/content-page-upsell.php": {
@@ -315,14 +235,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/content-templates/content-page.php",
-		"oF": 0
-		},
-	"/content-templates/content-portfolio.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/content-templates/content-portfolio.php",
 		"oF": 0
 		},
 	"/content-templates/content-post.php": {
@@ -2260,7 +2172,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/sass/assets/font-awesome.css",
 		"oF": 0,
 		"oS": 0,
@@ -2351,7 +2263,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/sass/understrap/understrap.css",
 		"oF": 0,
 		"oS": 0,
