@@ -54,6 +54,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 		transition: 1.2s cubic-bezier(0.87, 0, 0.13, 1);
 	}
 
+	@media (min-width: 991px) {
+		.loading-sheet {
+			background-size: cover;
+		}
+	}
 
 	body.transition .loading-sheet {
 		top: 0;
