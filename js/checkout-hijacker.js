@@ -1,5 +1,6 @@
 const checkoutBtn = document.querySelector('.wc-proceed-to-checkout .btn');
 let upsellShown = false;
+  document.querySelector('#precart').addEventListener('scroll', ev => scrollPop.doPop(ev));
 
 checkoutBtn.addEventListener("click", (e) => {
   if (upsellShown) return;

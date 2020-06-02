@@ -39,14 +39,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 	.loading-sheet {
 		height: 100vh;
 		width: 100vw;
-		background: #e9d5bc;
+		background: #e74026;
+
+		background-image: url(<?php echo get_template_directory_uri(); ?>/img/pudimloader.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+
 		position: fixed;
-		z-index: 100;
-		top: 100vh;
+		z-index: 1000;
+		top: -100vh;
 		left: 0;
 		pointer-events: none;
-		transition: .4s ease-out;
+		transition: 1.2s cubic-bezier(0.87, 0, 0.13, 1);
 	}
+
+
 	body.transition .loading-sheet {
 		top: 0;
 	}
@@ -151,6 +159,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</svg>
 
 	<aside class="loading-sheet">
+		<div class="spinner">
+
+		</div>
 	</aside>
 
 	<aside class="menu-sheet">

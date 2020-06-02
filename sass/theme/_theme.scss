@@ -16,6 +16,10 @@ html, body {
   }
 }
 
+.modal-backdrop.show {
+	opacity: .8
+}
+
 .navbar {
 	$border-navbar: solid theme-color(secondary);
 
@@ -403,6 +407,10 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 	background: transparent;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	text-transform: lowercase;
+}
+
 .display-1 {
 	line-height: 1;
 }
@@ -492,9 +500,46 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 		// height: 0px;
 		// padding-bottom: 40%;
 		// overflow: hidden;
+		.produto-grid {
+			display: grid;
 
+			grid:
+			"imagem" max(40vh)
+			"titulo" auto
+			"desc" auto
+			"cart" auto
+			"preco" auto / 1fr;
 
-		.row {
+			@include media-breakpoint-up(lg) {
+				grid:
+				"imagem titulo" auto
+				"imagem desc" auto
+				"imagem preco" auto
+				"imagem cart" auto / 1fr 1fr;
+			}
+
+			&__imagem {
+				grid-area: imagem;
+				.lazy-container {
+					padding-bottom: 0;
+					height: 100%;
+				}
+			}
+			&__titulo {
+				grid-area: titulo
+			}
+			&__desc {
+				grid-area: desc
+			}
+			&__preco {
+				grid-area: preco
+			}
+			&__addtocart {
+				grid-area: cart
+			}
+		}
+
+		.produto-grid, .row {
 			margin-left: 0;
 			margin-right: 0;
 			background: theme-color(tertiary);
@@ -629,7 +674,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 			}
 
 			&--marmita {
-				.row {
+				.row, .produto-grid {
 					background-image: none !important;
 					&:after {
 						content: '';
@@ -644,6 +689,40 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 			}
 		}
 	}
+
+	&--upsell {
+		.fechar {
+			box-shadow: none;
+			text-shadow: none;
+		}
+		.produto {
+
+			&--marmita {
+				.produto-grid {
+					grid:
+					"imagem" max(40vh)
+					"titulo" auto
+					"desc" auto
+					"cart" auto
+					"preco" auto / 1fr;
+				}
+				.row, .produto-grid {
+					border-bottom-left-radius: 8px;
+					border-bottom-right-radius: 8px;
+					background-image: none;
+					border-bottom: 2px dotted theme-color(secondary);
+				}
+			}
+		}
+	}
+}
+
+.woocommerce .quantity .qty {
+	width: 100%;
+}
+
+.btn-rounded {
+	border-radius: 8px;
 }
 
 .woocommerce-variation-availability {
@@ -1364,9 +1443,9 @@ a:hover {
 	  text-decoration: none;
 
 
-			&:hover {
+			&:hover, &:active, &:focus {
 				@include touch {
-					color: inherit;
+					color: theme-color('primary');
 				}
 			}
 

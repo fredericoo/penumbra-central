@@ -128,12 +128,15 @@ jQuery('body').on('click','.ajax_add_to_cart',function(e){
 })
 
 jQuery('body').on('added_to_cart',function(){
-  if (!document.querySelector('.ctl-cart')) return false;
   if (addButton) {
     addButton.classList.remove('adding');
-    addButton.innerHTML = "adicionar à sacola";
-    addButton = null; }
-  jQuery('#modal').modal('hide');
+    addButton.classList.add('added');
+    addButton.innerHTML = "Adicionado!";
+    addButton = null;
+  }
+    jQuery('#modal').modal('hide');
+    updateCartPage();
+  if (!document.querySelector('.ctl-cart')) return false;
   document.querySelector('.ctl-cart').classList.add('animate');
   jQuery.ajax({
     type: "post",
@@ -153,3 +156,11 @@ jQuery('body').on('added_to_cart',function(){
     }});
 
 });
+
+const updateCartPage = () => {
+  if (cartBtn = document.querySelector("[name='update_cart']")) {
+
+    cartBtn.removeAttribute('disabled');
+    jQuery(cartBtn).trigger("click");
+  }
+}

@@ -49,12 +49,9 @@ class ScrollPop {
 
 }
 
-jQuery(document).ready(function() {
-  loaded = setTimeout(function(){
-    finishedLoading();
-  }, 3000);
-
-});
+loaded = setTimeout(function(){
+  finishedLoading();
+}, 3000);
 
 imagesLoaded( document.querySelector('main'), function( instance ) {
   clearTimeout(loaded);

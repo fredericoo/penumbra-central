@@ -173,10 +173,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 	?>
 </div>
 
-<div class="modal fade modal--produto" id="precart" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+<div class="modal fade modal--upsell" id="precart" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
     <div class="modal-content">
-      <button type="button" class="fechar" data-dismiss="modal" aria-label="Close">
+      <button type="button" class="fechar text-background border-background" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="modal-body p-0">

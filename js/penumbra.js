@@ -83,15 +83,6 @@ const addLeadingZero = value => {
 
 jQuery(document).ready(function($){
 
-   $('body').on( 'keyup', '.quantity input', function() {
-     jQuery("[name='update_cart']").trigger("click");
-     $(this).val(addLeadingZero($(this).val()));
-   });
-
-   $('body').on( 'click', '.product-quantity button.plus, .product-quantity button.minus', function() {
-     document.querySelector("[name='update_cart']").removeAttribute('disabled');
-   });
-
    $('body').on( 'click', '.ch-qty button.plus, .ch-qty button.minus, .product-quantity button.plus, .product-quantity button.minus', function() {
 
       // Get current quantity values
@@ -118,16 +109,14 @@ jQuery(document).ready(function($){
       $( this ).closest( '.produto__addtocart' ).find('.add_to_cart_button').attr('data-quantity', $('.quantity input').val());
 
       qty.val(addLeadingZero(qty.val()));
-      // if (val > min) {
-      //   $('.ch-qty button.minus').removeClass('disabled');
-      // } else {
-      //   $('.ch-qty button.minus').addClass('disabled');
-      // }
+
+      if ($(this).closest('.shop_table').get(0)) {
+        updateCartPage();
+      }
 
    });
 
 });
-
 
 var pushdata = [];
 var inTransition = false;
@@ -146,7 +135,7 @@ const docMain = document.querySelector('main');
   });
 
   window.onscroll = () => {
-    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     let selectedPos = '';
 
     for (i in sections) {
@@ -164,10 +153,26 @@ const docMain = document.querySelector('main');
           isAnimating = true;
           jQuery('.scrollmenu .container').animate(
           {  scrollLeft: scrollSelected.offsetLeft },
-          500,
+          300,
           () => isAnimating = false);
         }
-      }
     }
-  };
+  }
+}
 })();
+
+
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  let debounceTimeout;
+  threshold = threshold || 100;
+  return function debounced() {
+    clearTimeout( debounceTimeout );
+    var args = arguments;
+    var _this = this;
+    function delayed() {
+      fn.apply( _this, args );
+    }
+    debounceTimeout = setTimeout( delayed, threshold );
+  };
+}
