@@ -1474,6 +1474,10 @@ a:hover {
 		&::-webkit-scrollbar {
 			display: none;
 		}
+		@include media-breakpoint-up(md) {
+			border-left: 1px solid theme-color('primary');
+			border-right: 1px solid theme-color('primary');
+		}
 	}
 
 	a {
