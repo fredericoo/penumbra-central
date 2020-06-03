@@ -17,7 +17,7 @@ const lineEq = (y2, y1, x2, x1, currentVal) => {
 let $root = jQuery('html, body');
 $root.on("click", 'a.scroll',function () {
     $root.animate({
-        scrollTop: jQuery( jQuery.attr(this, 'href') ).offset().top
+        scrollTop: jQuery( jQuery.attr(this, 'href') ).offset().top - 118
     }, 500);
 
     return false;
@@ -111,7 +111,6 @@ const docMain = document.querySelector('main');
   let section = document.querySelectorAll(".secao");
   let sections = {};
   let i = 0;
-  let isAnimating = false;
 
   [].forEach.call(section, function(e) {
     sections[e.id] = e.offsetTop;
@@ -132,13 +131,9 @@ const docMain = document.querySelector('main');
       if (!scrollSelected.classList.contains('current')) {
         document.querySelectorAll('.current').forEach(current => current.classList.remove('current') );
         scrollSelected.classList.add('current');
-        if (!isAnimating) {
-          isAnimating = true;
           jQuery('.scrollmenu .container').animate(
-          {  scrollLeft: scrollSelected.offsetLeft + document.querySelector('.scrollmenu>.container').offsetLeft },
-          300,
-          () => isAnimating = false);
-        }
+          {  scrollLeft: scrollSelected.offsetLeft - document.querySelector('.scrollmenu>.container').offsetLeft },
+          300);
     }
   }
 }
