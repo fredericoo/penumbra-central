@@ -27,7 +27,7 @@ endif;
 		<?php if (get_post_thumbnail_id()): ?>
 			<div class="col-4 col-md-5 col-lg-6 px-0">
 				<div class="p-3">
-					<a data-toggle="modal" data-target="#modal" data-modal-id="<?php echo get_the_ID(); ?>" href="<?php the_permalink() ?>"><?php smart_image(get_post_thumbnail_id() ?: get_option( 'woocommerce_placeholder_image', 0 ),'large','produto__imagem nobg pb-50pc','fade poponce'); ?></a>
+					<a data-toggle="modal" data-target="#modal" data-modal-id="<?php echo get_the_ID(); ?>" href="<?php the_permalink() ?>"><?php smart_image(get_post_thumbnail_id() ?: get_option( 'woocommerce_placeholder_image', 0 ),'medium','produto__imagem nobg pb-50pc','fade poponce'); ?></a>
 				</div>
 			</div>
 		<?php endif; ?>
