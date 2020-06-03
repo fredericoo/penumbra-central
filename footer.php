@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <footer>
 
-	<div class="container-fluid bg-secondary text-background">
+	<div class="container-fluid bg-secondary text-background py-3">
 
 		<?php get_template_part( 'sidebar-templates/sidebar-footerfull') ?>
 
