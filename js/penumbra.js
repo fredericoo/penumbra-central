@@ -135,7 +135,7 @@ const docMain = document.querySelector('main');
         if (!isAnimating) {
           isAnimating = true;
           jQuery('.scrollmenu .container').animate(
-          {  scrollLeft: scrollSelected.offsetLeft },
+          {  scrollLeft: scrollSelected.offsetLeft + document.querySelector('.scrollmenu>.container').offsetLeft },
           300,
           () => isAnimating = false);
         }
@@ -143,19 +143,3 @@ const docMain = document.querySelector('main');
   }
 }
 })();
-
-
-// debounce so filtering doesn't happen every millisecond
-function debounce( fn, threshold ) {
-  let debounceTimeout;
-  threshold = threshold || 100;
-  return function debounced() {
-    clearTimeout( debounceTimeout );
-    var args = arguments;
-    var _this = this;
-    function delayed() {
-      fn.apply( _this, args );
-    }
-    debounceTimeout = setTimeout( delayed, threshold );
-  };
-}

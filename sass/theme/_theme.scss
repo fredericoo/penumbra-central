@@ -1467,7 +1467,7 @@ a:hover {
 
 
 	.container {
-		@include media-breakpoint-up('md') {
+		@include media-breakpoint-up('sm') {
 			border-left: 1px solid theme-color('primary');
 			border-right: 1px solid theme-color('primary');
 		}
