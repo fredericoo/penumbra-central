@@ -8,7 +8,7 @@
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 512 237" xml:space="preserve" class="typeonapath">
             <text text-anchor="middle">
-              <textPath startOffset="50%" class="svgtext fill-secondary" xlink:href="#typepath"><?php the_title() ?></textPath>
+              <textPath startOffset="50%" class="svgtext font-sharp25 fill-secondary" xlink:href="#typepath"><?php the_title() ?></textPath>
             </text>
           </svg>
 
@@ -118,8 +118,17 @@
     if( $posts ): ?>
   <section id="marmitas" class="pb-5 archive-marmita secao">
     <div class="container">
-      <h2 class="display-4">Cardápio da semana</h2>
-      <p class="marmitas--explicacao d-lg-none"><strong>TODA SEMANA UM CARDÁPIO NOVO!</strong><br/>Sempre temos opções vegetarianas e veganas.</p>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-10 mx-auto scrollpop fade poponce">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 512 237" xml:space="preserve" class="typeonapath">
+            <text text-anchor="middle">
+              <textPath startOffset="50%" class="svgtext font-sharp25 fill-primary" xlink:href="#typepath">Cardápio da semana</textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+      <p class="marmitas--explicacao d-lg-none mb-5"><strong>TODA SEMANA UM CARDÁPIO NOVO!</strong><br/>Sempre temos opções vegetarianas e veganas.</p>
       <div class="row">
         <div class="col-md-12 col-lg-4 mx-auto mb-4">
         </div>
@@ -149,9 +158,18 @@ while ( have_rows('secoes') ) : the_row(); $ss++; ?>
     <div class="container">
       <div class="secao__info mb-2">
 
-        <h2 class="display-4 mb-0"><?php the_sub_field('titulo') ?></h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-10 mx-auto scrollpop fade poponce">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 512 237" xml:space="preserve" class="typeonapath">
+              <text text-anchor="middle">
+                <textPath startOffset="50%" class="svgtext font-sharp25 fill-primary" xlink:href="#typepath"><?php the_sub_field('titulo') ?></textPath>
+              </text>
+            </svg>
+          </div>
+        </div>
 
-        <div class="marmitas--explicacao"><?php the_sub_field('texto') ?></div>
+        <div class="marmitas--explicacao mb-5 mt-n5 scrollpop fade poponce ms-200"><?php the_sub_field('texto') ?></div>
       </div>
 
       <div class="row justify-content-center">
