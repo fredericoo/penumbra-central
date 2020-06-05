@@ -2172,7 +2172,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/sass/assets/font-awesome.css",
 		"oF": 0,
 		"oS": 0,
@@ -2205,16 +2205,16 @@
 		"sct": 1
 		},
 	"/sass/theme.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/css/theme.css",
-		"oF": 2,
-		"oS": 3,
+		"oAP": "/sass/theme.css",
+		"oF": 0,
+		"oS": 0,
 		"sct": 1
 		},
 	"/sass/theme/_contact-form7.scss": {
@@ -2263,7 +2263,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/sass/understrap/understrap.css",
 		"oF": 0,
 		"oS": 0,
