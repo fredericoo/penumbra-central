@@ -909,6 +909,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/inc/ajax-addtocart.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/ajax-addtocart.php",
+		"oF": 0
+		},
 	"/inc/ajax-loading.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -4077,12 +4085,12 @@
 		"oAP": "/woocommerce/single-product/add-to-cart/simple.php",
 		"oF": 0
 		},
-	"/woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php": {
+	"/woocommerce/single-product/add-to-cart/variation-add-to-cart-buttonr.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php",
+		"oAP": "/woocommerce/single-product/add-to-cart/variation-add-to-cart-buttonr.php",
 		"oF": 0
 		}
 	},

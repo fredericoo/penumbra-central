@@ -50,6 +50,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_script( 'lazy', get_template_directory_uri() . '/js/lazy.js', array(), $js_version, true );
 		wp_enqueue_script( 'pnmbr', get_template_directory_uri() . '/js/penumbra.js', array(), $js_version, true );
 
+
 		// wp_enqueue_style( 'share-buttons', get_template_directory_uri() . '/css/share-buttons.css', array(), $css_version );
 		// wp_enqueue_script( 'share-buttons', get_template_directory_uri() . '/js/share-buttons.js', array(), $js_version, true );
 

@@ -100,6 +100,7 @@ jQuery('#modal').on('show.bs.modal', function (event) {
         if (response.type == "success") {
           modal.querySelector('.modal-body').innerHTML = response.html
           modal.querySelector('.fechar').style.display = "block";
+          
           document.querySelector('.quantity input').value = addLeadingZero(document.querySelector('.quantity input').value);
             // history.pushState({
             //   id: postId,

@@ -14,7 +14,9 @@
 				<div class="produto-grid__desc produto__desc"><?php the_excerpt() ?></div>
 
 					<div class="produto__preco produto-grid__preco"><?php woocommerce_template_single_price() ?></div>
-					<div class="produto__addtocart produto-grid__addtocart"><?php woocommerce_template_single_add_to_cart() ?></div>
+					<div class="produto__addtocart produto-grid__addtocart">
+						<?php woocommerce_template_single_add_to_cart() ?>
+					</div>
 
 		</div>
 
