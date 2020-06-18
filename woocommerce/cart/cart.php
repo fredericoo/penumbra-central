@@ -165,7 +165,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		 				global $post;
 		 				$posts = get_field('produtos',$upsell->ID);
 		 	      if( $posts ): ?>
-		 	      <div class="carousel" data-flickity='{ "cellAlign": "left", "pageDots": false, "wrapAround": true, "prevNextButtons" : true, "contain" : true, "draggable": true, "groupCells" : "100%", "freeScroll": true, "accessibility": false, "arrowShape": "M2.4,38.2v8.8l22.1,3.2v3.5c0,18.3,9.7,23.8,22.1,23.8c14.7,0,8.5-9.4,20.9-9.4h7.7V58V42.7v-4.4H59.2c-4.7-5.6-8.8-15.3-8.8-15.3c0-0.3-0.6-0.6-0.9-0.6c-3.8,0.6-6.8,3.2-6.8,9.4c0,2.1,1.2,4.7,2.6,6.5H2.1H2.4z" }'>
+		 	      <div class="carousel" data-flickity='{ "cellAlign": "left", "pageDots": false, "wrapAround": <?php echo (sizeof($posts) > 3 ? 'true' : 'false'); ?>, "prevNextButtons" : true, "contain" : true, "draggable": true, "groupCells" : "100%", "freeScroll": true, "accessibility": false, "arrowShape": "M2.4,38.2v8.8l22.1,3.2v3.5c0,18.3,9.7,23.8,22.1,23.8c14.7,0,8.5-9.4,20.9-9.4h7.7V58V42.7v-4.4H59.2c-4.7-5.6-8.8-15.3-8.8-15.3c0-0.3-0.6-0.6-0.9-0.6c-3.8,0.6-6.8,3.2-6.8,9.4c0,2.1,1.2,4.7,2.6,6.5H2.1H2.4z" }'>
 		 	      <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 		 	        <div class="col-md-5 col-10 my-3">
 		 	          <?php setup_postdata($post);
