@@ -156,6 +156,30 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
+<div class="cart-upsell">
+	<div class="cart-upsell__inner">
+		<?php if ( $upsell = get_page_by_path( 'upsell', OBJECT, 'page' ) ) { ?>
+			
+			<h4><?php echo get_the_title($upsell->ID) ?></h4>
+		 				<?php
+		 				global $post;
+		 				$posts = get_field('produtos',$upsell->ID);
+		 	      if( $posts ): ?>
+		 	      <div class="carousel" data-flickity='{ "cellAlign": "left", "pageDots": false, "wrapAround": true, "prevNextButtons" : true, "contain" : true, "draggable": true, "groupCells" : "100%", "freeScroll": true, "accessibility": false, "arrowShape": "M2.4,38.2v8.8l22.1,3.2v3.5c0,18.3,9.7,23.8,22.1,23.8c14.7,0,8.5-9.4,20.9-9.4h7.7V58V42.7v-4.4H59.2c-4.7-5.6-8.8-15.3-8.8-15.3c0-0.3-0.6-0.6-0.9-0.6c-3.8,0.6-6.8,3.2-6.8,9.4c0,2.1,1.2,4.7,2.6,6.5H2.1H2.4z" }'>
+		 	      <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+		 	        <div class="col-md-5 col-10 my-3">
+		 	          <?php setup_postdata($post);
+		 	          get_template_part( 'loop-templates/content-marmita', get_post_field( 'post_name', get_post() )); ?>
+		 	        </div>
+		 	      <?php endforeach; ?>
+		 	      </div>
+		 	      <?php wp_reset_postdata(); endif;
+
+		 				wp_reset_postdata();
+		 			} ?></div>
+
+</div>
+
 <div class="cart-collaterals">
 
 	<div class="flair">
@@ -173,26 +197,5 @@ do_action( 'woocommerce_before_cart' ); ?>
 	?>
 </div>
 
-<div class="modal fade modal--upsell" id="precart" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <button type="button" class="fechar text-background border-background" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div class="modal-body p-0">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
-
 <?php do_action( 'woocommerce_after_cart' );
 
-wp_enqueue_script( 'hijacker', get_template_directory_uri() . '/js/checkout-hijacker-min.js', array(), '1', true );
-
-if ( $post = get_page_by_path( 'upsell', OBJECT, 'page' ) )
-    $upsell = $post->ID;
-else
-    $upsell = 0;
-
-wp_localize_script( 'hijacker', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'upsell' => $upsell ));

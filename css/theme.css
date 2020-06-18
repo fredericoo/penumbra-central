@@ -6616,7 +6616,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 0;
     height: 1px;
-    background: #007bff;
+    background: var(--primary);
     transition: 1.2s all 1s cubic-bezier(0.87, 0, 0.13, 1);
     bottom: -1px;
     left: 0;
@@ -8329,4 +8329,26 @@ a:hover {
       transform: rotate(2deg); } }
 .delivery_when {
   background: #f6a40b; }
+
+.cart-upsell {
+  background: var(--primary);
+  padding: 15px; }
+  .cart-upsell__inner {
+    background: var(--primary);
+    padding: 15px 0;
+    border: 2px solid var(--background);
+    overflow: hidden; }
+    .cart-upsell__inner h4 {
+      color: var(--background);
+      text-align: center;
+      margin-bottom: 30px; }
+  .cart-upsell .flickity-button {
+    background: var(--primary);
+    border: 2px solid var(--background);
+    color: var(--background); }
+  .cart-upsell .flickity-prev-next-button.previous {
+    left: 8px; }
+  .cart-upsell .flickity-prev-next-button.next {
+    right: 8px;
+    transform: translateY(-50%) scaleY(-1); }
 /*# sourceMappingURL=theme.css.map */

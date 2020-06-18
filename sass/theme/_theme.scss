@@ -1633,3 +1633,34 @@ display: none !important;
 .delivery_when {
 	background: theme-color('tertiary');
 }
+
+.cart-upsell {
+	background: var(--primary);
+	padding: $grid-gutter-width/2;
+	&__inner {
+		background: var(--primary);
+		padding: $grid-gutter-width/2 0;
+		border: 2px solid var(--background);
+		overflow: hidden;
+		h4 {
+			color: var(--background);
+			text-align: center;
+			margin-bottom: $grid-gutter-width;
+		}
+	}
+	.flickity-button {
+		background: var(--primary);
+		border: 2px solid var(--background);
+		color: var(--background);
+	}
+
+	.flickity-prev-next-button {
+		&.previous {
+			left: 8px;
+		}
+		&.next {
+			right: 8px;
+			transform: translateY(-50%) scaleY(-1)
+		}
+	}
+}

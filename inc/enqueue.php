@@ -14,7 +14,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	 */
 	function understrap_scripts() {
 
-		$penumbra_options = ['flickity'	=> false,
+		$penumbra_options = ['flickity'	=> true,
 												 'isotope'	=> false,
 												 'ajax'			=> true,
 											 	];
