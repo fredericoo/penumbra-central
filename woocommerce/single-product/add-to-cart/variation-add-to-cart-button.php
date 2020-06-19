@@ -33,9 +33,7 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
 
-	<a href="<?php echo $product->add_to_cart_url() ?>" value="<?php echo esc_attr( $product->get_id() ); ?>" class="ajax_add_to_cart btn btn-outline-secondary add_to_cart_button" data-product_id="<?php echo get_the_ID(); ?>" data-product_sku="<?php echo esc_attr($sku) ?>" aria-label="Add “<?php the_title_attribute() ?>” to your cart">Quero esse</a>
-
-	<!-- <button type="submit" class="single_add_to_cart_button btn btn-outline-secondary"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button> -->
+	<button type="submit" class="ctl-add single_add_to_cart_button btn btn-outline-secondary">Adicionar ao carrinho</button>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

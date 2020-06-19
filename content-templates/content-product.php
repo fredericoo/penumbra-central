@@ -10,7 +10,6 @@
 				$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
 				//smart_image($thumbnail_id,'large','nobg cat-icon','fade poponce');
 			} ?><?php the_title() ?></h3>
-				<?php $price = get_post_meta( get_the_ID(), '_price', true ); ?>
 				<div class="produto-grid__desc produto__desc"><?php the_excerpt() ?></div>
 
 					<div class="produto__preco produto-grid__preco"><?php woocommerce_template_single_price() ?></div>

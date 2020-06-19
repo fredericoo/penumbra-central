@@ -1,3 +1,5 @@
+
+
 // jQuery(document).on('click', '[data-post-id]', {}, function(e) {
 //   e.preventDefault();
 //   if (jQuery('body.transition').length) {
@@ -80,48 +82,44 @@ function loadContent(pageid,loaderObj) {
   });
 }
 
+let lastClickedProduct;
+
 jQuery('#modal').on('show.bs.modal', function (event) {
-  let button = jQuery(event.relatedTarget) // Button that triggered the modal
-  let postId = button.data('modal-id') // Extract info from data-* attributes
-  let modal = this
+  lastClickedProduct = event.relatedTarget;
+  const props = ['.produto__titulo','.produto__desc','.produto__preco', '.produto__imagem']
+  const modal = this
+  const product = event.relatedTarget // Button that triggered the modal
+  props.forEach( prop => {
+    if (modal.querySelector(prop) && product.querySelector(prop))
+    modal.querySelector(prop).innerHTML = product.querySelector(prop).innerHTML;
+  })
+  modal.querySelector('.produto__imagem>img').setAttribute('src',product.getAttribute('data-fullimage'));
+  modal.querySelector('.produto__imagem>img').className = "lazyload fade"
+  modal.querySelector('.produto__addtocart').appendChild(lastClickedProduct.querySelector('.cart'));
 
-  if (postId != null) {
-    modal.querySelector('.modal-body').innerHTML = '<img src="/wp-content/uploads/2020/04/ctl-loading.gif" class=carregando>'
-    modal.querySelector('.fechar').style.display = "none";
-  jQuery.ajax({
-    type: "post",
-    dataType: "json",
-    url: myAjax.ajaxurl,
-    data: {
-      action: "carregar_post",
-      post_id: postId
-    },
-    success: function(response) {
-        if (response.type == "success") {
-          modal.querySelector('.modal-body').innerHTML = response.html
-          modal.querySelector('.fechar').style.display = "block";
-          document.querySelector('.quantity input').value = addLeadingZero(document.querySelector('.quantity input').value);
-            // history.pushState({
-            //   id: postId,
-            //   url: response.url
-            // }, null, response.url);
-
-          lazyLoadInstance.update();
-          scrollPop.updatePoppable();
-          setTimeout(function() {
+  lazyLoadInstance.update();
+  scrollPop.updatePoppable();
+  setTimeout(function() {
             scrollPop.doPop();
-          }, 100);
-          return false;
-        }
-    }});
-  } else {
-    modal.querySelector('.modal-body').innerHTML = 'Falha ao carregar post #'+postId+'. Entre em contato com o suporte.'
-  }
+  }, 100);
 
 })
 
+jQuery('#modal').on('hidden.bs.modal', function (event) {
+  if (lastClickedProduct) {
+    console.log(lastClickedProduct)
+    lastClickedProduct.querySelector('.produto__addtocart').appendChild(this.querySelector('.cart'));
+  }
+});
+
 let addButton;
-jQuery('body').on('click','.ajax_add_to_cart',function(e){
+
+jQuery(document).on('click', '[data-target]', {}, function(e) {
+  e.preventDefault();
+});
+
+jQuery('body').on('click','.ctl-add',function(e){
+  if (this.classList.contains('disabled')) return false;
   this.classList.add('adding');
   this.innerHTML = 'adicionando…';
   addButton = this;
@@ -131,7 +129,7 @@ jQuery('body').on('added_to_cart',function(){
   if (addButton) {
     addButton.classList.remove('adding');
     addButton.classList.add('added');
-    addButton.innerHTML = "Adicionado!";
+    addButton.innerHTML = "Adicionar ao carrinho";
     addButton = null;
   }
     jQuery('#modal').modal('hide');

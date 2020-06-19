@@ -22,7 +22,27 @@ $container = get_theme_mod( 'understrap_container_type' );
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="modal-body p-0">
-        ...
+        
+        <div class="produto produto--marmita">
+          <div class="produto-grid">
+
+            <div class="p-3 p-lg-4 produto-grid__imagem">
+              <div class="lazy-container produto__imagem nobg pb-50pc" style="--image-w:50; --image-h:50; --image-bg:#a16d42">
+                <img class="lazyload swap" src="" data-was-processed="true">
+              </div>
+            </div>
+
+            <div class="p-3 p-lg-4 d-flex flex-column h-100">
+              <h3 class="produto-grid__titulo produto__titulo"></h3>
+              <div class="produto-grid__desc produto__desc"></div>
+              <div class="produto__preco produto-grid__preco"></div>
+              <div class="produto__addtocart produto-grid__addtocart"></div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </div>
   </div>
