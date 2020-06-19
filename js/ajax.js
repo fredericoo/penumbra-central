@@ -96,7 +96,7 @@ jQuery('#modal').on('show.bs.modal', function (event) {
   modal.querySelector('.produto__imagem>img').setAttribute('src',product.getAttribute('data-fullimage'));
   modal.querySelector('.produto__imagem>img').className = "lazyload fade"
 
-  modal.querySelector('.produto__addtocart').appendChild(lastClickedProduct.querySelector('.produto__addtocart>*'));
+  modal.querySelector('.produto__info').appendChild(lastClickedProduct.querySelector('.produto__addtocart'));
 
   lazyLoadInstance.update();
   scrollPop.updatePoppable();
@@ -109,7 +109,7 @@ jQuery('#modal').on('show.bs.modal', function (event) {
 jQuery('#modal').on('hidden.bs.modal', function (event) {
   if (lastClickedProduct) {
     console.log(lastClickedProduct)
-    lastClickedProduct.querySelector('.produto__addtocart').appendChild(this.querySelector('.produto__addtocart>*'));
+    lastClickedProduct.appendChild(this.querySelector('.produto__addtocart'));
   }
 });
 

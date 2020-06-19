@@ -32,11 +32,10 @@ $container = get_theme_mod( 'understrap_container_type' );
               </div>
             </div>
 
-            <div class="p-3 p-lg-4 d-flex flex-column h-100">
+            <div class="p-3 p-lg-4 d-flex flex-column h-100 produto__info">
               <h3 class="produto-grid__titulo produto__titulo"></h3>
               <div class="produto-grid__desc produto__desc"></div>
               <div class="produto__preco produto-grid__preco"></div>
-              <div class="produto__addtocart produto-grid__addtocart"></div>
             </div>
 
           </div>
