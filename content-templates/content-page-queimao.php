@@ -109,7 +109,7 @@
 
     $posts = get_field('produtos');
     if( $posts ): ?>
-  <section id="marmitas" class="pb-5 archive-marmita">
+  <section id="marmitas" class="pb-5 archive-marmita secao">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-4 mx-auto mb-4">
