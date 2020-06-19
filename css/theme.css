@@ -7738,7 +7738,7 @@ a:hover {
       -moz-appearance: textfield;
       margin: 0; }
 
-.secao .produto__addtocart {
+.secao .produto__addtocart, .cart-upsell .produto__addtocart {
   display: none; }
 
 .cart_totals th {

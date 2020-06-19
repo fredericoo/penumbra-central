@@ -958,8 +958,10 @@ a:hover {
 	}
 }
 
-.secao .produto__addtocart {
-	display: none;
+.secao, .cart-upsell {
+	.produto__addtocart {
+		display: none;
+	}
 }
 
 .cart_totals th {
