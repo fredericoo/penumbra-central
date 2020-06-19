@@ -104,7 +104,7 @@
 
 <nav class="scrollmenu sticky-top" style="top: 60px;">
     <div class="container">
-      <a href="#marmitas" class="scroll">Cardápio da semana</a>
+      <a href="#marmitas" class="scroll">Marmitas da semana</a>
       <?php $ss == 0; while ( have_rows('secoes') ) : the_row(); $ss++; ?>
         <a href="#sec-<?php echo $ss; ?>" class="scroll"><?php the_sub_field('titulo') ?></a>
       <?php endwhile;
@@ -123,7 +123,7 @@
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 512 237" xml:space="preserve" class="typeonapath">
             <text text-anchor="middle">
-              <textPath startOffset="50%" class="svgtext font-sharp25 fill-primary" xlink:href="#typepath">Cardápio da semana</textPath>
+              <textPath startOffset="50%" class="svgtext font-sharp25 fill-primary" xlink:href="#typepath">Marmitas da semana</textPath>
             </text>
           </svg>
         </div>
