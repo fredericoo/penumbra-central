@@ -1103,6 +1103,17 @@
 		"oAP": "/index.php",
 		"oF": 0
 		},
+	"/js/add-to-cart-variation-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/add-to-cart-variation-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/add-to-cart-variation.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1882,14 +1893,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/loop-templates/content-projects.php",
-		"oF": 0
-		},
-	"/loop-templates/content-queima.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/loop-templates/content-queima.php",
 		"oF": 0
 		},
 	"/loop-templates/content-search.php": {

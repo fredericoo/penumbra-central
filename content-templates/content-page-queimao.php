@@ -120,7 +120,7 @@
         <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
           <div class="col-lg-4 col-md-6 col-12 mb-gutter">
             <?php setup_postdata($post);
-            get_template_part( 'loop-templates/content-queima', get_post_field( 'post_name', get_post() )); ?>
+            get_template_part( 'loop-templates/content-marmita', get_post_field( 'post_name', get_post() )); ?>
           </div>
         <?php endforeach; ?>
       </div>
