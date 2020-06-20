@@ -130,7 +130,7 @@
 <?php endif; ?>
 
 
-  <a class="ctl-cart bg-secondary <?php $cc =(int)WC()->cart->get_cart_contents_count(); echo ($cc > 0 ? 'readypop' : 'scrollpop') ?> slide-up poponce" href="<?php echo wc_get_cart_url(); ?>">
+  <a class="ctl-cart <?php $cc =(int)WC()->cart->get_cart_contents_count(); echo ($cc > 0 ? 'readypop' : 'scrollpop') ?> slide-up poponce" href="<?php echo wc_get_cart_url(); ?>">
     <div class="ctl-cart__count"><span class="no"><?php echo WC()->cart->get_cart_contents_count() ?></span> <span class="woocommerce-Price-currencySymbol">itens</span></div>
     <div class="ctl-cart__goto">ver carrinho</div>
     <div class="ctl-cart__total"><span class="woocommerce-Price-currencySymbol">R$</span><span class="no"><?php echo WC()->cart->get_cart_contents_total() ?></span></div>

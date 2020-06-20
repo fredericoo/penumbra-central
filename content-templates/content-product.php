@@ -1,7 +1,7 @@
 <section id="single-product" class="container py-5">
 
 	<div class="row">
-		<div class="col-lg-4">
+		<div class="col-lg-4 mb-5">
 			<p class="small">Este produto é parte do esplendoroso cardápio d’A Central em Casa.</p>
 			<a class="btn btn-primary btn-block" href="<?php echo get_home_url(); ?>">Ver o cardápio completo</a>
 		</div>
