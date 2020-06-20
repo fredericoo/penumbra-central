@@ -1,22 +1,43 @@
-<div class="produto produto--marmita">
-	<div class="produto-grid">
+<section id="back"> 
 
-		<div class="p-3 p-lg-4 produto-grid__imagem">
-				<?php smart_image(get_post_thumbnail_id() ?: get_option( 'woocommerce_placeholder_image', 0 ),'large','produto__imagem nobg pb-50pc','fade poponce'); ?>
+</section>
+
+<section id="single-product" class="container pb-5">
+
+	<div class="row">
+		<div class="col-lg-4">
+			<p class="small">Este produto é parte do esplendoroso cardápio d’A Central em Casa.</p>
+			<a class="btn btn-primary btn-block" href="<?php echo get_home_url(); ?>">Ver o cardápio completo</a>
+			<?php $cc =(int)WC()->cart->get_cart_contents_count(); 
+			if ($cc > 0) { ?>
+				<a class="btn btn-outline-secondary btn-block" href="<?php echo wc_get_cart_url(); ?>">Ver meu carrinho <span class="badge badge-primary"><?php echo $cc ?></span></a>
+			<?php } ?>
 		</div>
-
-			<div class="p-3 p-lg-4 d-flex flex-column h-100">
-			<h3 class="produto-grid__titulo produto__titulo"><?php $terms = get_the_terms( get_the_ID(), 'product_cat' ); foreach ($terms as $cat) {
-				$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
-				//smart_image($thumbnail_id,'large','nobg cat-icon','fade poponce');
-			} ?><?php the_title() ?></h3>
-				<div class="produto-grid__desc produto__desc"><?php the_excerpt() ?></div>
-
-					<div class="produto__preco produto-grid__preco"><?php woocommerce_template_single_price() ?></div>
-					<div class="produto__addtocart produto-grid__addtocart"><?php woocommerce_template_single_add_to_cart() ?></div>
-
+		<div class="col-lg-8 col-md-10 mx-auto">
+			<div class="produto produto--marmita">
+				<div class="produto-grid">
+					
+					<div class="p-3 p-lg-4 produto-grid__imagem">
+						<?php smart_image(get_post_thumbnail_id() ?: get_option( 'woocommerce_placeholder_image', 0 ),'large','produto__imagem nobg pb-50pc','fade poponce'); ?>
+					</div>
+					
+					<div class="p-3 p-lg-4 d-flex flex-column h-100">
+						<h3 class="produto-grid__titulo produto__titulo"><?php $terms = get_the_terms( get_the_ID(), 'product_cat' ); foreach ($terms as $cat) {
+							$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+							//smart_image($thumbnail_id,'large','nobg cat-icon','fade poponce');
+						} ?><?php the_title() ?></h3>
+						<div class="produto-grid__desc produto__desc"><?php the_excerpt() ?></div>
+						
+						<div class="produto__preco produto-grid__preco"><?php woocommerce_template_single_price() ?></div>
+						<div class="produto__addtocart produto-grid__addtocart"><?php woocommerce_template_loop_add_to_cart() ?></div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
 		</div>
-
 	</div>
-
-</div>
+	
+	
+</section>
