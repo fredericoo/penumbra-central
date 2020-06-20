@@ -2,7 +2,7 @@
 
 </section>
 
-<section id="single-product" class="container pb-5">
+<section id="single-product" class="container py-5">
 
 	<div class="row">
 		<div class="col-lg-4">
