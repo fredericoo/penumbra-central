@@ -1,17 +1,9 @@
-<section id="back"> 
-
-</section>
-
 <section id="single-product" class="container py-5">
 
 	<div class="row">
 		<div class="col-lg-4">
 			<p class="small">Este produto é parte do esplendoroso cardápio d’A Central em Casa.</p>
 			<a class="btn btn-primary btn-block" href="<?php echo get_home_url(); ?>">Ver o cardápio completo</a>
-			<?php $cc =(int)WC()->cart->get_cart_contents_count(); 
-			if ($cc > 0) { ?>
-				<a class="btn btn-outline-secondary btn-block" href="<?php echo wc_get_cart_url(); ?>">Ver meu carrinho <span class="badge badge-primary"><?php echo $cc ?></span></a>
-			<?php } ?>
 		</div>
 		<div class="col-lg-8 col-md-10 mx-auto">
 			<div class="produto produto--marmita">
@@ -29,7 +21,7 @@
 						<div class="produto-grid__desc produto__desc"><?php the_excerpt() ?></div>
 						
 						<div class="produto__preco produto-grid__preco"><?php woocommerce_template_single_price() ?></div>
-						<div class="produto__addtocart produto-grid__addtocart"><?php woocommerce_template_loop_add_to_cart() ?></div>
+						<div class="produto__addtocart produto-grid__addtocart"><?php woocommerce_template_single_add_to_cart() ?></div>
 						
 					</div>
 					
@@ -41,3 +33,9 @@
 	
 	
 </section>
+
+<a class="ctl-cart <?php $cc =(int)WC()->cart->get_cart_contents_count(); echo ($cc > 0 ? 'readypop' : 'scrollpop') ?> slide-up poponce" href="<?php echo wc_get_cart_url(); ?>">
+    <div class="ctl-cart__count"><span class="no"><?php echo WC()->cart->get_cart_contents_count() ?></span> <span class="woocommerce-Price-currencySymbol">itens</span></div>
+    <div class="ctl-cart__goto">ver carrinho</div>
+    <div class="ctl-cart__total"><span class="woocommerce-Price-currencySymbol">R$</span><span class="no"><?php echo WC()->cart->get_cart_contents_total() ?></span></div>
+  </a>
