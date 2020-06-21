@@ -1039,7 +1039,8 @@ pre {
   .offset-xl-11 {
     margin-left: 91.6666666667%; } }
 
-.form-control, .shipping-calculator-form .input-text, .shipping-calculator-form .select2 {
+.form-control, .shipping-calculator-form .input-text,
+.shipping-calculator-form .select2 {
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -1054,12 +1055,15 @@ pre {
   border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .form-control, .shipping-calculator-form .input-text, .shipping-calculator-form .select2 {
+    .form-control, .shipping-calculator-form .input-text,
+    .shipping-calculator-form .select2 {
       transition: none; } }
-  .form-control::-ms-expand, .shipping-calculator-form .input-text::-ms-expand, .shipping-calculator-form .select2::-ms-expand {
+  .form-control::-ms-expand, .shipping-calculator-form .input-text::-ms-expand,
+  .shipping-calculator-form .select2::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus, .shipping-calculator-form .input-text:focus, .shipping-calculator-form .select2:focus {
+  .form-control:focus, .shipping-calculator-form .input-text:focus,
+  .shipping-calculator-form .select2:focus {
     color: #495057;
     background-color: #fff;
     border-color: #eda4a1;
@@ -1077,14 +1081,18 @@ pre {
   .form-control::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::placeholder, .shipping-calculator-form .input-text::placeholder, .shipping-calculator-form .select2::placeholder {
+  .form-control::placeholder, .shipping-calculator-form .input-text::placeholder,
+  .shipping-calculator-form .select2::placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:disabled, .shipping-calculator-form .input-text:disabled, .shipping-calculator-form .select2:disabled, .form-control[readonly], .shipping-calculator-form .input-text[readonly], .shipping-calculator-form .select2[readonly] {
+  .form-control:disabled, .shipping-calculator-form .input-text:disabled,
+  .shipping-calculator-form .select2:disabled, .form-control[readonly], .shipping-calculator-form .input-text[readonly],
+  .shipping-calculator-form .select2[readonly] {
     background-color: #e9ecef;
     opacity: 1; }
 
-select.form-control:focus::-ms-value, .shipping-calculator-form select.input-text:focus::-ms-value, .shipping-calculator-form select.select2:focus::-ms-value {
+select.form-control:focus::-ms-value, .shipping-calculator-form select.input-text:focus::-ms-value,
+.shipping-calculator-form select.select2:focus::-ms-value {
   color: #495057;
   background-color: #fff; }
 
@@ -1141,10 +1149,13 @@ select.form-control:focus::-ms-value, .shipping-calculator-form select.input-tex
   line-height: 1.5;
   border-radius: 0; }
 
-select.form-control[size], .shipping-calculator-form select.input-text[size], .shipping-calculator-form select.select2[size], select.form-control[multiple], .shipping-calculator-form select.input-text[multiple], .shipping-calculator-form select.select2[multiple] {
+select.form-control[size], .shipping-calculator-form select.input-text[size],
+.shipping-calculator-form select.select2[size], select.form-control[multiple], .shipping-calculator-form select.input-text[multiple],
+.shipping-calculator-form select.select2[multiple] {
   height: auto; }
 
-textarea.form-control, .shipping-calculator-form textarea.input-text, .shipping-calculator-form textarea.select2 {
+textarea.form-control, .shipping-calculator-form textarea.input-text,
+.shipping-calculator-form textarea.select2 {
   height: auto; }
 
 .form-group {
@@ -1211,28 +1222,40 @@ textarea.form-control, .shipping-calculator-form textarea.input-text, .shipping-
   background-color: rgba(40, 167, 69, 0.9);
   border-radius: 0; }
 
-.was-validated .form-control:valid, .was-validated .shipping-calculator-form .input-text:valid, .shipping-calculator-form .was-validated .input-text:valid, .was-validated .shipping-calculator-form .select2:valid, .shipping-calculator-form .was-validated .select2:valid, .form-control.is-valid, .shipping-calculator-form .is-valid.input-text, .shipping-calculator-form .is-valid.select2 {
+.was-validated .form-control:valid, .was-validated .shipping-calculator-form .input-text:valid, .shipping-calculator-form .was-validated .input-text:valid,
+.was-validated .shipping-calculator-form .select2:valid,
+.shipping-calculator-form .was-validated .select2:valid, .form-control.is-valid, .shipping-calculator-form .is-valid.input-text,
+.shipping-calculator-form .is-valid.select2 {
   border-color: #28a745;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
-  .was-validated .form-control:valid:focus, .was-validated .shipping-calculator-form .input-text:valid:focus, .shipping-calculator-form .was-validated .input-text:valid:focus, .was-validated .shipping-calculator-form .select2:valid:focus, .shipping-calculator-form .was-validated .select2:valid:focus, .form-control.is-valid:focus, .shipping-calculator-form .is-valid.input-text:focus, .shipping-calculator-form .is-valid.select2:focus {
+  .was-validated .form-control:valid:focus, .was-validated .shipping-calculator-form .input-text:valid:focus, .shipping-calculator-form .was-validated .input-text:valid:focus,
+  .was-validated .shipping-calculator-form .select2:valid:focus,
+  .shipping-calculator-form .was-validated .select2:valid:focus, .form-control.is-valid:focus, .shipping-calculator-form .is-valid.input-text:focus,
+  .shipping-calculator-form .is-valid.select2:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .shipping-calculator-form .input-text:valid ~ .valid-feedback, .shipping-calculator-form .was-validated .input-text:valid ~ .valid-feedback, .was-validated .shipping-calculator-form .select2:valid ~ .valid-feedback, .shipping-calculator-form .was-validated .select2:valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .shipping-calculator-form .input-text:valid ~ .valid-feedback, .shipping-calculator-form .was-validated .input-text:valid ~ .valid-feedback,
+  .was-validated .shipping-calculator-form .select2:valid ~ .valid-feedback,
+  .shipping-calculator-form .was-validated .select2:valid ~ .valid-feedback,
   .was-validated .form-control:valid ~ .valid-tooltip,
   .was-validated .shipping-calculator-form .input-text:valid ~ .valid-tooltip,
   .shipping-calculator-form .was-validated .input-text:valid ~ .valid-tooltip,
   .was-validated .shipping-calculator-form .select2:valid ~ .valid-tooltip,
-  .shipping-calculator-form .was-validated .select2:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .shipping-calculator-form .is-valid.input-text ~ .valid-feedback, .shipping-calculator-form .is-valid.select2 ~ .valid-feedback,
+  .shipping-calculator-form .was-validated .select2:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .shipping-calculator-form .is-valid.input-text ~ .valid-feedback,
+  .shipping-calculator-form .is-valid.select2 ~ .valid-feedback,
   .form-control.is-valid ~ .valid-tooltip,
   .shipping-calculator-form .is-valid.input-text ~ .valid-tooltip,
   .shipping-calculator-form .is-valid.select2 ~ .valid-tooltip {
     display: block; }
 
-.was-validated textarea.form-control:valid, .was-validated .shipping-calculator-form textarea.input-text:valid, .shipping-calculator-form .was-validated textarea.input-text:valid, .was-validated .shipping-calculator-form textarea.select2:valid, .shipping-calculator-form .was-validated textarea.select2:valid, textarea.form-control.is-valid, .shipping-calculator-form textarea.is-valid.input-text, .shipping-calculator-form textarea.is-valid.select2 {
+.was-validated textarea.form-control:valid, .was-validated .shipping-calculator-form textarea.input-text:valid, .shipping-calculator-form .was-validated textarea.input-text:valid,
+.was-validated .shipping-calculator-form textarea.select2:valid,
+.shipping-calculator-form .was-validated textarea.select2:valid, textarea.form-control.is-valid, .shipping-calculator-form textarea.is-valid.input-text,
+.shipping-calculator-form textarea.is-valid.select2 {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem); }
 
@@ -1314,28 +1337,40 @@ textarea.form-control, .shipping-calculator-form textarea.input-text, .shipping-
   background-color: rgba(231, 64, 38, 0.9);
   border-radius: 0; }
 
-.was-validated .form-control:invalid, .was-validated .shipping-calculator-form .input-text:invalid, .shipping-calculator-form .was-validated .input-text:invalid, .was-validated .shipping-calculator-form .select2:invalid, .shipping-calculator-form .was-validated .select2:invalid, .form-control.is-invalid, .shipping-calculator-form .is-invalid.input-text, .shipping-calculator-form .is-invalid.select2 {
+.was-validated .form-control:invalid, .was-validated .shipping-calculator-form .input-text:invalid, .shipping-calculator-form .was-validated .input-text:invalid,
+.was-validated .shipping-calculator-form .select2:invalid,
+.shipping-calculator-form .was-validated .select2:invalid, .form-control.is-invalid, .shipping-calculator-form .is-invalid.input-text,
+.shipping-calculator-form .is-invalid.select2 {
   border-color: #e74026;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23e74026' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23e74026' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
-  .was-validated .form-control:invalid:focus, .was-validated .shipping-calculator-form .input-text:invalid:focus, .shipping-calculator-form .was-validated .input-text:invalid:focus, .was-validated .shipping-calculator-form .select2:invalid:focus, .shipping-calculator-form .was-validated .select2:invalid:focus, .form-control.is-invalid:focus, .shipping-calculator-form .is-invalid.input-text:focus, .shipping-calculator-form .is-invalid.select2:focus {
+  .was-validated .form-control:invalid:focus, .was-validated .shipping-calculator-form .input-text:invalid:focus, .shipping-calculator-form .was-validated .input-text:invalid:focus,
+  .was-validated .shipping-calculator-form .select2:invalid:focus,
+  .shipping-calculator-form .was-validated .select2:invalid:focus, .form-control.is-invalid:focus, .shipping-calculator-form .is-invalid.input-text:focus,
+  .shipping-calculator-form .is-invalid.select2:focus {
     border-color: #e74026;
     box-shadow: 0 0 0 0.2rem rgba(231, 64, 38, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .shipping-calculator-form .input-text:invalid ~ .invalid-feedback, .shipping-calculator-form .was-validated .input-text:invalid ~ .invalid-feedback, .was-validated .shipping-calculator-form .select2:invalid ~ .invalid-feedback, .shipping-calculator-form .was-validated .select2:invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .shipping-calculator-form .input-text:invalid ~ .invalid-feedback, .shipping-calculator-form .was-validated .input-text:invalid ~ .invalid-feedback,
+  .was-validated .shipping-calculator-form .select2:invalid ~ .invalid-feedback,
+  .shipping-calculator-form .was-validated .select2:invalid ~ .invalid-feedback,
   .was-validated .form-control:invalid ~ .invalid-tooltip,
   .was-validated .shipping-calculator-form .input-text:invalid ~ .invalid-tooltip,
   .shipping-calculator-form .was-validated .input-text:invalid ~ .invalid-tooltip,
   .was-validated .shipping-calculator-form .select2:invalid ~ .invalid-tooltip,
-  .shipping-calculator-form .was-validated .select2:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .shipping-calculator-form .is-invalid.input-text ~ .invalid-feedback, .shipping-calculator-form .is-invalid.select2 ~ .invalid-feedback,
+  .shipping-calculator-form .was-validated .select2:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .shipping-calculator-form .is-invalid.input-text ~ .invalid-feedback,
+  .shipping-calculator-form .is-invalid.select2 ~ .invalid-feedback,
   .form-control.is-invalid ~ .invalid-tooltip,
   .shipping-calculator-form .is-invalid.input-text ~ .invalid-tooltip,
   .shipping-calculator-form .is-invalid.select2 ~ .invalid-tooltip {
     display: block; }
 
-.was-validated textarea.form-control:invalid, .was-validated .shipping-calculator-form textarea.input-text:invalid, .shipping-calculator-form .was-validated textarea.input-text:invalid, .was-validated .shipping-calculator-form textarea.select2:invalid, .shipping-calculator-form .was-validated textarea.select2:invalid, textarea.form-control.is-invalid, .shipping-calculator-form textarea.is-invalid.input-text, .shipping-calculator-form textarea.is-invalid.select2 {
+.was-validated textarea.form-control:invalid, .was-validated .shipping-calculator-form textarea.input-text:invalid, .shipping-calculator-form .was-validated textarea.input-text:invalid,
+.was-validated .shipping-calculator-form textarea.select2:invalid,
+.shipping-calculator-form .was-validated textarea.select2:invalid, textarea.form-control.is-invalid, .shipping-calculator-form textarea.is-invalid.input-text,
+.shipping-calculator-form textarea.is-invalid.select2 {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem); }
 
@@ -1414,7 +1449,9 @@ textarea.form-control, .shipping-calculator-form textarea.input-text, .shipping-
       flex-flow: row wrap;
       align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control, .form-inline .shipping-calculator-form .input-text, .shipping-calculator-form .form-inline .input-text, .form-inline .shipping-calculator-form .select2, .shipping-calculator-form .form-inline .select2 {
+    .form-inline .form-control, .form-inline .shipping-calculator-form .input-text, .shipping-calculator-form .form-inline .input-text,
+    .form-inline .shipping-calculator-form .select2,
+    .shipping-calculator-form .form-inline .select2 {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -2137,7 +2174,8 @@ input.btn-block[type="button"],
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%; }
-  .input-group > .form-control, .shipping-calculator-form .input-group > .input-text, .shipping-calculator-form .input-group > .select2,
+  .input-group > .form-control, .shipping-calculator-form .input-group > .input-text,
+  .shipping-calculator-form .input-group > .select2,
   .input-group > .form-control-plaintext,
   .input-group > .custom-select,
   .input-group > .custom-file {
@@ -2145,7 +2183,12 @@ input.btn-block[type="button"],
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control + .form-control, .shipping-calculator-form .input-group > .input-text + .form-control, .shipping-calculator-form .input-group > .select2 + .form-control, .shipping-calculator-form .input-group > .form-control + .input-text, .shipping-calculator-form .input-group > .input-text + .input-text, .shipping-calculator-form .input-group > .select2 + .input-text, .shipping-calculator-form .input-group > .form-control + .select2, .shipping-calculator-form .input-group > .input-text + .select2, .shipping-calculator-form .input-group > .select2 + .select2,
+    .input-group > .form-control + .form-control, .shipping-calculator-form .input-group > .input-text + .form-control,
+    .shipping-calculator-form .input-group > .select2 + .form-control, .shipping-calculator-form .input-group > .form-control + .input-text, .shipping-calculator-form .input-group > .input-text + .input-text,
+    .shipping-calculator-form .input-group > .select2 + .input-text,
+    .shipping-calculator-form .input-group > .form-control + .select2,
+    .shipping-calculator-form .input-group > .input-text + .select2,
+    .shipping-calculator-form .input-group > .select2 + .select2,
     .input-group > .form-control + .custom-select,
     .shipping-calculator-form .input-group > .input-text + .custom-select,
     .shipping-calculator-form .input-group > .select2 + .custom-select,
@@ -2168,17 +2211,20 @@ input.btn-block[type="button"],
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
-  .input-group > .form-control:focus, .shipping-calculator-form .input-group > .input-text:focus, .shipping-calculator-form .input-group > .select2:focus,
+  .input-group > .form-control:focus, .shipping-calculator-form .input-group > .input-text:focus,
+  .shipping-calculator-form .input-group > .select2:focus,
   .input-group > .custom-select:focus,
   .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
     z-index: 3; }
   .input-group > .custom-file .custom-file-input:focus {
     z-index: 4; }
-  .input-group > .form-control:not(:last-child), .shipping-calculator-form .input-group > .input-text:not(:last-child), .shipping-calculator-form .input-group > .select2:not(:last-child),
+  .input-group > .form-control:not(:last-child), .shipping-calculator-form .input-group > .input-text:not(:last-child),
+  .shipping-calculator-form .input-group > .select2:not(:last-child),
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child), .shipping-calculator-form .input-group > .input-text:not(:first-child), .shipping-calculator-form .input-group > .select2:not(:first-child),
+  .input-group > .form-control:not(:first-child), .shipping-calculator-form .input-group > .input-text:not(:first-child),
+  .shipping-calculator-form .input-group > .select2:not(:first-child),
   .input-group > .custom-select:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
@@ -2254,11 +2300,13 @@ input.btn-block[type="button"],
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group-lg > .form-control:not(textarea), .shipping-calculator-form .input-group-lg > .input-text:not(textarea), .shipping-calculator-form .input-group-lg > .select2:not(textarea),
+.input-group-lg > .form-control:not(textarea), .shipping-calculator-form .input-group-lg > .input-text:not(textarea),
+.shipping-calculator-form .input-group-lg > .select2:not(textarea),
 .input-group-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px); }
 
-.input-group-lg > .form-control, .shipping-calculator-form .input-group-lg > .input-text, .shipping-calculator-form .input-group-lg > .select2,
+.input-group-lg > .form-control, .shipping-calculator-form .input-group-lg > .input-text,
+.shipping-calculator-form .input-group-lg > .select2,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
@@ -2271,11 +2319,13 @@ input.btn-block[type="button"],
   line-height: 1.5;
   border-radius: 0; }
 
-.input-group-sm > .form-control:not(textarea), .shipping-calculator-form .input-group-sm > .input-text:not(textarea), .shipping-calculator-form .input-group-sm > .select2:not(textarea),
+.input-group-sm > .form-control:not(textarea), .shipping-calculator-form .input-group-sm > .input-text:not(textarea),
+.shipping-calculator-form .input-group-sm > .select2:not(textarea),
 .input-group-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px); }
 
-.input-group-sm > .form-control, .shipping-calculator-form .input-group-sm > .input-text, .shipping-calculator-form .input-group-sm > .select2,
+.input-group-sm > .form-control, .shipping-calculator-form .input-group-sm > .input-text,
+.shipping-calculator-form .input-group-sm > .select2,
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
@@ -7113,7 +7163,8 @@ h1, h2, h3, h4, h5, h6 {
 .ms-1500.pop, .ms-1500:after, .ms-1500:before {
   transition-delay: 1500ms !important; }
 
-html, body {
+html,
+body {
   background-color: #E9D5BC;
   color: #1f3231; }
 
@@ -7235,7 +7286,8 @@ html, body {
     top: 13px;
     border-bottom: 4px solid #D93D36; }
 
-.menu-sheet, #toggler {
+.menu-sheet,
+#toggler {
   display: none; }
 
 @media (max-width: 767.98px) {
@@ -7308,13 +7360,16 @@ html, body {
     body.menu-open .menu-sheet .menu-item:nth-child(10) {
       transition-delay: 1100ms; } }
 
-body.loading .hamburger, body.transition .hamburger {
+body.loading .hamburger,
+body.transition .hamburger {
   opacity: 0; }
 
-body.loading .menu-sheet, body.transition .menu-sheet {
+body.loading .menu-sheet,
+body.transition .menu-sheet {
   pointer-events: none; }
 
-.navbar-collapse, .navbar-toggler {
+.navbar-collapse,
+.navbar-toggler {
   transition: .3s; }
 
 /*!
@@ -7366,7 +7421,9 @@ body.menu-open .hamburger .hamburger-inner::after {
   top: 50%;
   margin-top: -2px; }
 
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
   width: 40px;
   height: 4px;
   background-color: #D93D36;
@@ -7376,7 +7433,8 @@ body.menu-open .hamburger .hamburger-inner::after {
   transition-duration: 0.15s;
   transition-timing-function: ease; }
 
-.hamburger-inner::before, .hamburger-inner::after {
+.hamburger-inner::before,
+.hamburger-inner::after {
   content: "";
   display: block; }
 
@@ -7428,17 +7486,39 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
     box-shadow: none !important;
     outline: none !important; }
 
-.form-control:focus, .shipping-calculator-form .input-text:focus, .shipping-calculator-form .select2:focus, .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 input[type=text]:focus, .wpcf7 input[type=search]:focus,
-.wpcf7 input[type=url]:focus, .wpcf7 input[type=tel]:focus, .wpcf7 input[type=number]:focus, .wpcf7 input[type=range]:focus, .wpcf7 input[type=date]:focus, .wpcf7 input[type=month]:focus, .wpcf7 input[type=week]:focus, .wpcf7 input[type=time]:focus, .wpcf7 input[type=datetime]:focus, .wpcf7 input[type=datetime-local]:focus, .wpcf7 input[type=color]:focus, .wpcf7 input[type=email]:focus, .wpcf7 input[type=file]:focus, .wpcf7 input[type=submit]:focus, .wpcf7 select:focus,
+.form-control:focus, .shipping-calculator-form .input-text:focus,
+.shipping-calculator-form .select2:focus,
+.wpcf7 .wpcf7-validation-errors:focus,
+.wpcf7 input[type=text]:focus,
+.wpcf7 input[type=search]:focus,
+.wpcf7 input[type=url]:focus,
+.wpcf7 input[type=tel]:focus,
+.wpcf7 input[type=number]:focus,
+.wpcf7 input[type=range]:focus,
+.wpcf7 input[type=date]:focus,
+.wpcf7 input[type=month]:focus,
+.wpcf7 input[type=week]:focus,
+.wpcf7 input[type=time]:focus,
+.wpcf7 input[type=datetime]:focus,
+.wpcf7 input[type=datetime-local]:focus,
+.wpcf7 input[type=color]:focus,
+.wpcf7 input[type=email]:focus,
+.wpcf7 input[type=file]:focus,
+.wpcf7 input[type=submit]:focus,
+.wpcf7 select:focus,
 .wpcf7 textarea:focus {
   border-color: #1f3231 !important; }
 
-.cf7mls_next, .cf7mls_back, .wpcf7-submit {
+.cf7mls_next,
+.cf7mls_back,
+.wpcf7-submit {
   background: transparent !important;
   border: 1px solid #1f3231 !important;
   border-radius: 0 !important;
   color: #1f3231 !important; }
-  .cf7mls_next:hover, .cf7mls_back:hover, .wpcf7-submit:hover {
+  .cf7mls_next:hover,
+  .cf7mls_back:hover,
+  .wpcf7-submit:hover {
     background: #1f3231 !important;
     color: white !important; }
 
@@ -7454,7 +7534,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 .btn:focus, .shipping-calculator-form button:focus {
   box-shadow: none !important; }
 
-.navbar > .container, .navbar > .container-fluid {
+.navbar > .container,
+.navbar > .container-fluid {
   padding-left: 15px;
   padding-right: 0; }
 
@@ -7462,7 +7543,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   padding-top: 3rem;
   padding-bottom: 3rem; }
 
-#wrapper-footer-full, #wrapper-static-hero {
+#wrapper-footer-full,
+#wrapper-static-hero {
   background: transparent; }
 
 .display-1 {
@@ -7493,7 +7575,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   background-size: 8px;
   background-position: top left; }
 
-.zigzag--bottom, .cart_totals:after, .modal--produto .produto--marmita .row:after, .modal--produto .produto--marmita .produto-grid:after {
+.zigzag--bottom, .cart_totals:after, .modal--produto .produto--marmita .row:after,
+.modal--produto .produto--marmita .produto-grid:after {
   background-image: url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 64 19.3' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23F9B342;%7D%0A%3C/style%3E%3Cdefs%3E%3C/defs%3E%3Cpolygon class='st0' points='64,3.3 32,19.3 0,3.3 0,0 64,0 '/%3E%3C/svg%3E%0A");
   background-repeat: repeat-x;
   background-size: 32px;
@@ -7542,7 +7625,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   grid: "imagem" 40vh "titulo" auto "desc" auto "cart" auto "preco" auto/1fr; }
   @media (min-width: 992px) {
     .produto--marmita .produto-grid {
-      grid: "titulo imagem" auto "desc imagem" auto "preco imagem" auto "cart imagem" auto / 1fr 1fr; } }
+      grid: "titulo imagem" auto "desc imagem" auto "preco imagem" auto "cart imagem" auto/1fr 1fr; } }
   .produto--marmita .produto-grid__imagem {
     grid-area: imagem; }
     .produto--marmita .produto-grid__imagem .lazy-container {
@@ -7557,7 +7640,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   .produto--marmita .produto-grid__addtocart {
     grid-area: cart; }
 
-.produto--marmita .produto-grid, .produto--marmita .row {
+.produto--marmita .produto-grid,
+.produto--marmita .row {
   margin-left: 0;
   margin-right: 0;
   background: #F9B342;
@@ -7674,9 +7758,11 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 .modal--produto .produto__addtocart {
   display: block; }
 
-.modal--produto .produto--marmita .row, .modal--produto .produto--marmita .produto-grid {
+.modal--produto .produto--marmita .row,
+.modal--produto .produto--marmita .produto-grid {
   background-image: none !important; }
-  .modal--produto .produto--marmita .row:after, .modal--produto .produto--marmita .produto-grid:after {
+  .modal--produto .produto--marmita .row:after,
+  .modal--produto .produto--marmita .produto-grid:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -7703,7 +7789,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 .shipping-calculator-form #calc_shipping_state_field span {
   width: 100%; }
 
-.shipping-calculator-form .input-text, .shipping-calculator-form .select2 {
+.shipping-calculator-form .input-text,
+.shipping-calculator-form .select2 {
   margin-bottom: 0 !important; }
 
 .shipping-calculator-form .select2 {
@@ -7727,7 +7814,9 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   font-size: 80%;
   margin-bottom: .5rem; }
 
-a, button, input[type="submit"] {
+a,
+button,
+input[type="submit"] {
   touch-action: manipulation !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
@@ -7738,7 +7827,8 @@ a, button, input[type="submit"] {
   display: flex;
   margin-bottom: 1rem;
   border-top: 4px solid #1f3231; }
-  .ch-qty button.plus, .ch-qty button.minus {
+  .ch-qty button.plus,
+  .ch-qty button.minus {
     align-self: center;
     order: 1;
     background: transparent;
@@ -7753,10 +7843,12 @@ a, button, input[type="submit"] {
     white-space: nowrap;
     line-height: 1;
     border-right: 1px solid #1f3231; }
-    .ch-qty button.plus:active, .ch-qty button.minus:active {
+    .ch-qty button.plus:active,
+    .ch-qty button.minus:active {
       background: #1f3231;
       color: #F9B342; }
-    .ch-qty button.plus.disabled, .ch-qty button.minus.disabled {
+    .ch-qty button.plus.disabled,
+    .ch-qty button.minus.disabled {
       opacity: 0;
       pointer-events: none; }
   .ch-qty button.plus {
@@ -7766,7 +7858,8 @@ a, button, input[type="submit"] {
 
 .product-quantity {
   display: flex; }
-  .product-quantity button.plus, .product-quantity button.minus {
+  .product-quantity button.plus,
+  .product-quantity button.minus {
     align-self: center;
     order: 1;
     background: transparent;
@@ -7781,10 +7874,12 @@ a, button, input[type="submit"] {
     white-space: nowrap;
     line-height: 1;
     border-right: 1px solid #1f3231; }
-    .product-quantity button.plus:active, .product-quantity button.minus:active {
+    .product-quantity button.plus:active,
+    .product-quantity button.minus:active {
       background: #1f3231;
       color: #E9D5BC; }
-    .product-quantity button.plus.disabled, .product-quantity button.minus.disabled {
+    .product-quantity button.plus.disabled,
+    .product-quantity button.minus.disabled {
       opacity: 0;
       pointer-events: none; }
   .product-quantity button.plus {
@@ -7848,6 +7943,24 @@ a:hover {
   .ctl-cart__total {
     align-self: center;
     text-align: right; }
+  .ctl-cart__actions {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; }
+    @media (max-width: 767.98px) {
+      .ctl-cart__actions {
+        padding: 0 15px;
+        gap: 15px;
+        flex-direction: column; } }
+    .ctl-cart__actions label {
+      line-height: 1;
+      text-transform: uppercase;
+      font-size: .4rem;
+      letter-spacing: .2em;
+      padding-left: 0 !important;
+      font-family: 'sharp25', sans-serif; }
   .ctl-cart__contents {
     list-style-type: none;
     padding: 0; }
@@ -7856,11 +7969,11 @@ a:hover {
     display: grid;
     gap: 30px;
     border-bottom: 1px dotted var(--secondary);
-    grid: "info price qty subtotal remove" 1vh / 1fr -webkit-max-content -webkit-min-content -webkit-max-content -webkit-max-content;
-    grid: "info price qty subtotal remove" 1vh / 1fr max-content min-content max-content max-content;
+    grid: "info price qty subtotal remove" 1vh/1fr -webkit-max-content -webkit-min-content -webkit-max-content -webkit-max-content;
+    grid: "info price qty subtotal remove" 1vh/1fr max-content min-content max-content max-content;
     align-items: center;
     font-size: calc(0.6rem + 0.2 * ( (100vw - 768px) / 372)); }
-    @media (max-width: 575.98px) {
+    @media (max-width: 767.98px) {
       .ctl-cart__item {
         padding: 15px;
         gap: 15px;
@@ -7878,10 +7991,11 @@ a:hover {
     .ctl-cart__item .product-name {
       grid-area: info; }
     .ctl-cart__item .product-price {
-      grid-area: price;
-      background: var(--tertiary);
-      padding: 4px 8px;
-      display: inline-block; }
+      grid-area: price; }
+      .ctl-cart__item .product-price span {
+        background: var(--tertiary);
+        padding: 4px 8px;
+        display: inline-block; }
     .ctl-cart__item .product-quantity {
       grid-area: qty; }
       .ctl-cart__item .product-quantity .quantity input {
@@ -7950,7 +8064,7 @@ a:hover {
     background-color: transparent !important;
     border: none !important;
     text-align: center;
-    font-family: clarendon-urw-extra-narrow,serif;
+    font-family: clarendon-urw-extra-narrow, serif;
     font-weight: 100;
     font-size: 4rem;
     color: #1f3231; }
@@ -7959,7 +8073,8 @@ a:hover {
       -moz-appearance: textfield;
       margin: 0; }
 
-.secao .produto__addtocart, .cart-upsell .produto__addtocart {
+.secao .produto__addtocart,
+.cart-upsell .produto__addtocart {
   display: none; }
 
 .cart_totals th {
@@ -8012,27 +8127,36 @@ a:hover {
   font-size: 1em;
   margin-right: .5em; }
 
-.woocommerce-Price-currencySymbol, .form-control::placeholder, .shipping-calculator-form .input-text::placeholder, .shipping-calculator-form .select2::placeholder, .woocommerce-input-wrapper input::placeholder {
+.woocommerce-Price-currencySymbol, .form-control::placeholder, .shipping-calculator-form .input-text::placeholder,
+.shipping-calculator-form .select2::placeholder,
+.woocommerce-input-wrapper input::placeholder {
   font-family: "adelle", serif;
   font-weight: 100;
   font-style: italic;
   font-size: 1em;
   margin-right: .5em; }
 
-.woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th {
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table tfoot th {
   border-right: 2px solid #1f3231;
   border-top: 0; }
 
-.woocommerce-info, .woocommerce-message, .woocommerce-error {
+.woocommerce-info,
+.woocommerce-message,
+.woocommerce-error {
   background: transparent !important;
   padding-left: 0px;
   font-size: .8rem;
   text-transform: uppercase;
   display: block; }
-  .woocommerce-info:before, .woocommerce-message:before, .woocommerce-error:before {
+  .woocommerce-info:before,
+  .woocommerce-message:before,
+  .woocommerce-error:before {
     display: none !important; }
 
-.woocommerce-info, .woocommerce-message {
+.woocommerce-info,
+.woocommerce-message {
   border-bottom: 2px solid #1f3231 !important;
   border-top: 4px solid #1f3231 !important;
   color: #1f3231; }
@@ -8051,7 +8175,9 @@ a:hover {
 .form-group {
   margin-bottom: 1rem !important; }
 
-.form-control, .shipping-calculator-form .input-text, .shipping-calculator-form .select2, .woocommerce-input-wrapper input {
+.form-control, .shipping-calculator-form .input-text,
+.shipping-calculator-form .select2,
+.woocommerce-input-wrapper input {
   padding-left: 0;
   background: transparent;
   color: #1f3231;
@@ -8059,11 +8185,15 @@ a:hover {
   border-bottom: 2px dotted #1f3231;
   font-family: "adelle", serif;
   margin-bottom: 1rem !important; }
-  .form-control:active, .shipping-calculator-form .input-text:active, .shipping-calculator-form .select2:active, .woocommerce-input-wrapper input:active {
+  .form-control:active, .shipping-calculator-form .input-text:active,
+  .shipping-calculator-form .select2:active,
+  .woocommerce-input-wrapper input:active {
     background: transparent;
     border-bottom-style: solid !important;
     box-shadow: none !important; }
-  .form-control:focus, .shipping-calculator-form .input-text:focus, .shipping-calculator-form .select2:focus, .woocommerce-input-wrapper input:focus {
+  .form-control:focus, .shipping-calculator-form .input-text:focus,
+  .shipping-calculator-form .select2:focus,
+  .woocommerce-input-wrapper input:focus {
     background: transparent;
     box-shadow: none !important; }
   .form-control::-webkit-input-placeholder, .shipping-calculator-form .input-text::-webkit-input-placeholder, .shipping-calculator-form .select2::-webkit-input-placeholder, .woocommerce-input-wrapper input::-webkit-input-placeholder {
@@ -8074,7 +8204,9 @@ a:hover {
     color: rgba(31, 50, 49, 0.2); }
   .form-control::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder, .woocommerce-input-wrapper input::-ms-input-placeholder {
     color: rgba(31, 50, 49, 0.2); }
-  .form-control::placeholder, .shipping-calculator-form .input-text::placeholder, .shipping-calculator-form .select2::placeholder, .woocommerce-input-wrapper input::placeholder {
+  .form-control::placeholder, .shipping-calculator-form .input-text::placeholder,
+  .shipping-calculator-form .select2::placeholder,
+  .woocommerce-input-wrapper input::placeholder {
     color: rgba(31, 50, 49, 0.2); }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -8085,7 +8217,8 @@ a:hover {
   border-radius: 0 !important;
   border: 2px solid #1f3231; }
 
-.select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true] {
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__option[data-selected=true] {
   background: #1f3231;
   color: #E9D5BC; }
 
@@ -8094,7 +8227,9 @@ a:hover {
   background: transparent;
   border-bottom: 2px dotted #1f3231; }
 
-.woocommerce form .form-row.woocommerce-validated .select2-container, .woocommerce form .form-row.woocommerce-validated input.input-text, .woocommerce form .form-row.woocommerce-validated select {
+.woocommerce form .form-row.woocommerce-validated .select2-container,
+.woocommerce form .form-row.woocommerce-validated input.input-text,
+.woocommerce form .form-row.woocommerce-validated select {
   border-color: #1f3231 !important; }
 
 .woocommerce-form-coupon {
@@ -8102,7 +8237,8 @@ a:hover {
   border-bottom: 2px solid #D93D36 !important;
   border-radius: 0px !important; }
 
-.woocommerce-checkout h3, .woocommerce-order-details h2 {
+.woocommerce-checkout h3,
+.woocommerce-order-details h2 {
   font-family: 'sharp10', sans-serif;
   text-transform: uppercase;
   font-size: 3.5rem;
@@ -8142,7 +8278,9 @@ a:hover {
 .woocommerce form .form-row.woocommerce-invalid label {
   color: #D93D36 !important; }
 
-.woocommerce form .form-row.woocommerce-invalid .select2-container, .woocommerce form .form-row.woocommerce-invalid input.input-text, .woocommerce form .form-row.woocommerce-invalid select {
+.woocommerce form .form-row.woocommerce-invalid .select2-container,
+.woocommerce form .form-row.woocommerce-invalid input.input-text,
+.woocommerce form .form-row.woocommerce-invalid select {
   border-color: #D93D36 !important; }
 
 .woocommerce a.remove {
@@ -8166,7 +8304,8 @@ a:hover {
 .wc-proceed-to-checkout {
   padding: 15px; }
 
-.woocommerce .blockUI.blockOverlay, .woocommerce .loader {
+.woocommerce .blockUI.blockOverlay,
+.woocommerce .loader {
   background-color: transparent !important;
   opacity: 1 !important; }
 
@@ -8212,7 +8351,7 @@ a:hover {
   .cart-collaterals .flair h3 {
     margin-top: 0;
     text-align: center;
-    font-family: clarendon-urw-extra-narrow,serif;
+    font-family: clarendon-urw-extra-narrow, serif;
     font-weight: 100;
     font-size: calc(2rem + 4 * ( (100vw - 768px) / 372));
     color: #D93D36; }
@@ -8324,7 +8463,9 @@ a:hover {
 .wc-forward {
   display: none; }
 
-#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
   background: transparent !important;
   border-radius: 0 !important;
   margin-top: 2rem; }
@@ -8334,7 +8475,9 @@ a:hover {
   padding-bottom: 1rem;
   border-bottom: 2px dotted #1f3231; }
 
-#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
   background-color: #F9B342;
   color: #1f3231;
   font-family: "adelle", serif; }
@@ -8342,7 +8485,9 @@ a:hover {
 .woocommerce-terms-and-conditions-wrapper {
   font-family: "adelle", serif; }
 
-#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
   display: none; }
 
 .woocommerce form .form-row label {
@@ -8354,7 +8499,12 @@ a:hover {
   font-family: 'sharp25', sans-serif;
   margin-bottom: .2rem; }
 
-#add_payment_method #payment div.payment_box input.input-text, #add_payment_method #payment div.payment_box textarea, .woocommerce-cart #payment div.payment_box input.input-text, .woocommerce-cart #payment div.payment_box textarea, .woocommerce-checkout #payment div.payment_box input.input-text, .woocommerce-checkout #payment div.payment_box textarea {
+#add_payment_method #payment div.payment_box input.input-text,
+#add_payment_method #payment div.payment_box textarea,
+.woocommerce-cart #payment div.payment_box input.input-text,
+.woocommerce-cart #payment div.payment_box textarea,
+.woocommerce-checkout #payment div.payment_box input.input-text,
+.woocommerce-checkout #payment div.payment_box textarea {
   border: none !important;
   background: transparent !important;
   padding-left: 15px !important;
@@ -8368,10 +8518,17 @@ a:hover {
     color: rgba(31, 50, 49, 0.2); }
   #add_payment_method #payment div.payment_box input.input-text::-ms-input-placeholder, #add_payment_method #payment div.payment_box textarea::-ms-input-placeholder, .woocommerce-cart #payment div.payment_box input.input-text::-ms-input-placeholder, .woocommerce-cart #payment div.payment_box textarea::-ms-input-placeholder, .woocommerce-checkout #payment div.payment_box input.input-text::-ms-input-placeholder, .woocommerce-checkout #payment div.payment_box textarea::-ms-input-placeholder {
     color: rgba(31, 50, 49, 0.2); }
-  #add_payment_method #payment div.payment_box input.input-text::placeholder, #add_payment_method #payment div.payment_box textarea::placeholder, .woocommerce-cart #payment div.payment_box input.input-text::placeholder, .woocommerce-cart #payment div.payment_box textarea::placeholder, .woocommerce-checkout #payment div.payment_box input.input-text::placeholder, .woocommerce-checkout #payment div.payment_box textarea::placeholder {
+  #add_payment_method #payment div.payment_box input.input-text::placeholder,
+  #add_payment_method #payment div.payment_box textarea::placeholder,
+  .woocommerce-cart #payment div.payment_box input.input-text::placeholder,
+  .woocommerce-cart #payment div.payment_box textarea::placeholder,
+  .woocommerce-checkout #payment div.payment_box input.input-text::placeholder,
+  .woocommerce-checkout #payment div.payment_box textarea::placeholder {
     color: rgba(31, 50, 49, 0.2); }
 
-#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods {
+#add_payment_method #payment ul.payment_methods,
+.woocommerce-cart #payment ul.payment_methods,
+.woocommerce-checkout #payment ul.payment_methods {
   border-bottom: none !important; }
 
 .wc_payment_method > label {
@@ -8470,7 +8627,9 @@ a:hover {
   .footer-widget .textwidget p:last-child {
     margin-bottom: 0; }
 
-.navbar-expand-md .ctl-cta, .navbar-expand-md .ctl-menu, .hamburger {
+.navbar-expand-md .ctl-cta,
+.navbar-expand-md .ctl-menu,
+.hamburger {
   display: none !important; }
 
 @media (min-width: 768px) {
@@ -8484,9 +8643,11 @@ a:hover {
 @media (max-width: 767.98px) {
   .woocommerce .quantity .qty {
     width: 100% !important; }
-  .woocommerce table.shop_table_responsive tr td.product-quantity, .woocommerce-page table.shop_table_responsive tr td.product-quantity {
+  .woocommerce table.shop_table_responsive tr td.product-quantity,
+  .woocommerce-page table.shop_table_responsive tr td.product-quantity {
     display: flex !important; }
-  .woocommerce table.shop_table_responsive tr td.product-quantity::before, .woocommerce-page table.shop_table_responsive tr td.product-quantity::before {
+  .woocommerce table.shop_table_responsive tr td.product-quantity::before,
+  .woocommerce-page table.shop_table_responsive tr td.product-quantity::before {
     content: '';
     display: none; }
   .woocommerce table.cart td.actions {
@@ -8539,6 +8700,10 @@ a:hover {
     background: var(--primary);
     border: 2px solid var(--background);
     color: var(--background); }
+    .cart-upsell .flickity-button:disabled {
+      opacity: 0;
+      display: none;
+      pointer-events: none; }
   .cart-upsell .flickity-prev-next-button.previous {
     left: 8px; }
   .cart-upsell .flickity-prev-next-button.next {

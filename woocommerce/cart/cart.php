@@ -23,10 +23,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 
-<ul class="ctl-cart__contents cart woocommerce-cart-form__contents" cellspacing="0">
-			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
+	<ul class="ctl-cart__contents cart woocommerce-cart-form__contents" cellspacing="0">
+		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
-			<?php
+		<?php
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 				$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
@@ -34,10 +34,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
-					<li class="ctl-cart__item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+		<li
+			class="ctl-cart__item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-						<div class="product-remove">
-							<?php
+			<div class="product-remove">
+				<?php
 								// @codingStandardsIgnoreLine
 								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 									'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
@@ -47,10 +48,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 									esc_attr( $_product->get_sku() )
 								), $cart_item_key );
 							?>
-						</div>
+			</div>
 
-						<div class="product-name" data-title="<?php esc_attr_e( 'Produto', 'understrap' ); ?>">
-						<?php
+			<div class="product-name" data-title="<?php esc_attr_e( 'Produto', 'understrap' ); ?>">
+				<?php
 						if ( ! $product_permalink ) {
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
 						} else {
@@ -67,23 +68,23 @@ do_action( 'woocommerce_before_cart' ); ?>
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>', $product_id ) );
 						}
 						?>
-						</div>
+			</div>
 
-						<div class="product-price" data-title="<?php esc_attr_e( 'Preço', 'understrap' ); ?>">
-							<?php
+			<div class="product-price" data-title="<?php esc_attr_e( 'Preço', 'understrap' ); ?>">
+				<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
-						</div>
+			</div>
 
-						<div class="product-quantity" data-title="<?php esc_attr_e( 'Quantidade', 'understrap' ); ?>">
-						<?php
+			<div class="product-quantity" data-title="<?php esc_attr_e( 'Quantidade', 'understrap' ); ?>">
+				<?php
 						if ( $_product->is_sold_individually() ) {
 							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
 						} else {
 							?>
-							<button type="button" class="plus" >+</button>
-							<button type="button" class="minus" >-</button>
-							<?php
+				<button type="button" class="plus">+</button>
+				<button type="button" class="minus">-</button>
+				<?php
 							$product_quantity = woocommerce_quantity_input( array(
 								'input_name'   => "cart[{$cart_item_key}][qty]",
 								'input_value'  => sprintf('%04d', $cart_item['quantity']),
@@ -95,70 +96,91 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 						?>
-						</div>
+			</div>
 
-						<div class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'understrap' ); ?>">
-							<?php
+			<div class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'understrap' ); ?>">
+				<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
-						</div>
-					</li>
-					<?php
+			</div>
+		</li>
+		<?php
 				}
 			}
 			?>
 
-			<?php do_action( 'woocommerce_cart_contents' ); ?>
+		<?php do_action( 'woocommerce_cart_contents' ); ?>
 
-			
 
-			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
+
+		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 	</ul>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 
-	<tr>
-				<td colspan="6" class="actions">
+	<div class="ctl-cart__actions">
 
-					<?php if ( wc_coupons_enabled() ) { ?>
-						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Cupom:', 'understrap' ); ?></label> <input type="text" name="coupon_code" class="input-text form-control d-inline-block" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Cupom', 'understrap' ); ?>" /> <button type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Aplicar cupom', 'understrap' ); ?>"><?php esc_attr_e( 'Aplicar cupom', 'understrap' ); ?></button>
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-						</div>
-					<?php } ?>
+		<?php if ( wc_coupons_enabled() ) { ?>
+		<div class="coupon form-row">
+			<div class="form-group">
+				<label for="coupon_code"><?php esc_html_e( 'Cupom:', 'understrap' ); ?></label> <input type="text"
+					name="coupon_code" class="input-text form-control d-inline-block" id="coupon_code" value=""
+					placeholder="<?php esc_attr_e( 'Cupom', 'understrap' ); ?>" /> 
+					<?php do_action( 'woocommerce_cart_coupon' ); ?>
+				</div>
+				<div class="form-group align-self-center">
+					<button type="submit"
+					class="btn btn-outline-primary" name="apply_coupon"
+					value="<?php esc_attr_e( 'Aplicar cupom', 'understrap' ); ?>"><?php esc_attr_e( 'Aplicar cupom', 'understrap' ); ?></button>
+				</div>
+		</div>
+		<?php } ?>
 
-					<button type="submit" class="btn btn-outline-primary" name="update_cart" value="<?php esc_attr_e( 'Atualizar preços', 'understrap' ); ?>"><?php esc_html_e( 'Atualizar preços', 'understrap' ); ?></button>
+		<button type="submit" class="btn btn-outline-primary mb-4" name="update_cart"
+			value="<?php esc_attr_e( 'Atualizar preços', 'understrap' ); ?>"><?php esc_html_e( 'Atualizar preços', 'understrap' ); ?></button>
+	</div>
 
-					<?php do_action( 'woocommerce_cart_actions' ); ?>
+			<?php do_action( 'woocommerce_cart_actions' ); ?>
 
-					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
-				</td>
-			</tr>
+			<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 
 </form>
 
+<?php if ( $upsell = get_page_by_path( 'upsell', OBJECT, 'page' ) ) { ?>
+
+<?php
+		 				global $post;        
+						 $posts = get_field('produtos',$upsell->ID);
+						 foreach(WC()->cart->get_cart() as $key => $val ) {
+							 $_product = $val['data'];
+							 foreach ($posts as $pkey => $post) {
+								 if ($post->ID == $_product->id) {
+									 unset($posts[$pkey]);
+								 }
+								}
+								
+							}        
+							
+							if( $posts ): ?>
+
 <div class="cart-upsell">
 	<div class="cart-upsell__inner">
-		<?php if ( $upsell = get_page_by_path( 'upsell', OBJECT, 'page' ) ) { ?>
-			
-			<h4><?php echo get_the_title($upsell->ID) ?></h4>
-		 				<?php
-		 				global $post;
-		 				$posts = get_field('produtos',$upsell->ID);
-		 	      if( $posts ): ?>
-		 	      <div class="carousel" data-flickity='{ "cellAlign": "left", "pageDots": false, "wrapAround": <?php echo (sizeof($posts) > 3 ? 'true' : 'false'); ?>, "prevNextButtons" : true, "contain" : true, "draggable": true, "groupCells" : "100%", "freeScroll": true, "accessibility": false, "arrowShape": "M2.4,38.2v8.8l22.1,3.2v3.5c0,18.3,9.7,23.8,22.1,23.8c14.7,0,8.5-9.4,20.9-9.4h7.7V58V42.7v-4.4H59.2c-4.7-5.6-8.8-15.3-8.8-15.3c0-0.3-0.6-0.6-0.9-0.6c-3.8,0.6-6.8,3.2-6.8,9.4c0,2.1,1.2,4.7,2.6,6.5H2.1H2.4z" }'>
-		 	      <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-		 	        <div class="col-md-5 col-10 my-3">
-		 	          <?php setup_postdata($post);
+		<h4><?php echo get_the_title($upsell->ID) ?></h4>
+		<div class="carousel"
+			data-flickity='{ "cellAlign": "left", "pageDots": false, "wrapAround": <?php echo (sizeof($posts) > 3 ? 'true' : 'false'); ?>, "prevNextButtons" : true, "contain" : true, "draggable": true, "groupCells" : "100%", "freeScroll": true, "accessibility": false, "arrowShape": "M2.4,38.2v8.8l22.1,3.2v3.5c0,18.3,9.7,23.8,22.1,23.8c14.7,0,8.5-9.4,20.9-9.4h7.7V58V42.7v-4.4H59.2c-4.7-5.6-8.8-15.3-8.8-15.3c0-0.3-0.6-0.6-0.9-0.6c-3.8,0.6-6.8,3.2-6.8,9.4c0,2.1,1.2,4.7,2.6,6.5H2.1H2.4z" }'>
+			<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+			<div class="col-md-5 col-10 my-3">
+				<?php setup_postdata($post);
 		 	          get_template_part( 'loop-templates/content-marmita', get_post_field( 'post_name', get_post() )); ?>
-		 	        </div>
-		 	      <?php endforeach; ?>
-		 	      </div>
-		 	      <?php wp_reset_postdata(); endif;
+			</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</div>
+<?php wp_reset_postdata(); endif;
 
 		 				wp_reset_postdata();
-		 			} ?></div>
+		 			} ?>
 
-</div>
 
 <div class="cart-collaterals">
 
@@ -178,4 +200,3 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' );
-
