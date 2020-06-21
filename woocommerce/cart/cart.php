@@ -22,18 +22,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
-		<thead>
-			<tr>
-				<th class="product-remove">&nbsp;</th>
-				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php esc_html_e( 'Produto', 'understrap' ); ?></th>
-				<th class="product-price"><?php esc_html_e( 'Preço', 'understrap' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Qtd.', 'understrap' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Total', 'understrap' ); ?></th>
-			</tr>
-		</thead>
-		<tbody>
+
+<ul class="ctl-cart__contents cart woocommerce-cart-form__contents" cellspacing="0">
 			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 			<?php
@@ -44,9 +34,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
-					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+					<li class="ctl-cart__item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-						<td class="product-remove">
+						<div class="product-remove">
 							<?php
 								// @codingStandardsIgnoreLine
 								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
@@ -57,21 +47,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 									esc_attr( $_product->get_sku() )
 								), $cart_item_key );
 							?>
-						</td>
+						</div>
 
-						<td class="product-thumbnail">
-						<?php
-						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
-
-						if ( ! $product_permalink ) {
-							echo $thumbnail; // PHPCS: XSS ok.
-						} else {
-							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
-						}
-						?>
-						</td>
-
-						<td class="product-name" data-title="<?php esc_attr_e( 'Produto', 'understrap' ); ?>">
+						<div class="product-name" data-title="<?php esc_attr_e( 'Produto', 'understrap' ); ?>">
 						<?php
 						if ( ! $product_permalink ) {
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
@@ -89,15 +67,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>', $product_id ) );
 						}
 						?>
-						</td>
+						</div>
 
-						<td class="product-price" data-title="<?php esc_attr_e( 'Preço', 'understrap' ); ?>">
+						<div class="product-price" data-title="<?php esc_attr_e( 'Preço', 'understrap' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
-						</td>
+						</div>
 
-						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantidade', 'understrap' ); ?>">
+						<div class="product-quantity" data-title="<?php esc_attr_e( 'Quantidade', 'understrap' ); ?>">
 						<?php
 						if ( $_product->is_sold_individually() ) {
 							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -117,14 +95,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 						?>
-						</td>
+						</div>
 
-						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'understrap' ); ?>">
+						<div class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'understrap' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
-						</td>
-					</tr>
+						</div>
+					</li>
 					<?php
 				}
 			}
@@ -132,7 +110,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
-			<tr>
+			
+
+			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
+	</ul>
+	<?php do_action( 'woocommerce_after_cart_table' ); ?>
+
+	<tr>
 				<td colspan="6" class="actions">
 
 					<?php if ( wc_coupons_enabled() ) { ?>
@@ -150,10 +134,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 				</td>
 			</tr>
 
-			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
-		</tbody>
-	</table>
-	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
 <div class="cart-upsell">

@@ -66,39 +66,45 @@ const addLeadingZero = value => {
 
 jQuery(document).ready(function($){
 
-   $('body').on( 'click', '.ch-qty button.plus, .ch-qty button.minus, .product-quantity button.plus, .product-quantity button.minus', function() {
-
-      // Get current quantity values
-      var qty = $( this ).parent().find( '.qty' );
-      var val   = parseFloat(qty.val());
-      var max = parseFloat(qty.attr( 'max' ));
-      var min = parseFloat(qty.attr( 'min' ));
-      var step = parseFloat(qty.attr( 'step' ));
-
-      // Change the value if plus or minus
-      if ( $( this ).is( '.plus' ) ) {
-         if ( max && ( max <= val ) ) {
-            qty.val( max );
-         } else {
-            qty.val( val + step );
-         }
-      } else {
-         if ( min && ( min >= val ) ) {
-            qty.val( min );
-         } else if ( val > 1 ) {
-            qty.val( val - step );
-         }
-      }
-      $( this ).closest( '.produto__addtocart' ).find('.add_to_cart_button').attr('data-quantity', $('.quantity input').val());
-
-      qty.val(addLeadingZero(qty.val()));
-
-      if ($(this).closest('.shop_table').get(0)) {
-        updateCartPage();
-      }
-
+   $('body').on( 'click', '.ch-qty button.plus, .ch-qty button.minus, .product-quantity button.plus, .product-quantity button.minus', (e) => {
+      handleQtySelector(e)
+   });
+   $('body').on( 'keyup', '.ch-qty input, .product-quantity input', (e) => {
+    $( e.target ).closest( '.produto__addtocart' ).find('.ctl-add').attr('data-quantity', $( e.target ).closest( '.produto__addtocart' ).find('.qty').val() );
    });
 
+  const handleQtySelector = (e) => {
+    // Get current quantity values
+    const clickedElement = e.target;
+    var qty = $( clickedElement ).parent().find( '.qty' );
+    var val   = parseFloat(qty.val());
+    var max = parseFloat(qty.attr( 'max' ));
+    var min = parseFloat(qty.attr( 'min' ));
+    var step = parseFloat(qty.attr( 'step' ));
+
+    // Change the value if plus or minus
+    if ( $( clickedElement ).is( '.plus' ) ) {
+       if ( max && ( max <= val ) ) {
+          qty.val( max );
+       } else {
+          qty.val( val + step );
+       }
+    } else {
+       if ( min && ( min >= val ) ) {
+          qty.val( min );
+       } else if ( val > 1 ) {
+          qty.val( val - step );
+       }
+    }
+    
+    $( clickedElement ).closest( '.produto__addtocart' ).find('.ctl-add').attr('data-quantity', $( clickedElement ).closest( '.produto__addtocart' ).find('.qty').val() );
+
+    qty.val(addLeadingZero(qty.val()));
+
+    if ($(clickedElement).closest('.ctl-cart__contents').get(0)) {
+      updateCartPage();
+    }
+  }
 });
 
 var pushdata = [];

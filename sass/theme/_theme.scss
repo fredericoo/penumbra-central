@@ -918,6 +918,53 @@ a:hover {
 		align-self: center;
 		text-align: right;
 	}
+
+	&__contents {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	&__item {
+		padding: $grid-gutter-width;
+		display: grid;
+		gap: $grid-gutter-width;
+		border-bottom: 1px dotted var(--secondary);
+		grid: "info price qty subtotal remove" 1vh / 1fr max-content min-content max-content max-content;
+		@include media-breakpoint-down(xs) {
+			padding: $grid-gutter-width/2;
+			gap: $grid-gutter-width/2;
+			grid: "info info remove" min-content
+				  "price qty subtotal" 1fr / 1fr min-content min-content;
+		}
+		align-items: center;
+		@include fluid-type(.6rem, .8rem, 768px, 1140px);
+		.product-remove { 
+			grid-area: remove;
+			justify-self: end;
+		}
+		.product-name {
+			grid-area: info
+		}
+		.product-price {
+			grid-area: price;
+			background: var(--tertiary);
+			padding: 4px 8px;
+			display: inline-block;
+		}
+		.product-quantity {
+			grid-area: qty;
+			.quantity {
+				
+				input {
+					min-width: 3em;
+					font-size: 1.5em;
+				}
+			}
+		}
+		.product-subtotal {
+			grid-area: subtotal;
+		}
+	}
 }
 
 @keyframes shake {
