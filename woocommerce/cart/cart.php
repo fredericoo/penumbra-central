@@ -130,7 +130,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<div class="form-group align-self-center">
 					<button type="submit"
 					class="btn btn-outline-primary" name="apply_coupon"
-					value="<?php esc_attr_e( 'Aplicar cupom', 'understrap' ); ?>"><?php esc_attr_e( 'Aplicar cupom', 'understrap' ); ?></button>
+					value="<?php esc_attr_e( 'Aplicar cupom', 'understrap' ); ?>"><?php esc_attr_e( 'Aplicar', 'understrap' ); ?></button>
 				</div>
 		</div>
 		<?php } ?>
