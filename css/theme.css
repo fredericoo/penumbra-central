@@ -7537,10 +7537,12 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 
 .produto--marmita .produto-grid {
   display: grid;
+  padding: 15px;
+  grid-gap: 30px;
   grid: "imagem" 40vh "titulo" auto "desc" auto "cart" auto "preco" auto/1fr; }
   @media (min-width: 992px) {
     .produto--marmita .produto-grid {
-      grid: "imagem titulo" auto "imagem desc" auto "imagem preco" auto "imagem cart" auto / 1fr 1fr; } }
+      grid: "titulo imagem" auto "desc imagem" auto "preco imagem" auto "cart imagem" auto / 1fr 1fr; } }
   .produto--marmita .produto-grid__imagem {
     grid-area: imagem; }
     .produto--marmita .produto-grid__imagem .lazy-container {

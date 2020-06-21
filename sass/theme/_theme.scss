@@ -502,7 +502,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 		// overflow: hidden;
 		.produto-grid {
 			display: grid;
-
+			padding: $grid-gutter-width/2;
+			grid-gap: $grid-gutter-width;
 			grid:
 			"imagem" max(40vh)
 			"titulo" auto
@@ -512,10 +513,10 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 
 			@include media-breakpoint-up(lg) {
 				grid:
-				"imagem titulo" auto
-				"imagem desc" auto
-				"imagem preco" auto
-				"imagem cart" auto / 1fr 1fr;
+				"titulo imagem" auto
+				"desc imagem" auto
+				"preco imagem" auto
+				"cart imagem" auto / 1fr 1fr;
 			}
 
 			&__imagem {

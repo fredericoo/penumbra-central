@@ -96,7 +96,7 @@ jQuery('#modal').on('show.bs.modal', function (event) {
   modal.querySelector('.produto__imagem>img').setAttribute('src',product.getAttribute('data-fullimage'));
   modal.querySelector('.produto__imagem>img').className = "lazyload fade"
 
-  modal.querySelector('.produto__info').appendChild(lastClickedProduct.querySelector('.produto__addtocart'));
+  modal.querySelector('.produto-grid').appendChild(lastClickedProduct.querySelector('.produto__addtocart'));
 
   lazyLoadInstance.update();
   scrollPop.updatePoppable();
