@@ -7965,12 +7965,12 @@ a:hover {
     list-style-type: none;
     padding: 0; }
   .ctl-cart__item {
-    padding: 30px;
+    padding: 15px 30px;
     display: grid;
     gap: 30px;
     border-bottom: 1px dotted var(--secondary);
-    grid: "info price qty subtotal remove" 1vh/1fr -webkit-max-content -webkit-min-content -webkit-max-content -webkit-max-content;
-    grid: "info price qty subtotal remove" 1vh/1fr max-content min-content max-content max-content;
+    grid: "info price qty subtotal remove" 1fr / 1fr -webkit-max-content -webkit-min-content -webkit-max-content -webkit-max-content;
+    grid: "info price qty subtotal remove" 1fr / 1fr max-content min-content max-content max-content;
     align-items: center;
     font-size: calc(0.6rem + 0.2 * ( (100vw - 768px) / 372)); }
     @media (max-width: 767.98px) {

@@ -1046,11 +1046,11 @@ a:hover {
 	}
 
 	&__item {
-		padding: $grid-gutter-width;
+		padding: $grid-gutter-width/2 $grid-gutter-width;
 		display: grid;
 		gap: $grid-gutter-width;
 		border-bottom: 1px dotted var(--secondary);
-		grid: "info price qty subtotal remove"1vh / 1fr max-content min-content max-content max-content;
+		grid: "info price qty subtotal remove" 1fr / 1fr max-content min-content max-content max-content;
 
 		@include media-breakpoint-down(sm) {
 			padding: $grid-gutter-width/2;
