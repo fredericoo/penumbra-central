@@ -51,7 +51,7 @@ jQuery( function( $ ) {
 					//.css( 'border', '1px solid red' )
 					.addClass( 'required error' )
 					//.addClass( 'barizi-class' )
-					.before( '<div class="ajaxerrors"><p>Please select ' + attributeTaxName + '</p></div>' )
+					.before( '<div class="ajaxerrors"><p>Selecione um(a) ' + attributeTaxName + '</p></div>' )
 		
 				check = false;
 			} else {
