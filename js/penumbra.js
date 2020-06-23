@@ -134,13 +134,15 @@ const docMain = document.querySelector('main');
 
     if (selectedPos != '') {
       const scrollSelected = document.querySelector('a[href*=' + selectedPos + ']');
-      if (!scrollSelected.classList.contains('current')) {
-        document.querySelectorAll('.current').forEach(current => current.classList.remove('current') );
-        scrollSelected.classList.add('current');
-          jQuery('.scrollmenu .container').animate(
-          {  scrollLeft: scrollSelected.offsetLeft - document.querySelector('.scrollmenu>.container').offsetLeft },
-          300);
-    }
+      if (scrollSelected) {
+        if (!scrollSelected.classList.contains('current')) {
+          document.querySelectorAll('.current').forEach(current => current.classList.remove('current') );
+          scrollSelected.classList.add('current');
+            jQuery('.scrollmenu .container').animate(
+            {  scrollLeft: scrollSelected.offsetLeft - document.querySelector('.scrollmenu>.container').offsetLeft },
+            300);
+        }
+      }
   }
 }
 })();
