@@ -165,7 +165,7 @@ jQuery( function( $ ) {
 					});
 
 					// Trigger event so themes can refresh other areas
-					$( document.body ).trigger( 'added_to_cart', [ fragments, cart_hash, $thisbutton ] );
+					$( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, $thisbutton ] );
 				}
 			});
 

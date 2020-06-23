@@ -134,8 +134,9 @@ jQuery('body').on('added_to_cart',function(){
     addButton.innerHTML = "Adicionar ao carrinho";
     addButton = null;
   }
-    jQuery('#modal').modal('hide');
-    updateCartPage();
+  if (document.querySelector('.ctl-cart')) document.querySelector('.ctl-cart').classList.remove('animate');
+  jQuery('#modal').modal('hide');
+  updateCartPage();
   
   // if (!document.querySelector('.ctl-cart')) return false;
   // document.querySelector('.ctl-cart').classList.add('animate');

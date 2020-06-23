@@ -7618,6 +7618,24 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 .produto a:hover {
   text-decoration: none; }
 
+.produto.acabou {
+  position: relative; }
+  .produto.acabou:after {
+    content: 'Tem mas acabou';
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    z-index: 2;
+    width: auto;
+    white-space: nowrap;
+    font-size: .8rem;
+    letter-spacing: .04em;
+    padding: 4px 8px;
+    transform: translate(-50%, 0) rotate(-2deg);
+    background: var(--primary);
+    color: var(--background); }
+
 .produto--marmita .produto-grid {
   display: grid;
   padding: 15px;

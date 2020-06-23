@@ -9,6 +9,8 @@
 			echo ' cat-'.esc_html($term->term_id);
 		}
 	endif;
+	global $product;
+	if($product->stock_status != 'instock') { echo ' acabou'; }
 	?>
 ">
 	<?php foreach ($terms as $cat) {
