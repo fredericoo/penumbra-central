@@ -8743,10 +8743,10 @@ a:hover {
     right: 8px;
     transform: translateY(-50%) scaleY(-1); }
 
-.tawcvs-swatches .swatch-image {
+.tawcvs-swatches .swatch.swatch-image {
   height: 60px;
   width: 60px; }
-  .tawcvs-swatches .swatch-image img {
+  .tawcvs-swatches .swatch.swatch-image img {
     width: 100%;
     height: 100%; }
 /*# sourceMappingURL=theme.css.map */
