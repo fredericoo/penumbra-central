@@ -7622,7 +7622,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   display: grid;
   padding: 15px;
   grid-gap: 30px;
-  grid: "imagem" 40vh "titulo" auto "desc" auto "cart" auto "preco" auto/1fr; }
+  grid: "imagem" 40vh "titulo" auto "desc" auto "preco" auto "cart" auto/1fr; }
   @media (min-width: 992px) {
     .produto--marmita .produto-grid {
       grid: "titulo imagem" auto "desc imagem" auto "preco imagem" auto "cart imagem" auto/1fr 1fr; } }
@@ -7757,6 +7757,16 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 
 .modal--produto .produto__addtocart {
   display: block; }
+  @media (max-width: 767.98px) {
+    .modal--produto .produto__addtocart {
+      padding-bottom: 15px;
+      background: var(--tertiary);
+      position: -webkit-sticky;
+      position: sticky;
+      bottom: 0px; } }
+  .modal--produto .produto__addtocart .variations_form {
+    padding-top: 15px;
+    border-top: 1px dotted var(--secondary); }
 
 .modal--produto .produto--marmita .row,
 .modal--produto .produto--marmita .produto-grid {
@@ -8112,8 +8122,14 @@ a:hover {
     text-align: center;
     font-family: clarendon-urw-extra-narrow, serif;
     font-weight: 100;
-    font-size: 4rem;
+    font-size: calc(2rem + 2 * ( (100vw - 768px) / 372));
     color: #1f3231; }
+    @media screen and (max-width: 768px) {
+      .quantity input {
+        font-size: 2rem; } }
+    @media screen and (min-width: 1140px) {
+      .quantity input {
+        font-size: 4rem; } }
     .quantity input::-webkit-outer-spin-button, .quantity input::-webkit-inner-spin-button {
       -webkit-appearance: none !important;
       -moz-appearance: textfield;

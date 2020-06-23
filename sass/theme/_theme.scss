@@ -569,7 +569,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 			padding: $grid-gutter-width/2;
 			grid-gap: $grid-gutter-width;
 			grid:
-				"imagem"max(40vh) "titulo"auto "desc"auto "cart"auto "preco"auto / 1fr;
+				"imagem"max(40vh) "titulo"auto "desc"auto "preco"auto "cart"auto / 1fr;
 
 			@include media-breakpoint-up(lg) {
 				grid:
@@ -753,6 +753,16 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 
 			&__addtocart {
 				display: block;
+				@include media-breakpoint-down(sm) {
+					padding-bottom: $grid-gutter-width/2;
+					background: var(--tertiary);
+					position: sticky;
+					bottom: 0px;
+				}
+				.variations_form {
+					padding-top: $grid-gutter-width/2;
+					border-top: 1px dotted var(--secondary);
+				}
 			}
 
 			&--marmita {
@@ -1212,7 +1222,7 @@ a:hover {
 		text-align: center;
 		font-family: clarendon-urw-extra-narrow, serif;
 		font-weight: 100;
-		font-size: 4rem;
+		@include fluid-type(2rem, 4rem, 768px, 1140px);
 		color: theme-color(secondary);
 
 		&::-webkit-outer-spin-button,
