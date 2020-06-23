@@ -1046,52 +1046,106 @@ a:hover {
 	}
 
 	&__item {
-		padding: $grid-gutter-width/2 $grid-gutter-width;
 		display: grid;
 		gap: $grid-gutter-width;
 		border-bottom: 1px dotted var(--secondary);
 		grid: "info price qty subtotal remove" 1fr / 1fr max-content min-content max-content max-content;
 
 		@include media-breakpoint-down(sm) {
-			padding: $grid-gutter-width/2;
 			gap: $grid-gutter-width/2;
-			grid: "info info remove"min-content "price qty subtotal"1fr / 1fr min-content min-content;
+			grid: "info info info remove" min-content 
+				  "qty subtotal subtotal remove" 1fr / 33.333% 33.333% calc(33.333% - 45px) 33.333%;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			scroll-behavior: smooth;
+			-webkit-overflow-scrolling: touch;
+			
+			&::-webkit-scrollbar {
+				display: none;
+				background: transparent;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: transparent;
+			}
+			&::-webkit-scrollbar-track {
+				background: transparent;
+			}
+
+			&>*{
+				scroll-snap-align: start;
+			}
+
 		}
 
 		align-items: center;
 		@include fluid-type(.6rem, .8rem, 768px, 1140px);
 
 		.product-remove {
+			@include media-breakpoint-up(md) {
+				padding: $grid-gutter-width/2;
+			}
+			width: 100%;
 			grid-area: remove;
 			justify-self: end;
+			@include media-breakpoint-down(sm) { 
+				align-self: stretch;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				a.remove {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: $grid-gutter-width/2;	
+					width: 100%;
+					height: 100%;
+					border-radius: 0;
+					background: theme-color('danger');
+					color: theme-color('background') !important;
+					vertical-align: middle;
+				}
+			}		
 		}
 
 		.product-name {
-			grid-area: info
+			grid-area: info;
+			padding: $grid-gutter-width/2 0 $grid-gutter-width/2 $grid-gutter-width/2;
+			.variation {
+				margin-bottom: 0;
+			}
+			@include media-breakpoint-down(sm) {  
+				padding-bottom: 0 !important;
+			}
+
 		}
 
 		.product-price {
+			padding: $grid-gutter-width/2 0;
 			grid-area: price;
-			span {
-				background: var(--tertiary);
-				padding: 4px 8px;
-				display: inline-block;
+			text-align: right;
+			@include media-breakpoint-down(sm) { 
+				display: none;
 			}
 		}
-
+		
 		.product-quantity {
 			grid-area: qty;
-
+			
 			.quantity {
-
+				
 				input {
 					min-width: 3em;
 					font-size: 1.5em;
 				}
 			}
+			@include media-breakpoint-down(sm) {
+				padding: $grid-gutter-width/2 0 $grid-gutter-width/2 $grid-gutter-width/2;
+			}
 		}
-
+		
 		.product-subtotal {
+			padding: $grid-gutter-width/2 0;
+			text-align: right;
 			grid-area: subtotal;
 		}
 	}
@@ -1821,27 +1875,6 @@ a:hover {
 	}
 }
 
-.navbar-expand-md .ctl-cta,
-.navbar-expand-md .ctl-menu,
-.hamburger {
-	//MARMITAS
-	display: none !important;
-}
-
-.navbar {
-
-	// MARMITAS
-	@include media-breakpoint-up(md) {
-		grid-template-areas:
-			"logo prompter cta"
-			"logo prompter cta";
-	}
-
-	@include media-breakpoint-down(sm) {
-		grid-template-areas:
-			"logo prompter prompter";
-	}
-}
 
 @include media-breakpoint-down(sm) {
 
@@ -1953,4 +1986,13 @@ a:hover {
 			transform: translateY(-50%) scaleY(-1)
 		}
 	}
+}
+
+.tawcvs-swatches .swatch-image {
+	height: 60px;
+	width: 60px;
+	img {
+		width: 100%;
+		height: 100%;
+	}	
 }

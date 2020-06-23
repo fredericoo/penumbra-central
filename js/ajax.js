@@ -124,6 +124,7 @@ jQuery('body').on('click','.ctl-add',function(e){
   this.classList.add('adding');
   this.innerHTML = 'adicionando…';
   addButton = this;
+  if (document.querySelector('.ctl-cart')) document.querySelector('.ctl-cart').classList.add('animate');
 })
 
 jQuery('body').on('added_to_cart',function(){
@@ -135,24 +136,25 @@ jQuery('body').on('added_to_cart',function(){
   }
     jQuery('#modal').modal('hide');
     updateCartPage();
-  if (!document.querySelector('.ctl-cart')) return false;
-  document.querySelector('.ctl-cart').classList.add('animate');
-  jQuery.ajax({
-    type: "post",
-    dataType: "json",
-    url: myAjax.ajaxurl,
-    data: {
-      action: "get_cart_number"
-    },
-    success: function(response) {
-        if (response.type == "success") {
-          document.querySelector('.ctl-cart__count .no').innerHTML = response.qty
-          document.querySelector('.ctl-cart__total .no').innerHTML = response.total
-          document.querySelector('.ctl-cart').classList.remove('animate');
-          document.querySelector('.ctl-cart').classList.add('pop');
-          return false;
-        }
-    }});
+  
+  // if (!document.querySelector('.ctl-cart')) return false;
+  // document.querySelector('.ctl-cart').classList.add('animate');
+  // jQuery.ajax({
+  //   type: "post",
+  //   dataType: "json",
+  //   url: myAjax.ajaxurl,
+  //   data: {
+  //     action: "get_cart_number"
+  //   },
+  //   success: function(response) {
+  //       if (response.type == "success") {
+  //         document.querySelector('.ctl-cart__count .no').innerHTML = response.qty
+  //         document.querySelector('.ctl-cart__total .no').innerHTML = response.total
+          // document.querySelector('.ctl-cart').classList.remove('animate');
+  //         document.querySelector('.ctl-cart').classList.add('pop');
+  //         return false;
+  //       }
+  //   }});
 
 });
 

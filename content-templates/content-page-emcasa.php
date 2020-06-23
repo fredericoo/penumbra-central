@@ -188,9 +188,10 @@ wp_reset_postdata();
 endif;
 
 ?>
+<a class="ctl-cart slide-up poponce readypop scrollpop" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'Ver seu carrinho' ); ?>">
+  <div class="ctl-cart__count"><?php echo sprintf ( _n( '%d item', '%d itens', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div>
+  <div class="ctl-cart__goto">ver carrinho</div>
+  <div class="ctl-cart__total"><?php echo WC()->cart->get_cart_total(); ?></div>
+</a>
 
-  <a class="ctl-cart <?php $cc =(int)WC()->cart->get_cart_contents_count(); echo ($cc > 0 ? 'readypop' : 'scrollpop') ?> slide-up poponce" href="<?php echo wc_get_cart_url(); ?>">
-    <div class="ctl-cart__count"><span class="no"><?php echo WC()->cart->get_cart_contents_count() ?></span> <span class="woocommerce-Price-currencySymbol">itens</span></div>
-    <div class="ctl-cart__goto">ver carrinho</div>
-    <div class="ctl-cart__total"><span class="woocommerce-Price-currencySymbol">R$</span><span class="no"><?php echo WC()->cart->get_cart_contents_total() ?></span></div>
-  </a>
+<?php //echo do_shortcode('[woocommerce_cart]') ?>

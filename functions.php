@@ -134,5 +134,41 @@ add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
 function my_custom_checkout_field_process() {
     // Check if set, if its not set add an error.
     if ( ! $_POST['custom_one'] )
-        wc_add_notice( __( 'Confira seu endereço e marque a checkbox, sua louca!.' ), 'error' );
+        wc_add_notice( __( 'Confira seu endereço e marque a checkbox, sua louca!' ), 'error' );
+}
+
+
+add_filter( 'woocommerce_account_menu_items', 'pnmbr_remove_my_account_dashboard' );
+function pnmbr_remove_my_account_dashboard( $menu_links ){
+
+	unset( $menu_links['dashboard'] );
+	unset( $menu_links['downloads'] );
+	return $menu_links;
+
+}
+
+add_action('template_redirect', 'pnmbr_redirect_to_orders_from_dashboard' );
+
+function pnmbr_redirect_to_orders_from_dashboard(){
+
+	if( is_account_page() && empty( WC()->query->get_current_endpoint() ) ){
+		wp_safe_redirect( wc_get_account_endpoint_url( 'orders' ) );
+		exit;
+	}
+
+}
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+	ob_start();
+	?>
+	<a class="ctl-cart slide-up poponce readypop scrollpop pop" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'Ver seu carrinho' ); ?>">
+		<div class="ctl-cart__count"><?php echo sprintf ( _n( '%d item', '%d itens', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div>
+		<div class="ctl-cart__goto">ver carrinho</div>
+		<div class="ctl-cart__total"><?php echo WC()->cart->get_cart_total(); ?></div>
+	</a>
+<?php
+$fragments['a.ctl-cart'] = ob_get_clean();
+return $fragments;
 }
