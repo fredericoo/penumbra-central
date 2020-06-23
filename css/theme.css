@@ -7756,14 +7756,12 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
     margin-bottom: 0; }
 
 .modal--produto .produto__addtocart {
-  display: block; }
-  @media (max-width: 767.98px) {
-    .modal--produto .produto__addtocart {
-      padding-bottom: 15px;
-      background: var(--tertiary);
-      position: -webkit-sticky;
-      position: sticky;
-      bottom: 0px; } }
+  display: block;
+  padding-bottom: 15px;
+  background: var(--tertiary);
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px; }
   .modal--produto .produto__addtocart .variations_form {
     padding-top: 15px;
     border-top: 1px dotted var(--secondary); }

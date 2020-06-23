@@ -753,12 +753,11 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 
 			&__addtocart {
 				display: block;
-				@include media-breakpoint-down(sm) {
-					padding-bottom: $grid-gutter-width/2;
-					background: var(--tertiary);
-					position: sticky;
-					bottom: 0px;
-				}
+				padding-bottom: $grid-gutter-width/2;
+				background: var(--tertiary);
+				position: sticky;
+				bottom: 0px;
+				
 				.variations_form {
 					padding-top: $grid-gutter-width/2;
 					border-top: 1px dotted var(--secondary);
