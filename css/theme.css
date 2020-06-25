@@ -7331,6 +7331,11 @@ body {
           text-decoration: none;
           background-size: 100% 1px; } }
 
+.top--navbar {
+  top: 59px; }
+  @media (min-width: 768px) {
+    .top--navbar {
+      top: 64px; } }
 @media (max-width: 767.98px) {
   body.menu-open .menu-sheet {
     pointer-events: auto;
@@ -7706,7 +7711,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 
 .produto--marmita .produto__preco {
   font-family: 'sharp25', sans-serif;
-  font-size: .8rem; }
+  font-size: .8rem;
+  height: 2.4em; }
 
 .produto--marmita .produto__addtocart .btn, .produto--marmita .produto__addtocart .shipping-calculator-form button, .shipping-calculator-form .produto--marmita .produto__addtocart button {
   display: block;
@@ -8316,7 +8322,9 @@ a:hover {
   border-radius: 0px !important; }
 
 .woocommerce-checkout h3,
-.woocommerce-order-details h2 {
+.woocommerce-order-details h2,
+.woocommerce-MyAccount-content h3,
+.woocommerce-MyAccount-content h3 {
   font-family: 'sharp10', sans-serif;
   text-transform: uppercase;
   font-size: 3.5rem;
@@ -8325,6 +8333,9 @@ a:hover {
   border-top: 4px solid #1f3231;
   margin-bottom: 1rem;
   margin-top: 4rem; }
+
+.woocommerce form .password-input, .woocommerce-page form .password-input {
+  width: 100%; }
 
 .cart_totals {
   background-color: #F9B342;
@@ -8568,7 +8579,7 @@ a:hover {
 .woocommerce-checkout #payment div.payment_box::before {
   display: none; }
 
-.woocommerce form .form-row label {
+.woocommerce form .form-row label, .form-group label {
   line-height: 1;
   text-transform: uppercase;
   font-size: .7rem;
@@ -8576,6 +8587,17 @@ a:hover {
   padding-left: 0 !important;
   font-family: 'sharp25', sans-serif;
   margin-bottom: .2rem; }
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+  border: 3px double var(--primary); }
+
+@media only screen and (max-width: 768px) {
+  .woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before {
+    content: '' !important;
+    font-weight: 700;
+    float: left; }
+  .woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td {
+    text-align: left !important; } }
 
 #add_payment_method #payment div.payment_box input.input-text,
 #add_payment_method #payment div.payment_box textarea,

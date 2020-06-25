@@ -221,6 +221,23 @@ body {
 	}
 }
 
+.top--navbar {
+	top: 59px;
+	@include media-breakpoint-up(md) {
+		top: 64px;
+	}
+}
+
+#interactive-content {
+	// transition: transform .3s ease-out;
+}
+body.modal-open {
+	#interactive-content {
+		// transform: scale(0.95);
+		// transition: transform .6s $easing;
+	}
+}
+
 body.menu-open {
 
 	@include media-breakpoint-down(sm) {
@@ -685,6 +702,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 			&__preco {
 				font-family: 'sharp25', sans-serif;
 				font-size: .8rem;
+				height: 2.4em;
 			}
 
 			&__addtocart {
@@ -1425,7 +1443,9 @@ a:hover {
 }
 
 .woocommerce-checkout h3,
-.woocommerce-order-details h2 {
+.woocommerce-order-details h2,
+.woocommerce-MyAccount-content h3,
+.woocommerce-MyAccount-content h3 {
 
 	font-family: 'sharp10', sans-serif;
 	text-transform: uppercase;
@@ -1436,6 +1456,10 @@ a:hover {
 	margin-bottom: 1rem;
 	margin-top: 4rem;
 
+}
+
+.woocommerce form .password-input, .woocommerce-page form .password-input {
+	width: 100%;
 }
 
 .cart_totals {
@@ -1732,7 +1756,7 @@ a:hover {
 	display: none;
 }
 
-.woocommerce form .form-row label {
+.woocommerce form .form-row label, .form-group label {
 
 	line-height: 1;
 	text-transform: uppercase;
@@ -1742,6 +1766,22 @@ a:hover {
 	font-family: 'sharp25', sans-serif;
 	margin-bottom: .2rem;
 }
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+	border: 3px double var(--primary)
+}
+
+@media only screen and (max-width: 768px) {
+	.woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before {
+		content: '' !important;
+		font-weight: 700;
+		float: left;
+	}
+	.woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td {
+		text-align: left !important;
+	}
+}
+
 
 #add_payment_method #payment div.payment_box input.input-text,
 #add_payment_method #payment div.payment_box textarea,

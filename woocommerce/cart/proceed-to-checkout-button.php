@@ -25,3 +25,6 @@ defined( 'ABSPATH' ) || exit;
 <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="btn btn-secondary btn-lg btn-block">
 	<?php esc_html_e( 'Próxima etapa', 'understrap' ); ?>
 </a>
+<a href="<?php echo get_home_url() ?>" class="btn btn-outline-secondary btn-block">
+	<?php esc_html_e( 'Continuar comprando', 'understrap' ); ?>
+</a>

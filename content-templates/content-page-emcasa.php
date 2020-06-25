@@ -1,3 +1,14 @@
+<?php 
+  // foreach (wcs_get_users_subscriptions($user_id) as $sid => $subscription) {
+  //   foreach ($subscription->get_related_orders() as $sorder_id) {
+  //     $sorder = wc_get_order( $sorder_id );
+  //     echo $sorder->get_date_created();
+  //   }
+  // }
+
+?>
+
+<article id="interactive-content">
 <section>
 
   <div class="container">
@@ -102,7 +113,7 @@
 
 </section>
 
-<nav class="scrollmenu sticky-top" style="top: 60px;">
+<nav class="scrollmenu sticky-top top--navbar">
     <div class="container">
       <a href="#marmitas" class="scroll">Marmitas da semana</a>
       <?php $ss == 0; while ( have_rows('secoes') ) : the_row(); $ss++; ?>
@@ -188,10 +199,11 @@ wp_reset_postdata();
 endif;
 
 ?>
+</article>
 <a class="ctl-cart slide-up poponce readypop scrollpop" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'Ver seu carrinho' ); ?>">
   <div class="ctl-cart__count"><?php echo sprintf ( _n( '%d item', '%d itens', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div>
   <div class="ctl-cart__goto">ver carrinho</div>
   <div class="ctl-cart__total"><?php echo WC()->cart->get_cart_total(); ?></div>
 </a>
 
-<?php //echo do_shortcode('[woocommerce_cart]') ?>
+<?php echo do_shortcode('[woocommerce_cart]') ?>

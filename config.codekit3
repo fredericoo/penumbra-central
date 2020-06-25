@@ -4021,6 +4021,14 @@
 		"oAP": "/woocommerce/myaccount/form-reset-password.php",
 		"oF": 0
 		},
+	"/woocommerce/myaccount/my-account.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-account.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/my-address.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -4029,12 +4037,12 @@
 		"oAP": "/woocommerce/myaccount/my-address.php",
 		"oF": 0
 		},
-	"/woocommerce/myaccount/my-orders.php": {
+	"/woocommerce/myaccount/my-subscriptions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/woocommerce/myaccount/my-orders.php",
+		"oAP": "/woocommerce/myaccount/my-subscriptions.php",
 		"oF": 0
 		},
 	"/woocommerce/myaccount/navigation.php": {
@@ -4051,6 +4059,62 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/myaccount/orders.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/payment-methods.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/payment-methods.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/related-orders.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/related-orders.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/related-subscriptions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/related-subscriptions.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/subscription-details.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/subscription-details.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/subscription-totals.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/subscription-totals.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/view-subscription.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/view-subscription.php",
+		"oF": 0
+		},
+	"/woocommerce/order/order-details-customer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/order/order-details-customer.php",
 		"oF": 0
 		},
 	"/woocommerce/product-searchform.php": {

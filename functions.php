@@ -141,22 +141,13 @@ function my_custom_checkout_field_process() {
 add_filter( 'woocommerce_account_menu_items', 'pnmbr_remove_my_account_dashboard' );
 function pnmbr_remove_my_account_dashboard( $menu_links ){
 
-	unset( $menu_links['dashboard'] );
+	//unset( $menu_links['dashboard'] );
 	unset( $menu_links['downloads'] );
 	return $menu_links;
 
 }
 
-add_action('template_redirect', 'pnmbr_redirect_to_orders_from_dashboard' );
 
-function pnmbr_redirect_to_orders_from_dashboard(){
-
-	if( is_account_page() && empty( WC()->query->get_current_endpoint() ) ){
-		wp_safe_redirect( wc_get_account_endpoint_url( 'orders' ) );
-		exit;
-	}
-
-}
 
 add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
