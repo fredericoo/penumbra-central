@@ -205,5 +205,3 @@ endif;
   <div class="ctl-cart__goto">ver carrinho</div>
   <div class="ctl-cart__total"><?php echo WC()->cart->get_cart_total(); ?></div>
 </a>
-
-<?php echo do_shortcode('[woocommerce_cart]') ?>
