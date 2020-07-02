@@ -43,7 +43,7 @@
       $secao2 = get_field('secao_2');
       if( $secao2 ): ?>
       <div class="col-lg-4 col-md-6 marmitas--explicacao order-2">
-        <h2 class="wavy-text d-none d-md-block display-4"><?php echo $secao2['titulo']; ?></h2>
+        <h2 class="wavy-text display-4"><?php echo $secao2['titulo']; ?></h2>
         <div class="px-3">
           <?php echo $secao2['texto']; ?>
         </div>
