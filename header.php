@@ -54,7 +54,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		background-position: center;
 
 		position: fixed;
-		z-index: 1000;
+		z-index: 10000;
 		top: -100vh;
 		left: 0;
 		pointer-events: none;
