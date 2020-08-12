@@ -7670,7 +7670,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 .produto--marmita .row {
   margin-left: 0;
   margin-right: 0;
-  background: #F9B342;
+  background: var(--card-color, #F9B342);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 66 23' style='enable-background:new 0 0 66 23;fill:%23e9d5bc;'%3E%3Ccircle cx='33.5' cy='11.1' r='11.1'/%3E%3C/svg%3E");
@@ -7728,7 +7728,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   background-size: 16.5px 5.75px;
   background-position: 50% -3px;
   padding-top: 12px;
-  background-color: #F9B342;
+  background-color: var(--card-color, #F9B342);
   transform-origin: top left;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px; }
@@ -8324,9 +8324,8 @@ a:hover {
   border-bottom: 2px solid #D93D36 !important;
   border-radius: 0px !important; }
 
-.woocommerce-checkout h3,
+.heading--tall, .woocommerce-checkout h3,
 .woocommerce-order-details h2,
-.woocommerce-MyAccount-content h3,
 .woocommerce-MyAccount-content h3 {
   font-family: 'sharp10', sans-serif;
   text-transform: uppercase;
