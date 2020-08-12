@@ -12,7 +12,7 @@
 	global $product;
 	if($product->stock_status != 'instock') { echo ' acabou'; }
 	?>
-">
+" style="<?= (get_field('custom_card_color') ? '--card-color: '.get_field('custom_card_color'): '')?>" >
 	<?php foreach ($terms as $cat) {
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
 		smart_image($thumbnail_id,'large','nobg cat-icon','fade poponce');

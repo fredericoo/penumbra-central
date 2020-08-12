@@ -648,7 +648,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 		.row {
 			margin-left: 0;
 			margin-right: 0;
-			background: theme-color(tertiary);
+			background: var(--card-color,theme-color(tertiary));
 			border-top-left-radius: 8px;
 			border-top-right-radius: 8px;
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 66 23' style='enable-background:new 0 0 66 23;fill:%23e9d5bc;'%3E%3Ccircle cx='33.5' cy='11.1' r='11.1'/%3E%3C/svg%3E");
@@ -722,8 +722,8 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
 				background-repeat: repeat-x;
 				background-size: 16.5px 5.75px;
 				background-position: 50% -3px;
-				padding-top: 12px;
-				background-color: theme-color(tertiary);
+				padding-top: 12px; 
+				background-color: var(--card-color,theme-color(tertiary));
 				transform-origin: top left;
 				border-bottom-left-radius: 8px;
 				border-bottom-right-radius: 8px;
@@ -1446,11 +1446,7 @@ a:hover {
 	@extend .dotted;
 }
 
-.woocommerce-checkout h3,
-.woocommerce-order-details h2,
-.woocommerce-MyAccount-content h3,
-.woocommerce-MyAccount-content h3 {
-
+.heading--tall {
 	font-family: 'sharp10', sans-serif;
 	text-transform: uppercase;
 	font-size: 3.5rem;
@@ -1459,6 +1455,14 @@ a:hover {
 	border-top: 4px solid theme-color(secondary);
 	margin-bottom: 1rem;
 	margin-top: 4rem;
+}
+
+.woocommerce-checkout h3,
+.woocommerce-order-details h2,
+.woocommerce-MyAccount-content h3,
+.woocommerce-MyAccount-content h3 {
+
+	@extend .heading--tall;
 
 }
 
