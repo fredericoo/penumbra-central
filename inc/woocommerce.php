@@ -161,3 +161,19 @@ if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 		return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
 	}
 }
+
+add_filter( 'woocommerce_min_password_strength', 'webroom_change_password_strength' );
+ 
+function webroom_change_password_strength( $strength ) {
+	 return 0;
+}
+
+function iconic_remove_password_strength() {
+
+
+    wp_dequeue_script( 'wc-password-strength-meter' );
+
+}
+
+
+add_action( 'wp_print_scripts', 'iconic_remove_password_strength', 10 );
