@@ -1,3 +1,17 @@
+import ClipboardJS from 'clipboard'
+const clipboard = new ClipboardJS('.copybtn')
+
+clipboard.on('success', function(e) {
+    e.trigger.parentNode.classList.add('success')
+    e.trigger.parentNode.querySelector('button>span').innerText = 'copiado!';
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+})
+
 jQuery(document).on('click','.social-link', {} ,function(){
         var $this = jQuery(this);
         var opt = {

@@ -25,7 +25,7 @@ global $wp;
 ?>
 
 <div class="row sticky-top" style="top: 64px;">
-	<nav class="scrollmenu " >
+	<nav class="scrollmenu w-100" >
 	    <div class="container">
 		  <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"

@@ -2074,3 +2074,126 @@ a:hover {
 		height: 100%;
 	}	
 }
+
+.ref {
+	background: theme-color('tertiary');
+	border-radius: 8px;
+	padding: $grid-gutter-width/2;
+	h2 {
+		@extend .font-sharp25;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	&__instrucoes {
+		@extend .marmitas--explicacao;
+		display: grid;
+		column-gap: $grid-gutter-width;
+		row-gap: $grid-gutter-width;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		list-style-type: none;
+		padding: 0;
+		margin: $grid-gutter-width 0;
+		li {
+			svg {
+				display: block;
+				margin: 0 auto 1rem;
+			}
+		}
+	}
+	&__chamada {
+		@extend .marmitas--explicacao;
+	}
+	&__codigo {
+		display: grid;
+		grid-template-columns: max-content 1fr max-content;
+		h6 {
+			margin-right: .5em;
+			align-self: center;
+		}
+		input {
+			line-height: 24px;
+			margin-right: -1px;
+			text-overflow: ellipsis;
+			text-align: left;
+			white-space: nowrap;
+			text-transform: lowercase;
+			font-family: 'sharp20', sans-serif;
+			letter-spacing: 0;
+		}
+		input, a {
+			@include media-breakpoint-down(md) {
+				grid-row: 2;
+			}
+		}
+		&.success {
+			input, a {
+				background: theme-color('success');
+			}
+		}
+	}
+	&__desconto {
+		font-weight: 800;
+	}
+
+	.social-social {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		dt {
+			@extend .font-sharp25;
+			font-weight: 300;
+			text-transform: uppercase;
+			font-size: .8rem;
+		}
+		dt, dd {
+			margin: 0;
+			align-self: center;
+		}
+		.social-link {
+			color: black;
+			padding: $grid-gutter-width/4;
+			&:hover {
+				@include mouse {
+					color: theme-color(primary);
+				}
+			}
+		}
+	}
+}
+
+.mwb-crp-referral-table-wrapper {
+	overflow: initial;
+	@extend .marmitas--explicacao;
+}
+
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table thead th {
+	@extend .font-sharp25;
+	background: theme-color('tertiary');
+	text-transform: uppercase;
+	color: black;
+	font-weight: 200;
+	font-size: .7em;
+}
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table tbody td {
+	font-weight: 300;
+	background: theme-color('tertiary');
+	border: 1px dotted black;
+	border-width: 1px 0 0 0;
+}
+
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table .mwb-crp-coupon-code {
+	background: theme-color('primary');
+	p {
+		@extend .font-sharp25;
+	}
+}
+
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table {
+	border: none;
+	margin-bottom: $grid-gutter-width;
+}
+
+.mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"] {
+	@extend .form-control;
+}

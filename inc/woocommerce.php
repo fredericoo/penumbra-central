@@ -177,3 +177,9 @@ function iconic_remove_password_strength() {
 
 
 add_action( 'wp_print_scripts', 'iconic_remove_password_strength', 10 );
+
+function get_user_referral_code() {
+	$public_obj = new Coupon_Referral_Program_Public('Coupon Referral Program', '1.0.0');
+	if( !$public_obj->is_social_sharing_enabled() || !is_user_logged_in()) { return false; }
+	return $public_obj->get_referral_link(get_current_user_ID());
+}

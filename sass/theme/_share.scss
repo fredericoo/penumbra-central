@@ -1,0 +1,61 @@
+.social {
+
+    &__link {
+      padding: 2px 8px 4px 8px !important;
+      color: inherit;
+      font-size: 14px;
+      margin-right: 8px;
+      cursor: pointer;
+      margin-top: 2px;
+      display: inline-block;
+      text-decoration: none;
+  		border: 1px solid currentColor !important;
+  		background: transparent;
+      &:hover {
+        background: theme-color('primary');
+        color: theme-color('background');
+      }
+    }
+
+    &--color {
+      .social {
+        $socials: ("twitter":#0084b4, "facebook":#0084b4, "email":theme-color('primary'), "whatsapp":#25d366, "pinterest":#bd081c, "linkedin":#006288);
+        @each $network, $palette in $socials {
+          &--#{$network} {
+            color: $palette !important;
+            &:hover, &:active {
+              border-color: $palette !important;
+            }
+          }
+        }
+      }
+    }
+}
+
+
+.tawcvs-swatches {
+  user-select: none;
+  padding: 0;
+  .swatch.selected {
+    border-color: theme-color('success');
+  }
+  .swatch-label {
+    .swatch__tooltip {
+      display: none;
+    }
+  }
+  .swatch.swatch-image {
+    height: 60px;
+    width: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+    }	
+  }
+  .swatch.swatch-label {
+    width: auto;
+    height: auto;
+    padding: 4px 8px;
+    border-radius: 999px;
+  }
+} 

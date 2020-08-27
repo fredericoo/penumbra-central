@@ -11,6 +11,49 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
+
+<?php if ( $upsell = get_page_by_path( 'assinatura', OBJECT, 'page' ) ) { ?>
+
+<?php
+		 				global $post;        
+						 $posts = get_field('produtos',$upsell->ID);
+						 foreach(WC()->cart->get_cart() as $key => $val ) {
+							 $_product = $val['data'];
+							 foreach ($posts as $pkey => $post) {
+								 if ($post->ID == $_product->id) {
+									 unset($posts[$pkey]);
+								 }
+								}
+								
+							}        
+							
+							if( $posts ):
+								WC()->cart->empty_cart(); ?>
+								
+<header>
+	<h3 class="text-tertiary border-tertiary"><?php echo get_the_title($upsell->ID) ?></h3>
+	<p><?= apply_filters('the_content', get_post_field('post_content', $upsell->ID)); ?></p>
+</header>
+
+<a class="ctl-subscriptionCart cart slide-up poponce readypop scrollpop" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'Ver seu carrinho' ); ?>">
+  <div class="ctl-subscriptionCart__count"><?php echo sprintf ( _n( '%d item', '%d itens', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div>
+  <div class="ctl-subscriptionCart__goto">esvaziar carrinho</div>
+  <div class="ctl-subscriptionCart__total"><?php echo WC()->cart->get_cart_total(); ?></div>
+</a>
+<div class="cart-pickmenu row">
+<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+			<div class="col-md-4 col-sm-6 col-12 my-3">
+				<?php setup_postdata($post);
+		 	          get_template_part( 'loop-templates/content-marmita', get_post_field( 'post_name', get_post() )); ?>
+			</div>
+			<?php endforeach; ?>
+</div>
+</div>
+<?php wp_reset_postdata(); endif;
+
+		 				wp_reset_postdata();
+					 } ?>
+					 
 <header>
 	<h2><?php esc_html_e( 'Assinaturas relacionadas', 'woocommerce-subscriptions' ); ?></h2>
 </header>

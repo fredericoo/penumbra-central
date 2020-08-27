@@ -1039,7 +1039,7 @@ pre {
   .offset-xl-11 {
     margin-left: 91.6666666667%; } }
 
-.form-control, .shipping-calculator-form .input-text,
+.form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"], .shipping-calculator-form .input-text,
 .shipping-calculator-form .select2 {
   display: block;
   width: 100%;
@@ -1055,38 +1055,38 @@ pre {
   border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .form-control, .shipping-calculator-form .input-text,
+    .form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"], .shipping-calculator-form .input-text,
     .shipping-calculator-form .select2 {
       transition: none; } }
-  .form-control::-ms-expand, .shipping-calculator-form .input-text::-ms-expand,
+  .form-control::-ms-expand, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-ms-expand, .shipping-calculator-form .input-text::-ms-expand,
   .shipping-calculator-form .select2::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus, .shipping-calculator-form .input-text:focus,
+  .form-control:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:focus, .shipping-calculator-form .input-text:focus,
   .shipping-calculator-form .select2:focus {
     color: #495057;
     background-color: #fff;
     border-color: #eda4a1;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(217, 61, 54, 0.25); }
-  .form-control::-webkit-input-placeholder, .shipping-calculator-form .input-text::-webkit-input-placeholder, .shipping-calculator-form .select2::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-webkit-input-placeholder, .shipping-calculator-form .input-text::-webkit-input-placeholder, .shipping-calculator-form .select2::-webkit-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::-moz-placeholder, .shipping-calculator-form .input-text::-moz-placeholder, .shipping-calculator-form .select2::-moz-placeholder {
+  .form-control::-moz-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-moz-placeholder, .shipping-calculator-form .input-text::-moz-placeholder, .shipping-calculator-form .select2::-moz-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:-ms-input-placeholder, .shipping-calculator-form .input-text:-ms-input-placeholder, .shipping-calculator-form .select2:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:-ms-input-placeholder, .shipping-calculator-form .input-text:-ms-input-placeholder, .shipping-calculator-form .select2:-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder {
+  .form-control::-ms-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::placeholder, .shipping-calculator-form .input-text::placeholder,
+  .form-control::placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::placeholder, .shipping-calculator-form .input-text::placeholder,
   .shipping-calculator-form .select2::placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:disabled, .shipping-calculator-form .input-text:disabled,
-  .shipping-calculator-form .select2:disabled, .form-control[readonly], .shipping-calculator-form .input-text[readonly],
+  .form-control:disabled, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:disabled, .shipping-calculator-form .input-text:disabled,
+  .shipping-calculator-form .select2:disabled, .form-control[readonly], .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[readonly][type="search"], .shipping-calculator-form .input-text[readonly],
   .shipping-calculator-form .select2[readonly] {
     background-color: #e9ecef;
     opacity: 1; }
@@ -1222,9 +1222,9 @@ textarea.form-control, .shipping-calculator-form textarea.input-text,
   background-color: rgba(40, 167, 69, 0.9);
   border-radius: 0; }
 
-.was-validated .form-control:valid, .was-validated .shipping-calculator-form .input-text:valid, .shipping-calculator-form .was-validated .input-text:valid,
+.was-validated .form-control:valid, .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:valid, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:valid, .was-validated .shipping-calculator-form .input-text:valid, .shipping-calculator-form .was-validated .input-text:valid,
 .was-validated .shipping-calculator-form .select2:valid,
-.shipping-calculator-form .was-validated .select2:valid, .form-control.is-valid, .shipping-calculator-form .is-valid.input-text,
+.shipping-calculator-form .was-validated .select2:valid, .form-control.is-valid, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-valid[type="search"], .shipping-calculator-form .is-valid.input-text,
 .shipping-calculator-form .is-valid.select2 {
   border-color: #28a745;
   padding-right: calc(1.5em + 0.75rem);
@@ -1232,22 +1232,25 @@ textarea.form-control, .shipping-calculator-form textarea.input-text,
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
-  .was-validated .form-control:valid:focus, .was-validated .shipping-calculator-form .input-text:valid:focus, .shipping-calculator-form .was-validated .input-text:valid:focus,
+  .was-validated .form-control:valid:focus, .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:valid:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:valid:focus, .was-validated .shipping-calculator-form .input-text:valid:focus, .shipping-calculator-form .was-validated .input-text:valid:focus,
   .was-validated .shipping-calculator-form .select2:valid:focus,
-  .shipping-calculator-form .was-validated .select2:valid:focus, .form-control.is-valid:focus, .shipping-calculator-form .is-valid.input-text:focus,
+  .shipping-calculator-form .was-validated .select2:valid:focus, .form-control.is-valid:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-valid[type="search"]:focus, .shipping-calculator-form .is-valid.input-text:focus,
   .shipping-calculator-form .is-valid.select2:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .shipping-calculator-form .input-text:valid ~ .valid-feedback, .shipping-calculator-form .was-validated .input-text:valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:valid ~ .valid-feedback, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:valid ~ .valid-feedback, .was-validated .shipping-calculator-form .input-text:valid ~ .valid-feedback, .shipping-calculator-form .was-validated .input-text:valid ~ .valid-feedback,
   .was-validated .shipping-calculator-form .select2:valid ~ .valid-feedback,
   .shipping-calculator-form .was-validated .select2:valid ~ .valid-feedback,
   .was-validated .form-control:valid ~ .valid-tooltip,
+  .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:valid ~ .valid-tooltip,
+  .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:valid ~ .valid-tooltip,
   .was-validated .shipping-calculator-form .input-text:valid ~ .valid-tooltip,
   .shipping-calculator-form .was-validated .input-text:valid ~ .valid-tooltip,
   .was-validated .shipping-calculator-form .select2:valid ~ .valid-tooltip,
-  .shipping-calculator-form .was-validated .select2:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .shipping-calculator-form .is-valid.input-text ~ .valid-feedback,
+  .shipping-calculator-form .was-validated .select2:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-valid[type="search"] ~ .valid-feedback, .shipping-calculator-form .is-valid.input-text ~ .valid-feedback,
   .shipping-calculator-form .is-valid.select2 ~ .valid-feedback,
   .form-control.is-valid ~ .valid-tooltip,
+  .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-valid[type="search"] ~ .valid-tooltip,
   .shipping-calculator-form .is-valid.input-text ~ .valid-tooltip,
   .shipping-calculator-form .is-valid.select2 ~ .valid-tooltip {
     display: block; }
@@ -1337,9 +1340,9 @@ textarea.form-control, .shipping-calculator-form textarea.input-text,
   background-color: rgba(231, 64, 38, 0.9);
   border-radius: 0; }
 
-.was-validated .form-control:invalid, .was-validated .shipping-calculator-form .input-text:invalid, .shipping-calculator-form .was-validated .input-text:invalid,
+.was-validated .form-control:invalid, .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:invalid, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:invalid, .was-validated .shipping-calculator-form .input-text:invalid, .shipping-calculator-form .was-validated .input-text:invalid,
 .was-validated .shipping-calculator-form .select2:invalid,
-.shipping-calculator-form .was-validated .select2:invalid, .form-control.is-invalid, .shipping-calculator-form .is-invalid.input-text,
+.shipping-calculator-form .was-validated .select2:invalid, .form-control.is-invalid, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-invalid[type="search"], .shipping-calculator-form .is-invalid.input-text,
 .shipping-calculator-form .is-invalid.select2 {
   border-color: #e74026;
   padding-right: calc(1.5em + 0.75rem);
@@ -1347,22 +1350,25 @@ textarea.form-control, .shipping-calculator-form textarea.input-text,
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
-  .was-validated .form-control:invalid:focus, .was-validated .shipping-calculator-form .input-text:invalid:focus, .shipping-calculator-form .was-validated .input-text:invalid:focus,
+  .was-validated .form-control:invalid:focus, .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:invalid:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:invalid:focus, .was-validated .shipping-calculator-form .input-text:invalid:focus, .shipping-calculator-form .was-validated .input-text:invalid:focus,
   .was-validated .shipping-calculator-form .select2:invalid:focus,
-  .shipping-calculator-form .was-validated .select2:invalid:focus, .form-control.is-invalid:focus, .shipping-calculator-form .is-invalid.input-text:focus,
+  .shipping-calculator-form .was-validated .select2:invalid:focus, .form-control.is-invalid:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-invalid[type="search"]:focus, .shipping-calculator-form .is-invalid.input-text:focus,
   .shipping-calculator-form .is-invalid.select2:focus {
     border-color: #e74026;
     box-shadow: 0 0 0 0.2rem rgba(231, 64, 38, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .shipping-calculator-form .input-text:invalid ~ .invalid-feedback, .shipping-calculator-form .was-validated .input-text:invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:invalid ~ .invalid-feedback, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:invalid ~ .invalid-feedback, .was-validated .shipping-calculator-form .input-text:invalid ~ .invalid-feedback, .shipping-calculator-form .was-validated .input-text:invalid ~ .invalid-feedback,
   .was-validated .shipping-calculator-form .select2:invalid ~ .invalid-feedback,
   .shipping-calculator-form .was-validated .select2:invalid ~ .invalid-feedback,
   .was-validated .form-control:invalid ~ .invalid-tooltip,
+  .was-validated .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:invalid ~ .invalid-tooltip,
+  .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .was-validated input[type="search"]:invalid ~ .invalid-tooltip,
   .was-validated .shipping-calculator-form .input-text:invalid ~ .invalid-tooltip,
   .shipping-calculator-form .was-validated .input-text:invalid ~ .invalid-tooltip,
   .was-validated .shipping-calculator-form .select2:invalid ~ .invalid-tooltip,
-  .shipping-calculator-form .was-validated .select2:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .shipping-calculator-form .is-invalid.input-text ~ .invalid-feedback,
+  .shipping-calculator-form .was-validated .select2:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-invalid[type="search"] ~ .invalid-feedback, .shipping-calculator-form .is-invalid.input-text ~ .invalid-feedback,
   .shipping-calculator-form .is-invalid.select2 ~ .invalid-feedback,
   .form-control.is-invalid ~ .invalid-tooltip,
+  .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input.is-invalid[type="search"] ~ .invalid-tooltip,
   .shipping-calculator-form .is-invalid.input-text ~ .invalid-tooltip,
   .shipping-calculator-form .is-invalid.select2 ~ .invalid-tooltip {
     display: block; }
@@ -1449,7 +1455,7 @@ textarea.form-control, .shipping-calculator-form textarea.input-text,
       flex-flow: row wrap;
       align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control, .form-inline .shipping-calculator-form .input-text, .shipping-calculator-form .form-inline .input-text,
+    .form-inline .form-control, .form-inline .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"], .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .form-inline input[type="search"], .form-inline .shipping-calculator-form .input-text, .shipping-calculator-form .form-inline .input-text,
     .form-inline .shipping-calculator-form .select2,
     .shipping-calculator-form .form-inline .select2 {
       display: inline-block;
@@ -2174,7 +2180,7 @@ input.btn-block[type="button"],
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%; }
-  .input-group > .form-control, .shipping-calculator-form .input-group > .input-text,
+  .input-group > .form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"], .shipping-calculator-form .input-group > .input-text,
   .shipping-calculator-form .input-group > .select2,
   .input-group > .form-control-plaintext,
   .input-group > .custom-select,
@@ -2183,47 +2189,56 @@ input.btn-block[type="button"],
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control + .form-control, .shipping-calculator-form .input-group > .input-text + .form-control,
-    .shipping-calculator-form .input-group > .select2 + .form-control, .shipping-calculator-form .input-group > .form-control + .input-text, .shipping-calculator-form .input-group > .input-text + .input-text,
+    .input-group > .form-control + .form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"] + .form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > .form-control + input[type="search"], .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"] + input[type="search"], .shipping-calculator-form .input-group > .input-text + .form-control, .shipping-calculator-form .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > .input-text + input[type="search"], .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .shipping-calculator-form .input-group > .input-text + input[type="search"],
+    .shipping-calculator-form .input-group > .select2 + .form-control,
+    .shipping-calculator-form .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > .select2 + input[type="search"],
+    .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .shipping-calculator-form .input-group > .select2 + input[type="search"], .shipping-calculator-form .input-group > .form-control + .input-text, .shipping-calculator-form .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"] + .input-text, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .shipping-calculator-form .input-group > input[type="search"] + .input-text, .shipping-calculator-form .input-group > .input-text + .input-text,
     .shipping-calculator-form .input-group > .select2 + .input-text,
     .shipping-calculator-form .input-group > .form-control + .select2,
+    .shipping-calculator-form .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"] + .select2,
+    .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .shipping-calculator-form .input-group > input[type="search"] + .select2,
     .shipping-calculator-form .input-group > .input-text + .select2,
     .shipping-calculator-form .input-group > .select2 + .select2,
     .input-group > .form-control + .custom-select,
+    .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"] + .custom-select,
     .shipping-calculator-form .input-group > .input-text + .custom-select,
     .shipping-calculator-form .input-group > .select2 + .custom-select,
     .input-group > .form-control + .custom-file,
+    .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"] + .custom-file,
     .shipping-calculator-form .input-group > .input-text + .custom-file,
     .shipping-calculator-form .input-group > .select2 + .custom-file,
     .input-group > .form-control-plaintext + .form-control,
+    .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > .form-control-plaintext + input[type="search"],
     .shipping-calculator-form .input-group > .form-control-plaintext + .input-text,
     .shipping-calculator-form .input-group > .form-control-plaintext + .select2,
     .input-group > .form-control-plaintext + .custom-select,
     .input-group > .form-control-plaintext + .custom-file,
     .input-group > .custom-select + .form-control,
+    .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > .custom-select + input[type="search"],
     .shipping-calculator-form .input-group > .custom-select + .input-text,
     .shipping-calculator-form .input-group > .custom-select + .select2,
     .input-group > .custom-select + .custom-select,
     .input-group > .custom-select + .custom-file,
     .input-group > .custom-file + .form-control,
+    .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > .custom-file + input[type="search"],
     .shipping-calculator-form .input-group > .custom-file + .input-text,
     .shipping-calculator-form .input-group > .custom-file + .select2,
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
-  .input-group > .form-control:focus, .shipping-calculator-form .input-group > .input-text:focus,
+  .input-group > .form-control:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"]:focus, .shipping-calculator-form .input-group > .input-text:focus,
   .shipping-calculator-form .input-group > .select2:focus,
   .input-group > .custom-select:focus,
   .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
     z-index: 3; }
   .input-group > .custom-file .custom-file-input:focus {
     z-index: 4; }
-  .input-group > .form-control:not(:last-child), .shipping-calculator-form .input-group > .input-text:not(:last-child),
+  .input-group > .form-control:not(:last-child), .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"]:not(:last-child), .shipping-calculator-form .input-group > .input-text:not(:last-child),
   .shipping-calculator-form .input-group > .select2:not(:last-child),
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child), .shipping-calculator-form .input-group > .input-text:not(:first-child),
+  .input-group > .form-control:not(:first-child), .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group > input[type="search"]:not(:first-child), .shipping-calculator-form .input-group > .input-text:not(:first-child),
   .shipping-calculator-form .input-group > .select2:not(:first-child),
   .input-group > .custom-select:not(:first-child) {
     border-top-left-radius: 0;
@@ -2300,12 +2315,12 @@ input.btn-block[type="button"],
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group-lg > .form-control:not(textarea), .shipping-calculator-form .input-group-lg > .input-text:not(textarea),
+.input-group-lg > .form-control:not(textarea), .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group-lg > input[type="search"]:not(textarea), .shipping-calculator-form .input-group-lg > .input-text:not(textarea),
 .shipping-calculator-form .input-group-lg > .select2:not(textarea),
 .input-group-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px); }
 
-.input-group-lg > .form-control, .shipping-calculator-form .input-group-lg > .input-text,
+.input-group-lg > .form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group-lg > input[type="search"], .shipping-calculator-form .input-group-lg > .input-text,
 .shipping-calculator-form .input-group-lg > .select2,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
@@ -2319,12 +2334,12 @@ input.btn-block[type="button"],
   line-height: 1.5;
   border-radius: 0; }
 
-.input-group-sm > .form-control:not(textarea), .shipping-calculator-form .input-group-sm > .input-text:not(textarea),
+.input-group-sm > .form-control:not(textarea), .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group-sm > input[type="search"]:not(textarea), .shipping-calculator-form .input-group-sm > .input-text:not(textarea),
 .shipping-calculator-form .input-group-sm > .select2:not(textarea),
 .input-group-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px); }
 
-.input-group-sm > .form-control, .shipping-calculator-form .input-group-sm > .input-text,
+.input-group-sm > .form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter .input-group-sm > input[type="search"], .shipping-calculator-form .input-group-sm > .input-text,
 .shipping-calculator-form .input-group-sm > .select2,
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
@@ -7163,6 +7178,73 @@ h1, h2, h3, h4, h5, h6 {
 .ms-1500.pop, .ms-1500:after, .ms-1500:before {
   transition-delay: 1500ms !important; }
 
+.social__link {
+  padding: 2px 8px 4px 8px !important;
+  color: inherit;
+  font-size: 14px;
+  margin-right: 8px;
+  cursor: pointer;
+  margin-top: 2px;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid currentColor !important;
+  background: transparent; }
+  .social__link:hover {
+    background: #D93D36;
+    color: #E9D5BC; }
+
+.social--color .social--twitter {
+  color: #0084b4 !important; }
+  .social--color .social--twitter:hover, .social--color .social--twitter:active {
+    border-color: #0084b4 !important; }
+
+.social--color .social--facebook {
+  color: #0084b4 !important; }
+  .social--color .social--facebook:hover, .social--color .social--facebook:active {
+    border-color: #0084b4 !important; }
+
+.social--color .social--email {
+  color: #D93D36 !important; }
+  .social--color .social--email:hover, .social--color .social--email:active {
+    border-color: #D93D36 !important; }
+
+.social--color .social--whatsapp {
+  color: #25d366 !important; }
+  .social--color .social--whatsapp:hover, .social--color .social--whatsapp:active {
+    border-color: #25d366 !important; }
+
+.social--color .social--pinterest {
+  color: #bd081c !important; }
+  .social--color .social--pinterest:hover, .social--color .social--pinterest:active {
+    border-color: #bd081c !important; }
+
+.social--color .social--linkedin {
+  color: #006288 !important; }
+  .social--color .social--linkedin:hover, .social--color .social--linkedin:active {
+    border-color: #006288 !important; }
+
+.tawcvs-swatches {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0; }
+  .tawcvs-swatches .swatch.selected {
+    border-color: #28a745; }
+  .tawcvs-swatches .swatch-label .swatch__tooltip {
+    display: none; }
+  .tawcvs-swatches .swatch.swatch-image {
+    height: 60px;
+    width: 60px; }
+    .tawcvs-swatches .swatch.swatch-image img {
+      width: 100%;
+      height: 100%; }
+  .tawcvs-swatches .swatch.swatch-label {
+    width: auto;
+    height: auto;
+    padding: 4px 8px;
+    border-radius: 999px; }
+
 html,
 body {
   background-color: #E9D5BC;
@@ -7491,7 +7573,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
     box-shadow: none !important;
     outline: none !important; }
 
-.form-control:focus, .shipping-calculator-form .input-text:focus,
+.form-control:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:focus, .shipping-calculator-form .input-text:focus,
 .shipping-calculator-form .select2:focus,
 .wpcf7 .wpcf7-validation-errors:focus,
 .wpcf7 input[type=text]:focus,
@@ -7605,7 +7687,7 @@ body.menu-open .hamburger--collapse .hamburger-inner::before {
   letter-spacing: .2em;
   text-transform: uppercase; }
 
-.font-sharp25 {
+.font-sharp25, .mwb-crp-referral-table-wrapper .mwb-crp-referral-table .mwb-crp-coupon-code p, .mwb-crp-referral-table-wrapper .mwb-crp-referral-table thead th, .ref .social-social dt, .ref h2 {
   font-family: 'sharp25', sans-serif !important; }
 
 .typeonapath .svgtext {
@@ -8186,35 +8268,35 @@ a:hover {
     font-size: 1.2rem;
     border-bottom: 1px dotted #1f3231 !important; }
 
-.form-control::-webkit-input-placeholder, .shipping-calculator-form .input-text::-webkit-input-placeholder, .shipping-calculator-form .select2::-webkit-input-placeholder, .woocommerce-input-wrapper input::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-webkit-input-placeholder, .shipping-calculator-form .input-text::-webkit-input-placeholder, .shipping-calculator-form .select2::-webkit-input-placeholder, .woocommerce-input-wrapper input::-webkit-input-placeholder {
   font-family: "adelle", serif;
   font-weight: 100;
   font-style: italic;
   font-size: 1em;
   margin-right: .5em; }
 
-.form-control::-moz-placeholder, .shipping-calculator-form .input-text::-moz-placeholder, .shipping-calculator-form .select2::-moz-placeholder, .woocommerce-input-wrapper input::-moz-placeholder {
+.form-control::-moz-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-moz-placeholder, .shipping-calculator-form .input-text::-moz-placeholder, .shipping-calculator-form .select2::-moz-placeholder, .woocommerce-input-wrapper input::-moz-placeholder {
   font-family: "adelle", serif;
   font-weight: 100;
   font-style: italic;
   font-size: 1em;
   margin-right: .5em; }
 
-.form-control:-ms-input-placeholder, .shipping-calculator-form .input-text:-ms-input-placeholder, .shipping-calculator-form .select2:-ms-input-placeholder, .woocommerce-input-wrapper input:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:-ms-input-placeholder, .shipping-calculator-form .input-text:-ms-input-placeholder, .shipping-calculator-form .select2:-ms-input-placeholder, .woocommerce-input-wrapper input:-ms-input-placeholder {
   font-family: "adelle", serif;
   font-weight: 100;
   font-style: italic;
   font-size: 1em;
   margin-right: .5em; }
 
-.form-control::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder, .woocommerce-input-wrapper input::-ms-input-placeholder {
+.form-control::-ms-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder, .woocommerce-input-wrapper input::-ms-input-placeholder {
   font-family: "adelle", serif;
   font-weight: 100;
   font-style: italic;
   font-size: 1em;
   margin-right: .5em; }
 
-.woocommerce-Price-currencySymbol, .form-control::placeholder, .shipping-calculator-form .input-text::placeholder,
+.woocommerce-Price-currencySymbol, .form-control::placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::placeholder, .shipping-calculator-form .input-text::placeholder,
 .shipping-calculator-form .select2::placeholder,
 .woocommerce-input-wrapper input::placeholder {
   font-family: "adelle", serif;
@@ -8262,7 +8344,7 @@ a:hover {
 .form-group {
   margin-bottom: 1rem !important; }
 
-.form-control, .shipping-calculator-form .input-text,
+.form-control, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"], .shipping-calculator-form .input-text,
 .shipping-calculator-form .select2,
 .woocommerce-input-wrapper input {
   padding-left: 0;
@@ -8272,26 +8354,26 @@ a:hover {
   border-bottom: 2px dotted #1f3231;
   font-family: "adelle", serif;
   margin-bottom: 1rem !important; }
-  .form-control:active, .shipping-calculator-form .input-text:active,
+  .form-control:active, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:active, .shipping-calculator-form .input-text:active,
   .shipping-calculator-form .select2:active,
   .woocommerce-input-wrapper input:active {
     background: transparent;
     border-bottom-style: solid !important;
     box-shadow: none !important; }
-  .form-control:focus, .shipping-calculator-form .input-text:focus,
+  .form-control:focus, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:focus, .shipping-calculator-form .input-text:focus,
   .shipping-calculator-form .select2:focus,
   .woocommerce-input-wrapper input:focus {
     background: transparent;
     box-shadow: none !important; }
-  .form-control::-webkit-input-placeholder, .shipping-calculator-form .input-text::-webkit-input-placeholder, .shipping-calculator-form .select2::-webkit-input-placeholder, .woocommerce-input-wrapper input::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-webkit-input-placeholder, .shipping-calculator-form .input-text::-webkit-input-placeholder, .shipping-calculator-form .select2::-webkit-input-placeholder, .woocommerce-input-wrapper input::-webkit-input-placeholder {
     color: rgba(31, 50, 49, 0.2); }
-  .form-control::-moz-placeholder, .shipping-calculator-form .input-text::-moz-placeholder, .shipping-calculator-form .select2::-moz-placeholder, .woocommerce-input-wrapper input::-moz-placeholder {
+  .form-control::-moz-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-moz-placeholder, .shipping-calculator-form .input-text::-moz-placeholder, .shipping-calculator-form .select2::-moz-placeholder, .woocommerce-input-wrapper input::-moz-placeholder {
     color: rgba(31, 50, 49, 0.2); }
-  .form-control:-ms-input-placeholder, .shipping-calculator-form .input-text:-ms-input-placeholder, .shipping-calculator-form .select2:-ms-input-placeholder, .woocommerce-input-wrapper input:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]:-ms-input-placeholder, .shipping-calculator-form .input-text:-ms-input-placeholder, .shipping-calculator-form .select2:-ms-input-placeholder, .woocommerce-input-wrapper input:-ms-input-placeholder {
     color: rgba(31, 50, 49, 0.2); }
-  .form-control::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder, .woocommerce-input-wrapper input::-ms-input-placeholder {
+  .form-control::-ms-input-placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::-ms-input-placeholder, .shipping-calculator-form .input-text::-ms-input-placeholder, .shipping-calculator-form .select2::-ms-input-placeholder, .woocommerce-input-wrapper input::-ms-input-placeholder {
     color: rgba(31, 50, 49, 0.2); }
-  .form-control::placeholder, .shipping-calculator-form .input-text::placeholder,
+  .form-control::placeholder, .mwb-crp-referral-table-wrapper #mwb-crp-referral-table_filter input[type="search"]::placeholder, .shipping-calculator-form .input-text::placeholder,
   .shipping-calculator-form .select2::placeholder,
   .woocommerce-input-wrapper input::placeholder {
     color: rgba(31, 50, 49, 0.2); }
@@ -8486,12 +8568,12 @@ a:hover {
       transform: translate(-50%, 0) rotate(-2deg);
       background: #F9B342; }
 
-.marmitas--explicacao {
+.marmitas--explicacao, .mwb-crp-referral-table-wrapper, .ref__chamada, .ref__instrucoes {
   text-align: center;
   font-family: "adelle", serif;
   font-size: .9rem;
   letter-spacing: .03em; }
-  .marmitas--explicacao strong {
+  .marmitas--explicacao strong, .mwb-crp-referral-table-wrapper strong, .ref__chamada strong, .ref__instrucoes strong {
     text-transform: uppercase;
     font-weight: 700; }
 
@@ -8805,4 +8887,88 @@ a:hover {
   .tawcvs-swatches .swatch.swatch-image img {
     width: 100%;
     height: 100%; }
+
+.ref {
+  background: #F9B342;
+  border-radius: 8px;
+  padding: 15px; }
+  .ref h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0; }
+  .ref__instrucoes {
+    display: grid;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0; }
+    .ref__instrucoes li svg {
+      display: block;
+      margin: 0 auto 1rem; }
+  .ref__codigo {
+    display: grid;
+    grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+    grid-template-columns: max-content 1fr max-content; }
+    .ref__codigo h6 {
+      margin-right: .5em;
+      align-self: center; }
+    .ref__codigo input {
+      line-height: 24px;
+      margin-right: -1px;
+      text-overflow: ellipsis;
+      text-align: left;
+      white-space: nowrap;
+      text-transform: lowercase;
+      font-family: 'sharp20', sans-serif;
+      letter-spacing: 0; }
+    @media (max-width: 991.98px) {
+      .ref__codigo input, .ref__codigo a {
+        grid-row: 2; } }
+    .ref__codigo.success input, .ref__codigo.success a {
+      background: #28a745; }
+  .ref__desconto {
+    font-weight: 800; }
+  .ref .social-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .ref .social-social dt {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: .8rem; }
+    .ref .social-social dt, .ref .social-social dd {
+      margin: 0;
+      align-self: center; }
+    .ref .social-social .social-link {
+      color: black;
+      padding: 7.5px; }
+      @media (pointer: fine) {
+        .ref .social-social .social-link:hover {
+          color: #D93D36; } }
+.mwb-crp-referral-table-wrapper {
+  overflow: initial; }
+
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table thead th {
+  background: #F9B342;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 200;
+  font-size: .7em; }
+
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table tbody td {
+  font-weight: 300;
+  background: #F9B342;
+  border: 1px dotted black;
+  border-width: 1px 0 0 0; }
+
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table .mwb-crp-coupon-code {
+  background: #D93D36; }
+
+.mwb-crp-referral-table-wrapper .mwb-crp-referral-table {
+  border: none;
+  margin-bottom: 30px; }
 /*# sourceMappingURL=theme.css.map */
