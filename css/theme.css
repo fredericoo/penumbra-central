@@ -8773,7 +8773,7 @@ a:hover {
     @media (pointer: coarse) {
       .scrollmenu a:hover, .scrollmenu a:active, .scrollmenu a:focus {
         color: #D93D36; } }
-    .scrollmenu a.current {
+    .scrollmenu a.current, .scrollmenu a.is-active {
       background: #D93D36;
       color: #E9D5BC; }
 
@@ -8909,6 +8909,14 @@ a:hover {
     .ref__instrucoes li svg {
       display: block;
       margin: 0 auto 1rem; }
+  .ref__registro {
+    padding-top: 2rem;
+    max-width: 300px;
+    margin: auto; }
+    .ref__registro .woocommerce-privacy-policy-text {
+      font-family: "adelle", serif;
+      font-size: .8rem;
+      font-weight: 300; }
   .ref__codigo {
     display: grid;
     grid-template-columns: -webkit-max-content 1fr -webkit-max-content;

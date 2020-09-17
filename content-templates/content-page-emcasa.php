@@ -1,11 +1,12 @@
-
-<div class="container">
+<?php if ($_GET['ref'] && !is_user_logged_in() ) { ?>
+	<div class="container">
 	<div class="row">
-		<div class="col-lg-10 mx-auto">
-			<?php get_template_part( 'components/referral-home'); ?>
-		</div>
-	</div>
+		<div class="col-lg-10 mx-auto my-3">
+	<?php get_template_part( 'components/referral-newcustomer'); ?>
 </div>
+</div>
+</div>
+<?php } ?>
 
 <article id="interactive-content">
 	<section>

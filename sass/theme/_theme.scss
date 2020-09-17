@@ -1896,7 +1896,7 @@ a:hover {
 			}
 		}
 
-		&.current {
+		&.current, &.is-active {
 			background: theme-color('primary');
 			color: theme-color('background');
 		}
@@ -2099,6 +2099,16 @@ a:hover {
 				display: block;
 				margin: 0 auto 1rem;
 			}
+		}
+	}
+	&__registro {
+		padding-top: 2rem;
+		max-width: 300px;
+		margin: auto;
+		.woocommerce-privacy-policy-text {
+			font-family: $font-family-adelle;
+			font-size: .8rem;
+			font-weight: 300;
 		}
 	}
 	&__chamada {

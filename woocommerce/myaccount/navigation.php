@@ -29,7 +29,7 @@ global $wp;
 	    <div class="container">
 		  <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"
-					   class="scroll <?php if (wc_get_account_endpoint_url( $endpoint ) == home_url( $wp->request )) echo 'current'; ?>"><?php echo esc_html( $label ); ?></a>
+					   class="scroll <?php echo wc_get_account_menu_item_classes( $endpoint ); ?>"><?php echo esc_html( $label ); ?></a>
 		  <?php endforeach; ?>
 	    </div>
 	</nav>

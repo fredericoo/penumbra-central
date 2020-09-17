@@ -197,6 +197,14 @@
 		"oAP": "/components/referral-home.php",
 		"oF": 0
 		},
+	"/components/referral-newcustomer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/referral-newcustomer.php",
+		"oF": 0
+		},
 	"/composer.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -211,6 +219,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/composer.lock",
+		"oF": 0
+		},
+	"/content-templates/content-page-cuponsmagicos.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/content-templates/content-page-cuponsmagicos.php",
 		"oF": 0
 		},
 	"/content-templates/content-page-emcasa.php": {
@@ -3979,6 +3995,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/checkout/payment.php",
+		"oF": 0
+		},
+	"/woocommerce/checkout/thankyou.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/checkout/thankyou.php",
 		"oF": 0
 		},
 	"/woocommerce/content-single-product.php": {

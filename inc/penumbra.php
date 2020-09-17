@@ -134,18 +134,23 @@ function penumbra_opengraph() {
       $blogtitle = get_bloginfo('name');
     }
     ?>
+	<?php 
+	if ($_GET['ref'] && !is_user_logged_in() ) {
+		$blogtitle = 'Clique aqui para ganhar Cupons Mágicos d’A Central!';
+		$blogdesc = 'Troque cupons mágicos por descontos na compra das Marmitas mais saborosas da cidade. É almoço, é jantar, é sobremesa!';
+	} ?>
     <meta name="description" content="<?php echo $blogdesc ?>">
     <meta name="og:description" content="<?php echo $blogdesc ?>">
     <meta name="twitter:description" content="<?php echo $blogdesc ?>">
     <meta name="keywords" content="">
     <meta name="robots" content=""><meta name="revisit-after" content="7 day">
 
-    <meta property="og:title" content="<?php echo $blogtitle ?>" />
+    <meta property="og:title" content="<?= $pagetitle ?>" />
     <meta property="og:url" content="<?php the_permalink();?>" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="" />
 
-    <meta property="twitter:title" content="<?php echo $blogtitle ?>" />
+    <meta property="twitter:title" content="<?= $pagetitle ?>" />
     <meta property="twitter:url" content="<?php the_permalink();?>" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:image" content="" />
@@ -178,3 +183,18 @@ else {
 die();
 
 }
+
+function wpb_woo_my_account_order() {
+	$myorder = array(
+		'dashboard'          => __( 'Indique & ganhe', 'woocommerce' ),
+		'cupons_magicos' => __( 'Cupons Mágicos', 'woocommerce' ),
+		'orders'             => __( 'Orders', 'woocommerce' ),
+		'edit-address'       => __( 'Addresses', 'woocommerce' ),
+		'payment-methods'    => __( 'Payment', 'woocommerce' ),
+		'edit-account'       => __( 'Meus dados', 'woocommerce' ),
+		'customer-logout'    => __( 'Logout', 'woocommerce' ),
+	);
+
+	return $myorder;
+}
+add_filter ( 'woocommerce_account_menu_items', 'wpb_woo_my_account_order' );
