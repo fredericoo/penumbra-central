@@ -145,12 +145,12 @@ function penumbra_opengraph() {
     <meta name="keywords" content="">
     <meta name="robots" content=""><meta name="revisit-after" content="7 day">
 
-    <meta property="og:title" content="<?= $pagetitle ?>" />
+    <meta property="og:title" content="<?= $blogtitle ?>" />
     <meta property="og:url" content="<?php the_permalink();?>" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="" />
 
-    <meta property="twitter:title" content="<?= $pagetitle ?>" />
+    <meta property="twitter:title" content="<?= $blogtitle ?>" />
     <meta property="twitter:url" content="<?php the_permalink();?>" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:image" content="" />
