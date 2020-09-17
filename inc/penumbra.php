@@ -139,6 +139,7 @@ function penumbra_opengraph() {
 		$blogtitle = 'Clique aqui para ganhar Cupons Mágicos d’A Central!';
 		$blogdesc = 'Troque cupons mágicos por descontos na compra das Marmitas mais saborosas da cidade. É almoço, é jantar, é sobremesa!';
 	} ?>
+    <meta name="title" content="<?= $blogtitle ?>" />
     <meta name="description" content="<?php echo $blogdesc ?>">
     <meta name="og:description" content="<?php echo $blogdesc ?>">
     <meta name="twitter:description" content="<?php echo $blogdesc ?>">
@@ -157,7 +158,7 @@ function penumbra_opengraph() {
 
     <?php
 }
-add_action('wp_head', 'penumbra_opengraph');
+add_action('wp_head', 'penumbra_opengraph', 10);
 
 
 add_action("wp_ajax_get_cart_number", "penumbra_cart_number");
