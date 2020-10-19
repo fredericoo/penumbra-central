@@ -183,3 +183,38 @@ function get_user_referral_code() {
 	if( !$public_obj->is_social_sharing_enabled() || !is_user_logged_in()) { return false; }
 	return $public_obj->get_referral_link(get_current_user_ID());
 }
+
+
+/**
+ * Add a custom action to order actions select box on edit order page
+ * Only added for paid orders that haven't fired this action yet
+ *
+ * @param array $actions order actions array to display
+ * @return array - updated actions
+ */
+function sv_wc_add_order_meta_box_action( $actions ) {
+    global $theorder;
+
+    // add "mark printed" custom action
+    $actions['wc_custom_order_action'] = __( '[VUUPT] Atualizar integração', 'my-textdomain' );
+    return $actions;
+}
+add_action( 'woocommerce_order_actions', 'sv_wc_add_order_meta_box_action' );
+
+
+/**
+ * Add an order note when custom action is clicked
+ * Add a flag on the order to show it's been run
+ *
+ * @param \WC_Order $order
+ */
+function sv_wc_process_order_meta_box_action( $order ) {
+    
+    // add the order note
+    // translators: Placeholders: %s is a user's display name
+	pnmbr_add_to_vuupt($order->get_id());
+    $message = sprintf( __( 'Integração atualizada por %s', 'my-textdomain' ), wp_get_current_user()->display_name );
+	$order->add_order_note( $message );
+
+}
+add_action( 'woocommerce_order_action_wc_custom_order_action', 'sv_wc_process_order_meta_box_action' );
